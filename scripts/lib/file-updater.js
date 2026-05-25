@@ -25,7 +25,7 @@ function getTodayISO() {
 function updateFeatureProperty(content, featureName, property, newValue) {
     // Find the feature section
     const featureRegex = new RegExp(
-        `(## ${escapeRegex(featureName)}\\n[\\s\\S]*?\\| ${property} \\| )([^|\\n]*)(\\s*\\|)`,
+        `(## ${escapeRegex(featureName)}\\n[\\s\\S]*?\\|\\s*${property}\\s*\\|\\s*)([^|\\n]*?)(\\s*\\|)`,
         'i'
     );
 
