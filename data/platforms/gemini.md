@@ -922,7 +922,7 @@ Available where Gemini Apps are available (230+ countries on web, 150+ on mobile
 | URL      | https://gemini.google.com |
 | Launched | 2024-02-08T12:00Z |
 | Verified | 2026-03-21 |
-| Checked  | 2026-04-08 |
+| Checked  | 2026-05-25 |
 
 ### Availability
 

@@ -627,7 +627,7 @@ Available globally where Claude is available. May be off by default in some regi
 | URL      | https://claude.ai |
 | Launched | 2023-07-11T12:00Z |
 | Verified | 2026-03-20|
-| Checked  | 2026-04-14 |
+| Checked  | 2026-05-25 |
 
 ### Availability
 
