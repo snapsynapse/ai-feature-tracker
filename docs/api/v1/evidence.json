@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-05-29T05:13:24.867Z",
+    "generated": "2026-05-29T22:23:18.116Z",
     "version": "1.0",
     "count": 90
   },
@@ -2563,8 +2563,8 @@
       "source_file": "data/platforms/chatgpt.md",
       "source_heading": null,
       "launched": null,
-      "verified": "2026-03-04",
-      "checked": "2026-03-04",
+      "verified": "2026-03-15",
+      "checked": "2026-05-26",
       "sources": [
         {
           "title": "ChatGPT pricing",
@@ -2572,7 +2572,7 @@
         }
       ],
       "changelog": [],
-      "notes": "Seeded from product metadata during ontology migration."
+      "notes": "Rolled up from backing platform features."
     },
     {
       "id": "product-claude",
@@ -2581,8 +2581,8 @@
       "source_file": "data/platforms/claude.md",
       "source_heading": null,
       "launched": null,
-      "verified": "2026-03-04",
-      "checked": "2026-03-04",
+      "verified": "2026-03-19",
+      "checked": "2026-05-26",
       "sources": [
         {
           "title": "Claude pricing",
@@ -2590,7 +2590,7 @@
         }
       ],
       "changelog": [],
-      "notes": "Seeded from product metadata during ontology migration."
+      "notes": "Rolled up from backing platform features."
     },
     {
       "id": "product-copilot",
@@ -2599,8 +2599,8 @@
       "source_file": "data/platforms/copilot.md",
       "source_heading": null,
       "launched": null,
-      "verified": "2026-03-04",
-      "checked": "2026-03-04",
+      "verified": "2026-03-15",
+      "checked": "2026-05-26",
       "sources": [
         {
           "title": "Microsoft Copilot pricing",
@@ -2608,7 +2608,7 @@
         }
       ],
       "changelog": [],
-      "notes": "Seeded from product metadata during ontology migration."
+      "notes": "Rolled up from backing platform features."
     },
     {
       "id": "product-gemini",
@@ -2617,8 +2617,8 @@
       "source_file": "data/platforms/gemini.md",
       "source_heading": null,
       "launched": null,
-      "verified": "2026-03-04",
-      "checked": "2026-03-04",
+      "verified": "2026-02-22",
+      "checked": "2026-05-26",
       "sources": [
         {
           "title": "Gemini pricing",
@@ -2626,7 +2626,7 @@
         }
       ],
       "changelog": [],
-      "notes": "Seeded from product metadata during ontology migration."
+      "notes": "Rolled up from backing platform features."
     },
     {
       "id": "product-grok",
@@ -2635,8 +2635,8 @@
       "source_file": "data/platforms/grok.md",
       "source_heading": null,
       "launched": null,
-      "verified": "2026-03-04",
-      "checked": "2026-03-04",
+      "verified": "2026-03-07",
+      "checked": "2026-05-29",
       "sources": [
         {
           "title": "Grok pricing",
@@ -2644,7 +2644,7 @@
         }
       ],
       "changelog": [],
-      "notes": "Seeded from product metadata during ontology migration."
+      "notes": "Rolled up from backing platform features."
     },
     {
       "id": "product-lm-studio",
@@ -2719,8 +2719,8 @@
       "source_file": "data/platforms/perplexity.md",
       "source_heading": null,
       "launched": null,
-      "verified": "2026-02-07",
-      "checked": "2026-02-07",
+      "verified": "2026-01-29",
+      "checked": "2026-05-29",
       "sources": [
         {
           "title": "Perplexity pricing",
@@ -2728,7 +2728,7 @@
         }
       ],
       "changelog": [],
-      "notes": "Seeded from product metadata during ontology migration."
+      "notes": "Rolled up from backing platform features."
     },
     {
       "id": "product-text-generation-webui",
@@ -2736,17 +2736,30 @@
       "entity_id": "text-generation-webui",
       "source_file": "data/watchlist/oobabooga-runtime.md",
       "source_heading": "text-generation-webui",
-      "launched": null,
+      "launched": "2023-02-27T12:00Z",
       "verified": "2026-03-07",
       "checked": "2026-03-07",
       "sources": [
         {
-          "title": "text-generation-webui pricing",
+          "title": "text-generation-webui",
           "url": "https://github.com/oobabooga/text-generation-webui"
+        },
+        {
+          "title": "Support for LLaMA models · Issue #147",
+          "url": "https://github.com/oobabooga/text-generation-webui/issues/147"
         }
       ],
-      "changelog": [],
-      "notes": "Seeded from product metadata during ontology migration."
+      "changelog": [
+        {
+          "date": "2026-03-07T12:00Z",
+          "change": "Launch date aligned to earliest public official repo evidence found (issue activity on February 27, 2023)"
+        },
+        {
+          "date": "2023-02-27T12:00Z",
+          "change": "Initial entry"
+        }
+      ],
+      "notes": ""
     }
   ]
 }
