@@ -88,10 +88,10 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          if git diff --quiet data/platforms/; then
+          if git diff --quiet data/platforms/ data/watchlist/; then
             echo "No date changes to commit"
           else
-            git add data/platforms/
+            git add data/platforms/ data/watchlist/
             git commit -m "Update Checked/Verified dates [skip ci]"
           fi
 
@@ -132,10 +132,10 @@ jobs:
       - name: Commit resolution updates
         if: inputs.dry_run != true && steps.issues.outputs.count > 0
         run: |
-          if git diff --quiet data/platforms/; then
+          if git diff --quiet data/platforms/ data/watchlist/; then
             echo "No additional changes from issue resolution"
           else
-            git add data/platforms/
+            git add data/platforms/ data/watchlist/
             git commit -m "Auto-resolve verification issues [skip ci]"
           fi
 

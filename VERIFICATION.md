@@ -77,6 +77,8 @@ For each feature to verify:
 
 ## What Gets Verified
 
+The cascade verifies feature sections in `data/platforms/` and in `data/watchlist/` (watchlist files that back an active record, e.g. a product, carry the same feature-table structure and are checked on the same schedule). Note-style watchlist entries with no feature table contribute nothing to the cascade.
+
 For each feature, the system verifies:
 
 | Field | Description | Example |
@@ -157,12 +159,21 @@ node scripts/verify-features.js --stale-only
 
 This creates an issue listing stale features without running the full cascade.
 
+### Evidence Freshness for Products and Watchlist Records
+
+Product records (`data/products/*.md`) and watchlist-backed records do not carry their own `Checked`/`Verified` rows. Their freshness is derived in `sync-evidence.js`:
+
+- If the record names a specific feature (`record_source` + `source_heading`), it inherits that feature's dates.
+- Otherwise it rolls up from the oldest verification across all features in its backing platform file.
+
+This means a product stays fresh as long as its underlying features are being verified — there is no separate seed date to go stale. (Records that fell back to a frozen seed date were the cause of the recurring "Stale evidence" alerts.)
+
 ## Output
 
 ### When Changes Confirmed (3+ positives)
 
 Creates a **Pull Request** with:
-- Updated markdown files in `data/platforms/`
+- Updated markdown files in `data/platforms/` and `data/watchlist/`
 - Summary of changes in PR description
 - Model responses as evidence
 - Links to sources cited by models

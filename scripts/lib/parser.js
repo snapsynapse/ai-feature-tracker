@@ -7,6 +7,7 @@ const fs = require('fs');
 const path = require('path');
 
 const DATA_DIR = path.join(__dirname, '..', '..', 'data', 'platforms');
+const WATCHLIST_DIR = path.join(__dirname, '..', '..', 'data', 'watchlist');
 
 /**
  * Parse YAML-like frontmatter from markdown content.
@@ -171,8 +172,15 @@ function parsePlatform(filepath) {
  * @returns {Array<Object>}
  */
 function loadAllPlatforms() {
-    const files = fs.readdirSync(DATA_DIR).filter(f => f.endsWith('.md') && !f.startsWith('_'));
-    return files.map(f => parsePlatform(path.join(DATA_DIR, f)));
+    const collect = (dir) => fs.existsSync(dir)
+        ? fs.readdirSync(dir)
+            .filter(f => f.endsWith('.md') && !f.startsWith('_') && f !== 'README.md')
+            .map(f => parsePlatform(path.join(dir, f)))
+        : [];
+    // Watchlist entries are verified on the same cascade as platforms so their
+    // freshness keeps moving; otherwise watchlist-backed records go stale with
+    // no pipeline to re-check them.
+    return [...collect(DATA_DIR), ...collect(WATCHLIST_DIR)];
 }
 
 /**

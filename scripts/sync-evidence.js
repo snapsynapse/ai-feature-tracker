@@ -6,6 +6,7 @@ const path = require('path');
 const ROOT = path.join(__dirname, '..');
 const DIRS = {
     platforms: path.join(ROOT, 'data', 'platforms'),
+    watchlist: path.join(ROOT, 'data', 'watchlist'),
     products: path.join(ROOT, 'data', 'products'),
     modelAccess: path.join(ROOT, 'data', 'model-access'),
     implementationsFile: path.join(ROOT, 'data', 'implementations', 'index.yml'),
@@ -228,21 +229,40 @@ function parseImplementationIndex(filepath) {
 }
 
 function buildSourceLookup() {
-    const files = listMarkdownFiles(DIRS.platforms);
-    const platforms = files.map(file => parsePlatform(path.join(DIRS.platforms, file)));
+    // Index platform and watchlist files alike so watchlist-backed records
+    // (e.g. products on the watchlist) resolve their verified/checked dates
+    // instead of falling back to a frozen frontmatter stamp.
+    const sourceDirs = [DIRS.platforms, DIRS.watchlist];
+    const platforms = sourceDirs.flatMap(dir =>
+        listMarkdownFiles(dir).map(file => parsePlatform(path.join(dir, file)))
+    );
     const lookup = new Map();
+    const byFile = new Map();
 
     platforms.forEach(platform => {
         platform.features.forEach(feature => {
             lookup.set(`${platform.source_file}::${feature.name}`, { platform, feature });
+            if (!byFile.has(platform.source_file)) byFile.set(platform.source_file, []);
+            byFile.get(platform.source_file).push(feature);
         });
     });
 
-    return lookup;
+    return { lookup, byFile };
+}
+
+// A product is only as current as the oldest verification among the features
+// of its backing platform file. Rolling up keeps product records moving as
+// features are re-verified, instead of freezing at a seeded frontmatter date.
+function rollupFeatureDates(features) {
+    const oldest = (key) => features
+        .map(feature => feature[key])
+        .filter(Boolean)
+        .sort()[0] || '';
+    return { verified: oldest('verified'), checked: oldest('checked') };
 }
 
 function buildEvidenceRecords() {
-    const featureLookup = buildSourceLookup();
+    const { lookup: featureLookup, byFile: featuresByFile } = buildSourceLookup();
     const implementations = parseImplementationIndex(DIRS.implementationsFile);
     const products = loadIdRecords(DIRS.products);
     const modelAccess = loadIdRecords(DIRS.modelAccess);
@@ -271,6 +291,12 @@ function buildEvidenceRecords() {
             ? `${record.frontmatter.record_source}::${record.frontmatter.source_heading}`
             : null;
         const source = lookupKey ? featureLookup.get(lookupKey) : null;
+        // No specific feature heading: roll freshness up from every feature in
+        // the backing platform file so the record tracks ongoing verification.
+        const platformFeatures = !source && record.frontmatter.record_source
+            ? (featuresByFile.get(record.frontmatter.record_source) || [])
+            : [];
+        const rollup = platformFeatures.length ? rollupFeatureDates(platformFeatures) : null;
         const pricingSource = record.frontmatter.pricing_page
             ? [{ title: `${record.frontmatter.name || record.id} pricing`, url: record.frontmatter.pricing_page }]
             : [];
@@ -282,11 +308,11 @@ function buildEvidenceRecords() {
             source_file: record.frontmatter.record_source || '',
             source_heading: record.frontmatter.source_heading || '',
             launched: source?.feature?.launched || '',
-            verified: source?.feature?.verified || record.frontmatter.last_verified || '',
-            checked: source?.feature?.checked || record.frontmatter.last_verified || '',
+            verified: source?.feature?.verified || rollup?.verified || record.frontmatter.last_verified || '',
+            checked: source?.feature?.checked || rollup?.checked || record.frontmatter.last_verified || '',
             sources: source?.feature?.sources || pricingSource,
             changelog: source?.feature?.changelog || [],
-            notes: source ? '' : 'Seeded from product metadata during ontology migration.'
+            notes: source ? '' : (rollup ? 'Rolled up from backing platform features.' : 'Seeded from product metadata during ontology migration.')
         });
     });
 
