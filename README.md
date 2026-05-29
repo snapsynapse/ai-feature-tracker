@@ -8,6 +8,18 @@
 
 ---
 
+## Who this is for
+
+Anyone — humans or agents — who needs current, plain-English answers about AI tool capabilities, plan gates, and constraints before committing to a tool.
+
+## What problem it solves
+
+AI tool capabilities, plan limits, and constraints change constantly and are scattered across marketing pages. AI Tool Watch is a single, verified, plain-English reference for humans and agents.
+
+## Canonical URL
+
+https://aitool.watch/
+
 ## What is this?
 
 A single source of truth for answering questions like:
