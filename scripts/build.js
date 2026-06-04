@@ -1132,7 +1132,7 @@ function renderSharedFooter() {
                 <a href="${REPO_PULLS_URL}">submit a PR</a>.
             </p>
             <p style="margin-top: 8px;">
-                &copy; 2026 <a href="https://paice.work/">PAICE.work PBC</a> | via <a href="https://docs.anthropic.com/en/docs/claude-code/overview">Claude Code</a> | 🤓+🤖 | No trackers here, you're welcome.
+                &copy; 2026 <a href="https://snapsynapse.com/">Snap Synapse LLC</a> | Used by <a href="https://paice.work/">PAICE.work</a> | via <a href="https://docs.anthropic.com/en/docs/claude-code/overview">Claude Code</a> | 🤓+🤖 | No trackers here, you're welcome.
             </p>
             <p style="margin-top: 12px; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px;">
                 <a href="${REPO_URL}" class="footer-social" title="Star on GitHub">⭐ Star</a>
@@ -1273,9 +1273,9 @@ function generateHTML(platforms, ontologyData) {
       "@graph": [
         {
           "@type": "Organization",
-          "@id": "https://paice.work/#organization",
-          "name": "PAICE.work",
-          "url": "https://paice.work/"
+          "@id": "https://snapsynapse.com/#organization",
+          "name": "Snap Synapse LLC",
+          "url": "https://snapsynapse.com/"
         },
         {
           "@type": "WebPage",
@@ -1284,7 +1284,7 @@ function generateHTML(platforms, ontologyData) {
           "name": "${DASHBOARD_TITLE} - ${FEATURE_VIEW_TITLE}",
           "description": "Detailed plan-by-plan availability for AI features across ChatGPT, Claude, Gemini, Copilot, and more.",
           "isPartOf": { "@id": "${SITE_URL}#website" },
-          "publisher": { "@id": "https://paice.work/#organization" },
+          "publisher": { "@id": "https://snapsynapse.com/#organization" },
           "about": {
             "@type": "Thing",
             "name": "AI feature availability by subscription plan"
@@ -1982,9 +1982,9 @@ function generateCapabilitiesHTML(ontologyData) {
       "@graph": [
         {
           "@type": "Organization",
-          "@id": "https://paice.work/#organization",
-          "name": "PAICE.work",
-          "url": "https://paice.work/"
+          "@id": "https://snapsynapse.com/#organization",
+          "name": "Snap Synapse LLC",
+          "url": "https://snapsynapse.com/"
         },
         {
           "@type": "WebSite",
@@ -1992,7 +1992,7 @@ function generateCapabilitiesHTML(ontologyData) {
           "url": "${SITE_URL}",
           "name": "AI Tool Watch",
           "description": "A maintained reference for AI capability availability across plans, platforms, and access tiers.",
-          "publisher": { "@id": "https://paice.work/#organization" }
+          "publisher": { "@id": "https://snapsynapse.com/#organization" }
         },
         {
           "@type": "WebPage",
@@ -2337,9 +2337,9 @@ function generateAboutHTML() {
       "@graph": [
         {
           "@type": "Organization",
-          "@id": "https://paice.work/#organization",
-          "name": "PAICE.work",
-          "url": "https://paice.work/"
+          "@id": "https://snapsynapse.com/#organization",
+          "name": "Snap Synapse LLC",
+          "url": "https://snapsynapse.com/"
         },
         {
           "@type": "AboutPage",
@@ -2348,8 +2348,8 @@ function generateAboutHTML() {
           "name": "About - ${DASHBOARD_TITLE}",
           "description": "About the AI Tool Watch - a plain-English resource for AI capabilities, plans, constraints, and implementations.",
           "isPartOf": { "@id": "${SITE_URL}#website" },
-          "publisher": { "@id": "https://paice.work/#organization" },
-          "about": { "@id": "https://paice.work/#organization" }
+          "publisher": { "@id": "https://snapsynapse.com/#organization" },
+          "about": { "@id": "https://snapsynapse.com/#organization" }
         }
       ]
     }
@@ -2674,9 +2674,9 @@ function generateConstraintsHTML(ontologyData, platforms) {
       "@graph": [
         {
           "@type": "Organization",
-          "@id": "https://paice.work/#organization",
-          "name": "PAICE.work",
-          "url": "https://paice.work/"
+          "@id": "https://snapsynapse.com/#organization",
+          "name": "Snap Synapse LLC",
+          "url": "https://snapsynapse.com/"
         },
         {
           "@type": "WebPage",
@@ -2685,7 +2685,7 @@ function generateConstraintsHTML(ontologyData, platforms) {
           "name": "AI Tool Watch - Access & Limits",
           "description": "Find AI features by access tier, platform support, and regional availability. Filter by free, paid, surface, and more.",
           "isPartOf": { "@id": "${SITE_URL}#website" },
-          "publisher": { "@id": "https://paice.work/#organization" },
+          "publisher": { "@id": "https://snapsynapse.com/#organization" },
           "about": {
             "@type": "Thing",
             "name": "AI feature access tiers, platform support, and regional availability"
@@ -3324,9 +3324,9 @@ function generateCompareHTML(ontologyData) {
       "@graph": [
         {
           "@type": "Organization",
-          "@id": "https://paice.work/#organization",
-          "name": "PAICE.work",
-          "url": "https://paice.work/"
+          "@id": "https://snapsynapse.com/#organization",
+          "name": "Snap Synapse LLC",
+          "url": "https://snapsynapse.com/"
         },
         {
           "@type": "WebPage",
@@ -3335,7 +3335,7 @@ function generateCompareHTML(ontologyData) {
           "name": "Compare Products - ${DASHBOARD_TITLE}",
           "description": "Side-by-side comparison of AI product capabilities across ChatGPT, Claude, Gemini, Copilot, Grok, and Perplexity.",
           "isPartOf": { "@id": "${SITE_URL}#website" },
-          "publisher": { "@id": "https://paice.work/#organization" },
+          "publisher": { "@id": "https://snapsynapse.com/#organization" },
           "about": {
             "@type": "Thing",
             "name": "AI product capability comparison"
@@ -4617,7 +4617,7 @@ function generateAgentsJson(ontologyData) {
         url: SITE_URL,
         repository: REPO_URL,
         license: 'MIT',
-        maintainer: 'PAICE.work',
+        maintainer: 'Snap Synapse LLC',
         generated: timestamp,
         capabilities: {
             read: true,

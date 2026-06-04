@@ -189,6 +189,12 @@ Skills: [skills/](skills/) ([README](skills/README.md))
 
 AI Tool Watch is free and open. If you rely on this reference, consider [sponsoring its upkeep](https://github.com/sponsors/snapsynapse) to keep the verification pipeline running. See [SPONSORS.md](SPONSORS.md).
 
+## Stewardship and use
+
+AI Tool Watch is an open reference under [Snap Synapse LLC](https://snapsynapse.com/) stewardship, authored by [Sam Rogers](https://linkedin.com/in/samrogers). It is used indirectly by [PAICE.work](https://paice.work/).
+
+A planned integration will expose AI Tool Watch via MCP to PAICE so behavioral-reliability assessments stay current with product changes and PAICE Pro features. The reference remains MIT-licensed and free for any use.
+
 ## License
 
 MIT - see [LICENSE](LICENSE)

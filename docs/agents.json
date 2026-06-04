@@ -7,8 +7,8 @@
   "url": "https://aitool.watch/",
   "repository": "https://github.com/snapsynapse/ai-tool-watch",
   "license": "MIT",
-  "maintainer": "PAICE.work",
-  "generated": "2026-06-04T01:56:37.162Z",
+  "maintainer": "Snap Synapse LLC",
+  "generated": "2026-06-04T02:39:24.979Z",
   "capabilities": {
     "read": true,
     "write": false,
