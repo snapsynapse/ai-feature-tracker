@@ -416,7 +416,7 @@ Available globally.
 | URL      | https://copilot.microsoft.com |
 | Launched | 2023-02-07T12:00Z |
 | Verified | 2026-03-22|
-| Checked  | 2026-05-29 |
+| Checked  | 2026-06-05 |
 
 ### Availability
 
