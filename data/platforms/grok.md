@@ -3,18 +3,20 @@ name: Grok
 vendor: xAI
 logo: https://x.ai/favicon.ico
 status_page: https://status.x.ai
-pricing_page: https://x.ai/grok
-last_verified: 2026-04-14
+pricing_page: https://grok.com/
+last_verified: 2026-06-18
 ---
 
 ## Pricing
 
 | Plan | Price | Notes |
 |------|-------|-------|
-| Free | $0 | Limited queries via X |
+| Free | $0 | Limited queries via X / grok.com |
 | Premium | $8/mo | Basic Grok access |
 | Premium+ | $16/mo | Enhanced limits |
-| SuperGrok | $30/mo | Highest limits, priority |
+| SuperGrok Lite | $10/mo | Lighter limits, image/video access |
+| SuperGrok | $30/mo | Full Grok 4 / 4.1, DeepSearch, ~100 prompts / 2h |
+| SuperGrok Heavy | $300/mo | Max rate limits, full Grok 4.3, Grok Build CLI |
 
 ---
 
@@ -363,51 +365,56 @@ Available globally where X is available.
 |----------|-------|
 | Category | search |
 | Status | ga |
-| Gating | paid |
-| URL | https://x.ai/grok |
+| Gating | free |
+| URL | https://grok.com/ |
 | Launched | 2023-11-04T12:00Z |
-| Verified | 2026-03-19|
-| Checked | 2026-06-05|
+| Verified | 2026-06-18|
+| Checked | 2026-06-18|
 
 ### Availability
 
 | Plan | Available | Limits | Notes |
 |------|-----------|--------|-------|
-| Free | ⚠️ | Limited | Basic access |
+| Free | ⚠️ | Limited | ~10 msgs / 2h, lighter models |
 | Premium | ✅ | Full | Real-time posts |
-| Premium+ | ✅ | Full | |
-| SuperGrok | ✅ | Full | |
+| Premium+ | ✅ | Full | Higher quotas |
+| SuperGrok Lite | ✅ | Standard | Real-time posts, lighter limits |
+| SuperGrok | ✅ | Full | DeepSearch, ~100 prompts / 2h |
+| SuperGrok Heavy | ✅ | Full | Max rate limits, Grok 4.3 |
 
 ### Platforms
 
 | Platform | Available | Notes |
 |----------|-----------|-------|
-| Windows | ⚠️ | Web only (no official app) |
-| macOS | ⚠️ | Web only (no official app) |
-| Linux | ⚠️ | Web only (no official app) |
-| iOS | ✅ | X app + standalone |
-| Android | ✅ | X app + standalone |
+| Windows | ⚠️ | Web only (no GUI desktop app) |
+| macOS | ⚠️ | Web only (no GUI desktop app) |
+| Linux | ⚠️ | Web only (no GUI desktop app) |
+| iOS | ✅ | X app + standalone Grok app |
+| Android | ✅ | X app + standalone Grok app |
 | Chrome | ❌ |  |
 | web | ✅ | grok.com |
-| terminal | ❌ |  |
+| terminal | ✅ | Grok Build CLI (SuperGrok beta) |
 | API | ✅ | xAI API |
+| Tesla | ✅ | In-car integration |
 
 ### Regional
 
-Available globally.
+Available globally. EU/EEA users treated differently for training/data-usage defaults.
 
 ### Talking Point
 
-> "Grok has **real-time access to X/Twitter posts**—its unique advantage over other chatbots. Even free users get some access to this."
+> "Grok has **real-time access to X/Twitter posts**—its unique advantage over other chatbots. **Available on the free tier with lower limits**; paid tiers (X Premium from $8/mo, SuperGrok $30/mo, SuperGrok Heavy $300/mo) get higher quotas and more capable models. Also accessible inside Tesla vehicles."
 
 ### Sources
 
-- [Grok Official](https://x.ai/grok)
+- [Grok (consumer)](https://grok.com/)
+- [xAI](https://x.ai/grok)
 
 ### Changelog
 
 | Date | Change |
 |------|--------|
+| 2026-06-18T12:00Z | [Verified] Gating corrected paid→free (free tier has real-time access, ~10 msgs / 2h); SuperGrok Lite ($10/mo) and SuperGrok Heavy ($300/mo) added; terminal flipped to ✅ for Grok Build CLI (SuperGrok beta); Tesla platform added; URL normalized to grok.com |
 | 2023-11-04T12:00Z | Initial entry |
 
 ---
