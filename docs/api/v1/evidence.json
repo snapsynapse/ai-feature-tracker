@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-06-18T01:55:00.783Z",
+    "generated": "2026-06-18T18:49:50.751Z",
     "version": "1.0",
     "count": 90
   },
@@ -1840,15 +1840,23 @@
       "source_file": "data/platforms/grok.md",
       "source_heading": "Real-time X/Twitter Data",
       "launched": "2023-11-04T12:00Z",
-      "verified": "2026-03-19",
-      "checked": "2026-06-05",
+      "verified": "2026-06-18",
+      "checked": "2026-06-18",
       "sources": [
         {
-          "title": "Grok Official",
+          "title": "Grok (consumer)",
+          "url": "https://grok.com/"
+        },
+        {
+          "title": "xAI",
           "url": "https://x.ai/grok"
         }
       ],
       "changelog": [
+        {
+          "date": "2026-06-18T12:00Z",
+          "change": "[Verified] Gating corrected paid→free (free tier has real-time access, ~10 msgs / 2h); SuperGrok Lite ($10/mo) and SuperGrok Heavy ($300/mo) added; terminal flipped to ✅ for Grok Build CLI (SuperGrok beta); Tesla platform added; URL normalized to grok.com"
+        },
         {
           "date": "2023-11-04T12:00Z",
           "change": "Initial entry"

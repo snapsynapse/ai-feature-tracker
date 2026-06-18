@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-06-18T01:55:00.783Z",
+    "generated": "2026-06-18T18:49:50.751Z",
     "version": "1.0",
     "count": 72
   },
@@ -5858,14 +5858,14 @@
         "connect-to-external-systems"
       ],
       "category": "search",
-      "gating": "paid",
+      "gating": "free",
       "status": "ga",
       "plans": [
         {
           "plan": "Free",
           "available": false,
           "limits": "Limited",
-          "notes": "Basic access"
+          "notes": "~10 msgs / 2h, lighter models"
         },
         {
           "plan": "Premium",
@@ -5877,13 +5877,25 @@
           "plan": "Premium+",
           "available": true,
           "limits": "Full",
-          "notes": ""
+          "notes": "Higher quotas"
+        },
+        {
+          "plan": "SuperGrok Lite",
+          "available": true,
+          "limits": "Standard",
+          "notes": "Real-time posts, lighter limits"
         },
         {
           "plan": "SuperGrok",
           "available": true,
           "limits": "Full",
-          "notes": ""
+          "notes": "DeepSearch, ~100 prompts / 2h"
+        },
+        {
+          "plan": "SuperGrok Heavy",
+          "available": true,
+          "limits": "Full",
+          "notes": "Max rate limits, Grok 4.3"
         }
       ],
       "surfaces": [
@@ -5891,31 +5903,31 @@
           "surface": "windows",
           "name": "Windows",
           "available": false,
-          "notes": "Web only (no official app)"
+          "notes": "Web only (no GUI desktop app)"
         },
         {
           "surface": "macos",
           "name": "macOS",
           "available": false,
-          "notes": "Web only (no official app)"
+          "notes": "Web only (no GUI desktop app)"
         },
         {
           "surface": "linux",
           "name": "Linux",
           "available": false,
-          "notes": "Web only (no official app)"
+          "notes": "Web only (no GUI desktop app)"
         },
         {
           "surface": "ios",
           "name": "iOS",
           "available": true,
-          "notes": "X app + standalone"
+          "notes": "X app + standalone Grok app"
         },
         {
           "surface": "android",
           "name": "Android",
           "available": true,
-          "notes": "X app + standalone"
+          "notes": "X app + standalone Grok app"
         },
         {
           "surface": "chrome",
@@ -5932,21 +5944,27 @@
         {
           "surface": "terminal",
           "name": "terminal",
-          "available": false,
-          "notes": ""
+          "available": true,
+          "notes": "Grok Build CLI (SuperGrok beta)"
         },
         {
           "surface": "api",
           "name": "API",
           "available": true,
           "notes": "xAI API"
+        },
+        {
+          "surface": "tesla",
+          "name": "Tesla",
+          "available": true,
+          "notes": "In-car integration"
         }
       ],
-      "talking_point": "Grok has **real-time access to X/Twitter posts**—its unique advantage over other chatbots. Even free users get some access to this.",
+      "talking_point": "Grok has **real-time access to X/Twitter posts**—its unique advantage over other chatbots. **Available on the free tier with lower limits**; paid tiers (X Premium from $8/mo, SuperGrok $30/mo, SuperGrok Heavy $300/mo) get higher quotas and more capable models. Also accessible inside Tesla vehicles.",
       "launched": "2023-11-04T12:00Z",
-      "verified": "2026-03-19",
+      "verified": "2026-06-18",
       "evidence_id": "implementation-grok-real-time-x-twitter-data",
-      "evidence_verified": "2026-03-19"
+      "evidence_verified": "2026-06-18"
     },
     {
       "id": "grok-think-mode",

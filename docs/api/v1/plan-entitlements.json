@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-06-18T01:55:00.783Z",
+    "generated": "2026-06-18T18:49:50.751Z",
     "version": "1.0"
   },
   "products": {
@@ -763,6 +763,28 @@
           ],
           "implementation_count": 3,
           "capability_count": 5
+        },
+        "SuperGrok Lite": {
+          "price": "$10/mo",
+          "implementations": [
+            "grok-real-time-x-twitter-data"
+          ],
+          "capabilities": [
+            "connect-to-external-systems"
+          ],
+          "implementation_count": 1,
+          "capability_count": 1
+        },
+        "SuperGrok Heavy": {
+          "price": "$300/mo",
+          "implementations": [
+            "grok-real-time-x-twitter-data"
+          ],
+          "capabilities": [
+            "connect-to-external-systems"
+          ],
+          "implementation_count": 1,
+          "capability_count": 1
         }
       }
     },
