@@ -24,7 +24,7 @@ build_visibility: hidden
 | URL | https://github.com/oobabooga/text-generation-webui |
 | Launched | 2023-02-27T12:00Z |
 | Verified | 2026-03-07|
-| Checked | 2026-06-23|
+| Checked | 2026-06-30|
 
 ### Availability
 
