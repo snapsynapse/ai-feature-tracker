@@ -8,7 +8,7 @@
   "repository": "https://github.com/snapsynapse/ai-tool-watch",
   "license": "MIT",
   "maintainer": "Snap Synapse LLC",
-  "generated": "2026-07-02T01:45:27.738Z",
+  "generated": "2026-07-06T01:38:24.356Z",
   "capabilities": {
     "read": true,
     "write": false,
