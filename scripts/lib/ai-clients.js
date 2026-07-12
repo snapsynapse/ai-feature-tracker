@@ -17,9 +17,10 @@ const PROVIDER_MODEL_MAP = {
  * Build the verification prompt for a feature
  * @param {Object} platform - Platform object
  * @param {Object} feature - Feature object
+ * @param {string} [claim] - A specific change claimed by another model, to confirm or refute
  * @returns {string} The prompt to send to AI models
  */
-function buildVerificationPrompt(platform, feature) {
+function buildVerificationPrompt(platform, feature, claim) {
     const { serializeFeature } = require('./parser');
     const planList = platform.pricing.map(p => p.plan).join(', ');
     const featureUrl = feature.url ? `\n   Current stored URL: ${feature.url}` : '';
@@ -63,16 +64,24 @@ Please verify whether this data is still accurate by checking:
 
 For each section, explicitly state whether our stored data is CORRECT or INCORRECT.
 If incorrect, describe exactly what changed. If everything matches, say "no change detected."
-Cite official sources where possible.`;
+Cite official sources where possible.${claim ? `
+
+IMPORTANT — a claimed change needs adjudication:
+Another research model checking this same feature reported the following change:
+"${claim}"
+Search specifically for evidence that CONFIRMS or REFUTES this claim, and state
+your verdict on it explicitly with sources. If the claim is real, reflect it in
+the relevant numbered section above as INCORRECT stored data.` : ''}`;
 }
 
 /**
  * Build X/Twitter-specific prompt for Grok
  * @param {Object} platform - Platform object
  * @param {Object} feature - Feature object
+ * @param {string} [claim] - A specific change claimed by another model, to confirm or refute
  * @returns {string} The prompt for Grok X/Twitter search
  */
-function buildGrokPrompt(platform, feature) {
+function buildGrokPrompt(platform, feature, claim) {
     // Map platform names to their official X/Twitter accounts
     const twitterAccounts = {
         'ChatGPT': '@OpenAI',
@@ -103,7 +112,13 @@ Look for:
 
 Focus on official announcements and verified account posts.
 State whether our stored data above is still accurate or if something has changed.
-Summarize what you find about current availability and any recent changes.`;
+Summarize what you find about current availability and any recent changes.${claim ? `
+
+IMPORTANT — a claimed change needs adjudication:
+Another research model checking this same feature reported the following change:
+"${claim}"
+Search specifically for posts that CONFIRM or REFUTE this claim, and state your
+verdict on it explicitly.` : ''}`;
 }
 
 /**
@@ -117,12 +132,12 @@ class GeminiClient {
         this.provider = 'Google';
     }
 
-    async verify(platform, feature) {
+    async verify(platform, feature, context = {}) {
         if (!this.apiKey) {
             throw new Error('GEMINI_API_KEY not configured');
         }
 
-        const prompt = buildVerificationPrompt(platform, feature);
+        const prompt = buildVerificationPrompt(platform, feature, context.claim);
 
         const maxRetries = 3;
         let lastError;
@@ -193,12 +208,12 @@ class PerplexityClient {
         this.provider = 'Perplexity AI';
     }
 
-    async verify(platform, feature) {
+    async verify(platform, feature, context = {}) {
         if (!this.apiKey) {
             throw new Error('PERPLEXITY_API_KEY not configured');
         }
 
-        const prompt = buildVerificationPrompt(platform, feature);
+        const prompt = buildVerificationPrompt(platform, feature, context.claim);
 
         const response = await fetch('https://api.perplexity.ai/chat/completions', {
             method: 'POST',
@@ -254,13 +269,13 @@ class GrokClient {
         this.provider = 'xAI';
     }
 
-    async verify(platform, feature) {
+    async verify(platform, feature, context = {}) {
         if (!this.apiKey) {
             throw new Error('XAI_API_KEY not configured');
         }
 
         // Use X/Twitter-specific prompt for Grok
-        const prompt = buildGrokPrompt(platform, feature);
+        const prompt = buildGrokPrompt(platform, feature, context.claim);
 
         const response = await fetch('https://api.x.ai/v1/chat/completions', {
             method: 'POST',
@@ -317,12 +332,12 @@ class ClaudeClient {
         this.provider = 'Anthropic';
     }
 
-    async verify(platform, feature) {
+    async verify(platform, feature, context = {}) {
         if (!this.apiKey) {
             throw new Error('ANTHROPIC_API_KEY not configured');
         }
 
-        const prompt = buildVerificationPrompt(platform, feature);
+        const prompt = buildVerificationPrompt(platform, feature, context.claim);
 
         const response = await fetch('https://api.anthropic.com/v1/messages', {
             method: 'POST',

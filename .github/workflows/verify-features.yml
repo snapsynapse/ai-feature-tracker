@@ -82,6 +82,29 @@ jobs:
           node scripts/verify-features.js ${{ steps.args.outputs.args }}
         continue-on-error: true
 
+      - name: Publish run summary
+        if: always()
+        run: |
+          # Surface the verification report in the Actions job summary so
+          # outcomes are visible without reading raw logs.
+          {
+            echo "## Verification run summary"
+            echo ""
+            if [ "${{ steps.verify.outcome }}" = "failure" ]; then
+              echo "> ⚠️ **verify-features.js exited nonzero** (confirmed changes/contradictions found, or the script errored). See logs and issues."
+              echo ""
+            fi
+            REPORT=$(ls -t .verification-reports/*.md 2>/dev/null | head -1)
+            if [ -n "$REPORT" ]; then
+              head -100 "$REPORT"
+            else
+              echo "_No verification report was generated — the script may have failed early._"
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
+          if [ "${{ steps.verify.outcome }}" = "failure" ]; then
+            echo "::warning::verify-features.js exited nonzero — check the run summary and open issues."
+          fi
+
       - name: Commit updated dates
         if: inputs.dry_run != true
         run: |
@@ -124,7 +147,7 @@ jobs:
 
             Then resolve them by platform. Be thorough but efficient — use batch mode.
           allowed_tools: "Bash,Read,Edit,Write,Grep,Glob,WebFetch"
-          claude_args: "--model claude-sonnet-4-6 --max-turns 30"
+          claude_args: "--model claude-sonnet-5 --max-turns 30"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PERPLEXITY_API_KEY: ${{ secrets.PERPLEXITY_API_KEY }}
@@ -148,6 +171,49 @@ jobs:
             git push
           else
             echo "No local commits to push"
+          fi
+
+      - name: Silence canary
+        if: github.event_name == 'schedule'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # A monitoring pipeline whose healthy and dead states look identical
+          # is unmonitorable. If automation has produced zero issues of any
+          # kind for 21 days, flag it: either the world went suspiciously
+          # quiet or the pipeline is over-suppressing signal again.
+          SINCE=$(date -u -d '21 days ago' +%Y-%m-%d)
+          RECENT=$(gh issue list --state all --limit 100 \
+            --search "author:app/github-actions created:>=$SINCE" \
+            --json number --jq 'length')
+          echo "Automation issues created since $SINCE: $RECENT"
+
+          if [ "$RECENT" -eq 0 ]; then
+            OPEN_CANARY=$(gh issue list --state open --label "pipeline-canary" --json number --jq 'length')
+            if [ "$OPEN_CANARY" -eq 0 ]; then
+              gh label create "pipeline-canary" --color "5319e7" --description "Automation silence canary" 2>/dev/null || true
+              gh issue create \
+                --title "[Canary] No automated issues in 21+ days — pipeline may be over-suppressing" \
+                --label "pipeline-canary" \
+                --body "The verification pipeline has not filed a single automated issue (conflict, unconfirmed change, signals digest, staleness, broken links, or cascade health) since before $SINCE, while scheduled runs keep completing green.
+
+          This is exactly the failure mode from June 2026: runs succeed, but the cascade discards every change signal, so silence looks identical to health.
+
+          **Check:**
+          1. Recent *Verify Features* run logs — are POSITIVE votes appearing and being discarded?
+          2. The run summary line \`Positive votes discarded\` — nonzero values with zero issues filed means suppression.
+          3. Whether the signals digest issue is being created/updated.
+
+          Close this issue once you've confirmed the silence is genuine (no changes in the AI tool landscape) or fixed the suppression.
+
+          ---
+          *Automatically created by the silence canary in verify-features.yml.*"
+              echo "::warning::Silence canary fired — no automation issues in 21+ days."
+            else
+              echo "Canary already open — not duplicating."
+            fi
+          else
+            echo "Canary quiet: automation is producing issues."
           fi
 
       - name: Upload verification report

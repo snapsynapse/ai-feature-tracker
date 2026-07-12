@@ -319,9 +319,22 @@ async function runCascade(platform, feature, options = {}) {
     for (const client of clients) {
         log(`\n[${results.length + 1}/${clients.length}] Querying ${client.displayName}...`);
 
+        // If an earlier model flagged a change, later models get a targeted
+        // prompt asking them to confirm or refute that specific claim —
+        // targeted confirmation is far more sensitive than open-ended re-checks.
+        const positiveSoFar = results.filter(r => r.type === ResultType.POSITIVE);
+        const activeClaim = positiveSoFar.length > 0
+            ? positiveSoFar
+                .map(r => `${r.model} reported: ${(r.changes || []).map(c => c.detail).join('; ')}`)
+                .join(' | ')
+            : null;
+        if (activeClaim) {
+            log(`  (Targeted follow-up on claim: ${activeClaim.substring(0, 120)})`);
+        }
+
         try {
             // Query the model
-            const response = await client.verify(platform, feature);
+            const response = await client.verify(platform, feature, activeClaim ? { claim: activeClaim } : {});
 
             // Parse the response for changes
             const parsed = parseResponse(response.response, storedData);
@@ -384,11 +397,18 @@ async function runCascade(platform, feature, options = {}) {
                 log(`  ⚠ ${client.displayName} said "no change" without search evidence — vote not counted`);
             }
 
-            // Two QUALIFIED models agree on no change - stop cascade
-            if (qualifiedNoChange >= 2 && !parsed.hasChange && response.hasSearchEvidence) {
+            // Two QUALIFIED models agree on no change - stop cascade.
+            // BUT never early-stop while a positive vote is on the table:
+            // the positive must be adjudicated by the remaining models, and
+            // the post-loop consensus rules decide the final outcome.
+            const positiveVotes = results.filter(r => r.type === ResultType.POSITIVE).length;
+            if (qualifiedNoChange >= 2 && !parsed.hasChange && response.hasSearchEvidence && positiveVotes === 0) {
                 log(`\n✓ ${qualifiedNoChange} models confirm no change (with search evidence). Stopping cascade.`);
                 outcome = CascadeOutcome.NO_CHANGE;
                 break;
+            }
+            if (qualifiedNoChange >= 2 && positiveVotes > 0) {
+                log(`  (${qualifiedNoChange} no-change votes, but ${positiveVotes} positive vote(s) pending — continuing cascade)`);
             }
 
             // Check for contradictions with previous non-error results
@@ -447,9 +467,16 @@ async function runCascade(platform, feature, options = {}) {
     const negativeResults = substantiveResults.filter(r => !r.hasChange);
     if (outcome === CascadeOutcome.INCONCLUSIVE &&
         positiveResults.length < 2 &&
-        negativeResults.length >= positiveResults.length) {
+        negativeResults.length >= positiveResults.length &&
+        positiveResults.length > 0) {
         log(`\n⚠ Only ${positiveResults.length} model(s) flagged a material change against ` +
-            `${negativeResults.length} no-change vote(s). Downgrading to NO_CHANGE.`);
+            `${negativeResults.length} no-change vote(s). Downgrading to NO_CHANGE ` +
+            `(signal recorded for digest).`);
+        outcome = CascadeOutcome.NO_CHANGE;
+    } else if (outcome === CascadeOutcome.INCONCLUSIVE && positiveResults.length === 0 &&
+        negativeResults.length >= 2) {
+        // All substantive votes were no-change but the cascade ran to
+        // exhaustion (e.g. mixed search evidence) — that's a no-change result.
         outcome = CascadeOutcome.NO_CHANGE;
     }
 
@@ -480,6 +507,20 @@ async function runCascade(platform, feature, options = {}) {
         }
     }
 
+    // Positive votes that lost the consensus vote. These are NOT surfaced as
+    // issues, but they must not vanish silently — the caller rolls them into
+    // a weekly "unconfirmed signals" digest.
+    const discardedPositives = outcome === CascadeOutcome.NO_CHANGE
+        ? results
+            .filter(r => r.type === ResultType.POSITIVE && (r.changes || []).length > 0)
+            .map(r => ({
+                model: r.model,
+                confidence: r.confidence,
+                hasSearchEvidence: r.hasSearchEvidence,
+                changes: r.changes
+            }))
+        : [];
+
     return {
         platform: platform.name,
         feature: feature.name,
@@ -489,6 +530,7 @@ async function runCascade(platform, feature, options = {}) {
         requiredConfirmations,
         results,
         proposedChanges: uniqueChanges,
+        discardedPositives,
         storedData,
         timestamp: new Date().toISOString()
     };
@@ -565,10 +607,12 @@ function summarizeResults(results) {
         contradiction: 0,
         inconclusive: 0,
         error: 0,
+        positivesDiscarded: 0,
         byPlatform: {}
     };
 
     for (const result of results) {
+        summary.positivesDiscarded += (result.discardedPositives || []).length;
         switch (result.outcome) {
             case CascadeOutcome.NO_CHANGE:
                 summary.noChange++;

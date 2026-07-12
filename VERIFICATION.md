@@ -64,7 +64,8 @@ For each feature to verify:
 5. STOP WHEN
    ├─ 3 models confirm same change → CONFIRMED, create PR
    ├─ Contradiction detected → create Issue for manual review
-   └─ Cascade exhausted → create Issue as "unconfirmed"
+   ├─ 2 searched models confirm no change AND no positive vote pending → NO_CHANGE
+   └─ Cascade exhausted → consensus rules decide (see below)
 ```
 
 ### Result Definitions
@@ -74,6 +75,26 @@ For each feature to verify:
 | **Positive** | Model detected a change from stored data | Continue cascade |
 | **Negative** | Model confirms data matches (no change) | Stop cascade, data is current |
 | **Contradiction** | Models disagree with each other | Flag for manual review |
+
+### Positive-vote adjudication
+
+A positive vote never dies silently:
+
+- Once any model flags a change, the two-negative early stop is **disabled** —
+  the cascade runs to exhaustion so the claim gets adjudicated by every model.
+- Models queried after a positive vote receive a **targeted prompt** naming the
+  specific claimed change and asking them to confirm or refute it with sources.
+- **2+ positive votes** → INCONCLUSIVE → an `[Unconfirmed Change]` issue is filed.
+- **1 positive vote outvoted by no-change consensus** → the feature resolves as
+  NO_CHANGE, but the signal is recorded and rolled into the open
+  `[Signals] Unconfirmed change signals digest` issue (label
+  `unconfirmed-signals`) so a human can spot recurring claims.
+- The run summary reports `Positive votes discarded` — a nonzero value with zero
+  issues filed would indicate suppression.
+
+A **silence canary** in the workflow files a `pipeline-canary` issue if no
+automated issue of any kind has been created for 21+ days while scheduled runs
+keep succeeding — the failure mode where suppression looks identical to health.
 
 ## What Gets Verified
 

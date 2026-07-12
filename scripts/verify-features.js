@@ -48,6 +48,9 @@ const {
     generateStalenessReport,
     printResults,
     createGitHubIssue,
+    commentOnGitHubIssue,
+    findExistingIssue,
+    generateSignalsDigestBody,
     generateCascadeHealthIssue
 } = require('./lib/reporter');
 
@@ -429,6 +432,28 @@ async function main() {
             const issueUrl = createGitHubIssue(title, body, ['verification-inconclusive', 'needs-review']);
             if (issueUrl) {
                 console.log(`  Issue created: ${issueUrl}`);
+            }
+        }
+
+        // Roll discarded positive signals into a rolling digest issue.
+        // A single outvoted positive isn't worth its own issue, but dropping
+        // it silently is how the pipeline went dark — keep one digest issue
+        // open and append each run's signals as a comment.
+        const withSignals = results.filter(r => (r.discardedPositives || []).length > 0);
+        if (withSignals.length > 0) {
+            const digestTitle = '[Signals] Unconfirmed change signals digest';
+            const digestBody = generateSignalsDigestBody(withSignals);
+
+            const existingDigest = findExistingIssue(digestTitle);
+            if (existingDigest) {
+                console.log(`\nAppending ${withSignals.length} feature signal(s) to digest: ${existingDigest}`);
+                commentOnGitHubIssue(existingDigest, digestBody);
+            } else {
+                console.log(`\nCreating signals digest issue (${withSignals.length} feature(s) with discarded signals)`);
+                const issueUrl = createGitHubIssue(digestTitle, digestBody, ['unconfirmed-signals']);
+                if (issueUrl) {
+                    console.log(`  Digest issue: ${issueUrl}`);
+                }
             }
         }
 
