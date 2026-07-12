@@ -869,7 +869,7 @@ Available globally where ChatGPT is available.
 | URL      | https://chatgpt.com |
 | Launched | 2022-11-30T12:00Z |
 | Verified | 2026-03-21|
-| Checked  | 2026-07-07 |
+| Checked  | 2026-07-12 |
 
 ### Availability
 
