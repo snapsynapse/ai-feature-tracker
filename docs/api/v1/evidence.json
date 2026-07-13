@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-07-12T03:33:11.706Z",
+    "generated": "2026-07-13T01:37:22.267Z",
     "version": "1.0",
     "count": 90
   },
@@ -137,7 +137,7 @@
       "source_heading": "Chat",
       "launched": "2022-11-30T12:00Z",
       "verified": "2026-03-21",
-      "checked": "2026-07-07",
+      "checked": "2026-07-12",
       "sources": [
         {
           "title": "ChatGPT",
@@ -537,7 +537,7 @@
       "source_heading": "Chat",
       "launched": "2023-07-11T12:00Z",
       "verified": "2026-03-20",
-      "checked": "2026-07-07",
+      "checked": "2026-07-12",
       "sources": [
         {
           "title": "Claude",
@@ -914,7 +914,7 @@
       "source_heading": "Chat",
       "launched": "2023-02-07T12:00Z",
       "verified": "2026-03-22",
-      "checked": "2026-07-07",
+      "checked": "2026-07-12",
       "sources": [
         {
           "title": "Microsoft Copilot",
@@ -1131,7 +1131,7 @@
       "source_heading": "Agentic App Actions (Android)",
       "launched": "2026-03-03T12:00Z",
       "verified": "2026-03-21",
-      "checked": "2026-07-07",
+      "checked": "2026-07-12",
       "sources": [
         {
           "title": "March 2026 Pixel Drop",
@@ -1608,7 +1608,7 @@
       "source_heading": "Veo (Video Generation)",
       "launched": "2024-05-14T12:00Z",
       "verified": "2026-02-22",
-      "checked": "2026-07-07",
+      "checked": "2026-07-12",
       "sources": [
         {
           "title": "Veo - Google DeepMind",
@@ -2572,7 +2572,7 @@
       "source_heading": null,
       "launched": null,
       "verified": "2026-03-15",
-      "checked": "2026-07-07",
+      "checked": "2026-07-10",
       "sources": [
         {
           "title": "ChatGPT pricing",
@@ -2590,7 +2590,7 @@
       "source_heading": null,
       "launched": null,
       "verified": "2026-03-19",
-      "checked": "2026-07-07",
+      "checked": "2026-07-10",
       "sources": [
         {
           "title": "Claude pricing",
@@ -2608,7 +2608,7 @@
       "source_heading": null,
       "launched": null,
       "verified": "2026-03-15",
-      "checked": "2026-07-07",
+      "checked": "2026-07-10",
       "sources": [
         {
           "title": "Microsoft Copilot pricing",
