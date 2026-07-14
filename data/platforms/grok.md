@@ -30,7 +30,7 @@ last_verified: 2026-06-18
 | URL | https://x.ai/blog/grok-deepsearch |
 | Launched | 2025-02-17T12:00Z |
 | Verified | 2026-03-24|
-| Checked | 2026-07-07|
+| Checked | 2026-07-14|
 
 ### Availability
 
@@ -85,7 +85,7 @@ Available globally.
 | URL | https://x.ai/grok |
 | Launched | 2023-11-04T12:00Z |
 | Verified | 2026-03-24|
-| Checked | 2026-07-07|
+| Checked | 2026-07-14|
 
 ### Availability
 
@@ -141,7 +141,7 @@ Available globally where X is available.
 | URL | https://x.ai/blog/grok-image-generation |
 | Launched | 2024-12-09T12:00Z |
 | Verified | 2026-03-24|
-| Checked | 2026-07-07|
+| Checked | 2026-07-14|
 
 ### Availability
 
@@ -197,7 +197,7 @@ Available globally.
 | URL | https://x.ai/blog/grok-imagine |
 | Launched | 2025-08-04T12:00Z |
 | Verified | 2026-03-24|
-| Checked | 2026-07-07|
+| Checked | 2026-07-14|
 
 ### Availability
 
@@ -256,7 +256,7 @@ Available globally where X is available.
 | URL | https://grok.com |
 | Launched | 2025-04-16T12:00Z |
 | Verified | 2026-03-20|
-| Checked | 2026-07-07|
+| Checked | 2026-07-14|
 
 ### Availability
 
@@ -312,7 +312,7 @@ Available globally where Grok is available.
 | URL | https://x.ai/blog/grok-voice |
 | Launched | 2025-02-24T12:00Z |
 | Verified | 2026-03-21|
-| Checked | 2026-07-07|
+| Checked | 2026-07-14|
 
 ### Availability
 
@@ -369,7 +369,7 @@ Available globally where X is available.
 | URL | https://grok.com/ |
 | Launched | 2023-11-04T12:00Z |
 | Verified | 2026-06-18|
-| Checked | 2026-07-07|
+| Checked | 2026-07-14|
 
 ### Availability
 
@@ -429,7 +429,7 @@ Available globally. EU/EEA users treated differently for training/data-usage def
 | URL | https://x.ai/blog/grok-3 |
 | Launched | 2025-02-17T12:00Z |
 | Verified | 2026-03-24|
-| Checked | 2026-07-07|
+| Checked | 2026-07-14|
 
 ### Availability
 
@@ -484,7 +484,7 @@ Available globally.
 | URL | https://x.ai/blog/grok-2 |
 | Launched | 2024-08-13T12:00Z |
 | Verified | 2026-03-24|
-| Checked | 2026-07-07|
+| Checked | 2026-07-14|
 
 ### Availability
 
@@ -540,7 +540,7 @@ Available globally where Grok is available.
 | URL | https://grok.com |
 | Launched | 2025-02-17T12:00Z |
 | Verified | 2026-03-07 |
-| Checked | 2026-07-07|
+| Checked | 2026-07-14|
 
 ### Availability
 
