@@ -4,7 +4,7 @@ vendor: OpenAI
 logo: https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg
 status_page: https://status.openai.com
 pricing_page: https://chatgpt.com/pricing
-last_verified: 2026-04-14
+last_verified: 2026-07-22
 ---
 
 ## Pricing
@@ -214,23 +214,23 @@ Available where ChatGPT is available. Same regional restrictions apply.
 | Property | Value |
 |----------|-------|
 | Category | coding |
-| Status | ga |
+| Status | deprecated |
 | Gating | free |
 | URL | https://openai.com/index/introducing-canvas/ |
 | Launched | 2024-10-03T12:00Z |
-| Verified | 2026-04-07|
-| Checked | 2026-07-14|
+| Verified | 2026-07-22|
+| Checked | 2026-07-22|
 
 ### Availability
 
 | Plan | Available | Limits | Notes |
 |------|-----------|--------|-------|
-| Free | ✅ | Standard | Full access |
-| Go | ✅ | Standard | Full access |
-| Plus | ✅ | Standard | Full access |
-| Pro | ✅ | Standard | Full access |
-| Team | ✅ | Standard | Full access |
-| Enterprise | ✅ | Standard | Full access |
+| Free | ✅ | GPT-4o only | Via GPT-4o default; removed from GPT-5.5 |
+| Go | ✅ | GPT-4o only | Via GPT-4o default; removed from GPT-5.5 |
+| Plus | ✅ | GPT-4o + legacy | GPT-4o default; legacy-model access sunsets 2026-08-26 |
+| Pro | ✅ | GPT-4o + legacy | GPT-4o default; legacy-model access sunsets 2026-08-26 |
+| Team | ✅ | GPT-4o + legacy | GPT-4o default; legacy-model access sunsets 2026-08-26 |
+| Enterprise | ✅ | GPT-4o + legacy | GPT-4o default; legacy-model access sunsets 2026-08-26 |
 
 ### Platforms
 
@@ -252,16 +252,18 @@ Available globally where ChatGPT is available.
 
 ### Talking Point
 
-> "Canvas is ChatGPT's split-screen workspace for writing and coding projects—edit inline, get suggestions, and refine together. **Available on all plans including free**, but currently desktop and web only. Mobile is coming soon."
+> "Canvas is **being sunset**. OpenAI removed the split-screen Canvas interface from its GPT-5.5 flagship models (Instant and Thinking), replacing it with inline **writing blocks and code blocks** in the chat thread. Canvas **remains available by default in GPT-4o for all users including free**, and paid users can still reach it through legacy models—but that legacy path **ends when OpenAI o3 retires on August 26, 2026**."
 
 ### Sources
 
 - [Introducing Canvas](https://openai.com/index/introducing-canvas/)
+- [ChatGPT Model Release Notes](https://help.openai.com/en/articles/9624314-model-release-notes)
 
 ### Changelog
 
 | Date | Change |
 |------|--------|
+| 2026-07-22T12:00Z | [Verified] Status ga → deprecated. Canvas removed from GPT-5.5 Instant/Thinking (replaced by inline writing/code blocks); still default in GPT-4o for all users; paid legacy-model access sunsets 2026-08-26. Availability notes updated; talking point rewritten. |
 | 2024-10-03T12:00Z | Initial entry |
 
 ---
