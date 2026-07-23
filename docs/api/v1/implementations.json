@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-07-23T04:02:24.814Z",
+    "generated": "2026-07-23T04:04:03.079Z",
     "version": "1.0",
     "count": 72
   },
@@ -349,43 +349,43 @@
       ],
       "category": "coding",
       "gating": "free",
-      "status": "ga",
+      "status": "deprecated",
       "plans": [
         {
           "plan": "Free",
           "available": true,
-          "limits": "Standard",
-          "notes": "Full access"
+          "limits": "GPT-4o only",
+          "notes": "Via GPT-4o default; removed from GPT-5.5"
         },
         {
           "plan": "Go",
           "available": true,
-          "limits": "Standard",
-          "notes": "Full access"
+          "limits": "GPT-4o only",
+          "notes": "Via GPT-4o default; removed from GPT-5.5"
         },
         {
           "plan": "Plus",
           "available": true,
-          "limits": "Standard",
-          "notes": "Full access"
+          "limits": "GPT-4o + legacy",
+          "notes": "GPT-4o default; legacy-model access sunsets 2026-08-26"
         },
         {
           "plan": "Pro",
           "available": true,
-          "limits": "Standard",
-          "notes": "Full access"
+          "limits": "GPT-4o + legacy",
+          "notes": "GPT-4o default; legacy-model access sunsets 2026-08-26"
         },
         {
           "plan": "Team",
           "available": true,
-          "limits": "Standard",
-          "notes": "Full access"
+          "limits": "GPT-4o + legacy",
+          "notes": "GPT-4o default; legacy-model access sunsets 2026-08-26"
         },
         {
           "plan": "Enterprise",
           "available": true,
-          "limits": "Standard",
-          "notes": "Full access"
+          "limits": "GPT-4o + legacy",
+          "notes": "GPT-4o default; legacy-model access sunsets 2026-08-26"
         }
       ],
       "surfaces": [
@@ -444,11 +444,11 @@
           "notes": "Not available via API"
         }
       ],
-      "talking_point": "Canvas is ChatGPT's split-screen workspace for writing and coding projects—edit inline, get suggestions, and refine together. **Available on all plans including free**, but currently desktop and web only. Mobile is coming soon.",
+      "talking_point": "Canvas is **being sunset**. OpenAI removed the split-screen Canvas interface from its GPT-5.5 flagship models (Instant and Thinking), replacing it with inline **writing blocks and code blocks** in the chat thread. Canvas **remains available by default in GPT-4o for all users including free**, and paid users can still reach it through legacy models—but that legacy path **ends when OpenAI o3 retires on August 26, 2026**.",
       "launched": "2024-10-03T12:00Z",
-      "verified": "2026-04-07",
+      "verified": "2026-07-22",
       "evidence_id": "implementation-chatgpt-canvas",
-      "evidence_verified": "2026-04-07"
+      "evidence_verified": "2026-07-22"
     },
     {
       "id": "chatgpt-search",

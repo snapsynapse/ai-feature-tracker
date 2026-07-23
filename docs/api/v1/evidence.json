@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-07-23T04:02:24.814Z",
+    "generated": "2026-07-23T04:04:03.079Z",
     "version": "1.0",
     "count": 90
   },
@@ -113,15 +113,23 @@
       "source_file": "data/platforms/chatgpt.md",
       "source_heading": "Canvas",
       "launched": "2024-10-03T12:00Z",
-      "verified": "2026-04-07",
-      "checked": "2026-07-14",
+      "verified": "2026-07-22",
+      "checked": "2026-07-22",
       "sources": [
         {
           "title": "Introducing Canvas",
           "url": "https://openai.com/index/introducing-canvas/"
+        },
+        {
+          "title": "ChatGPT Model Release Notes",
+          "url": "https://help.openai.com/en/articles/9624314-model-release-notes"
         }
       ],
       "changelog": [
+        {
+          "date": "2026-07-22T12:00Z",
+          "change": "[Verified] Status ga → deprecated. Canvas removed from GPT-5.5 Instant/Thinking (replaced by inline writing/code blocks); still default in GPT-4o for all users; paid legacy-model access sunsets 2026-08-26. Availability notes updated; talking point rewritten."
+        },
         {
           "date": "2024-10-03T12:00Z",
           "change": "Initial entry"
