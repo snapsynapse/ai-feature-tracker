@@ -77,6 +77,26 @@ const PROFILE_NAMES = Object.keys(REQUEST_PROFILES);
 const BODY_CAPTURE_LIMIT = 4096;
 
 /**
+ * Max response header bytes the HTTP parser will accept.
+ * Node's default is 16 KB, which some large sites (e.g. Google properties
+ * setting many cookies) exceed — the parser then aborts with
+ * HPE_HEADER_OVERFLOW even though the URL is perfectly reachable.
+ */
+const MAX_HEADER_SIZE = 128 * 1024;
+
+/**
+ * True when an error code is a Node HTTP-parser error (HPE_*).
+ * These say something about how the response was framed, not whether the
+ * URL resolves, so they must never classify a link as broken.
+ *
+ * @param {string|null} errorCode
+ * @returns {boolean}
+ */
+function isParserError(errorCode) {
+    return typeof errorCode === 'string' && errorCode.startsWith('HPE_');
+}
+
+/**
  * Patterns that indicate a response body is a challenge/interstitial page
  * rather than real content. These are checked case-insensitively against
  * the first ~4KB of the response body.
@@ -151,17 +171,18 @@ function detectChallengePage(bodySnippet) {
  * @param {number} timeout - milliseconds
  * @param {Object} [opts]
  * @param {boolean} [opts.captureBody=false] - If true, capture first ~4KB of body for challenge detection
+ * @param {number}  [opts.maxHeaderSize=MAX_HEADER_SIZE] - Parser limit for response headers
  * @returns {Promise<RawResponse>}
  */
 function makeRequest(url, method, headers, timeout, opts = {}) {
-    const { captureBody = false } = opts;
+    const { captureBody = false, maxHeaderSize = MAX_HEADER_SIZE } = opts;
     const start = Date.now();
     return new Promise((resolve) => {
         try {
             const parsedUrl = new URL(url);
             const protocol = parsedUrl.protocol === 'https:' ? https : http;
 
-            const req = protocol.request(url, { method, timeout, headers }, (res) => {
+            const req = protocol.request(url, { method, timeout, headers, maxHeaderSize }, (res) => {
                 const elapsed = Date.now() - start;
                 const redirectUrl = (res.statusCode >= 300 && res.statusCode < 400)
                     ? res.headers.location || null
@@ -280,6 +301,11 @@ function classifySingleResponse(response) {
         if (response.error === 'ECONNRESET') {
             return { category: Category.BROKEN, evidence: `connection reset: ${response.error}` };
         }
+        // HTTP parser errors (HPE_*) — the server answered, we just could not
+        // parse the framing (oversized headers, etc.). Inconclusive, not broken.
+        if (isParserError(response.error)) {
+            return { category: null, evidence: `http parser error: ${response.error}` };  // signal: retry with GET
+        }
         // Other network errors → broken
         return { category: Category.BROKEN, evidence: `network error: ${response.error}` };
     }
@@ -362,12 +388,14 @@ async function checkUrl(url, options = {}) {
     let attempts = 0;
     let lastProfileUsed = 'default';
     let finalUrl = null;
+    let sawSoftBlock = false;
 
     // --- Step 1: HEAD with default profile ---
     attempts++;
     const headRes = await makeRequest(url, 'HEAD', REQUEST_PROFILES['default'], opts.timeout);
     const headClass = classifySingleResponse(headRes);
     trail.add(`HEAD ${headClass.evidence}`);
+    if (headClass.category === Category.SOFT_BLOCKED) sawSoftBlock = true;
 
     // Handle redirects
     if (headRes.redirectUrl) {
@@ -439,6 +467,7 @@ async function checkUrl(url, options = {}) {
     const getRes = await makeRequest(url, 'GET', REQUEST_PROFILES['default'], opts.timeout, { captureBody: true });
     const getClass = classifySingleResponse(getRes);
     trail.add(`GET ${getClass.evidence}`);
+    if (getClass.category === Category.SOFT_BLOCKED) sawSoftBlock = true;
 
     if (getRes.redirectUrl) {
         finalUrl = getRes.redirectUrl;
@@ -493,6 +522,7 @@ async function checkUrl(url, options = {}) {
         const profileRes = await makeRequest(url, 'GET', REQUEST_PROFILES[profileName], opts.timeout, { captureBody: true });
         const profileClass = classifySingleResponse(profileRes);
         trail.add(`GET[${profileName}] ${profileClass.evidence}`);
+        if (profileClass.category === Category.SOFT_BLOCKED) sawSoftBlock = true;
 
         if (profileRes.redirectUrl) {
             finalUrl = profileRes.redirectUrl;
@@ -533,11 +563,24 @@ async function checkUrl(url, options = {}) {
         }
     }
 
-    // --- Step 4: All attempts returned 403 → soft-blocked ---
+    // --- Step 4: no attempt produced a definitive answer ---
     trail.add('all profiles exhausted');
+
+    // All-403 → soft-blocked. Otherwise the run ended on inconclusive signals
+    // (405 chains, HTTP parser errors) — surface for review, never as broken.
+    if (sawSoftBlock) {
+        return createResult({
+            url, category: Category.SOFT_BLOCKED, http_code: 403,
+            final_url: null, evidence: trail.toString(),
+            checked_at: new Date().toISOString(),
+            attempts, method_used: 'GET', request_profile: lastProfileUsed,
+            latency_ms: Date.now() - startTime
+        });
+    }
+
     return createResult({
-        url, category: Category.SOFT_BLOCKED, http_code: 403,
-        final_url: null, evidence: trail.toString(),
+        url, category: Category.NEEDS_MANUAL_REVIEW, http_code: null,
+        final_url: finalUrl, evidence: trail.toString(),
         checked_at: new Date().toISOString(),
         attempts, method_used: 'GET', request_profile: lastProfileUsed,
         latency_ms: Date.now() - startTime
@@ -654,6 +697,8 @@ module.exports = {
 
     // Classification (exported for testing)
     classifySingleResponse,
+    isParserError,
+    MAX_HEADER_SIZE,
 
     // Challenge detection (exported for testing)
     detectChallengePage,

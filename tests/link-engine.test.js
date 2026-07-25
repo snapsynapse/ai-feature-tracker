@@ -11,11 +11,16 @@
 
 const { describe, it } = require('node:test');
 const assert = require('node:assert/strict');
+const http = require('node:http');
 
 const {
+    checkUrl,
     classifySingleResponse,
+    isParserError,
+    makeRequest,
     groupByCategory,
     summarize,
+    MAX_HEADER_SIZE,
     REQUEST_PROFILES,
     PROFILE_NAMES,
     DEFAULT_OPTIONS
@@ -174,6 +179,99 @@ describe('classifySingleResponse', () => {
             statusCode: null, headers: {}, error: 'ESOMETHING', redirectUrl: null, latency_ms: 50
         });
         assert.equal(result.category, Category.BROKEN);
+    });
+
+    // ---------------------------------------------------------------
+    // HTTP parser errors (HPE_*) — inconclusive, never broken
+    // Regression: gemini.google.com returns 200 to curl but overflows
+    // Node's default 16KB header limit, which used to report "broken".
+    // ---------------------------------------------------------------
+
+    describe('HPE_* parser errors → inconclusive (retry signal), never broken', () => {
+        const parserErrors = [
+            'HPE_HEADER_OVERFLOW',
+            'HPE_INVALID_HEADER_TOKEN',
+            'HPE_INVALID_CONSTANT',
+            'HPE_UNEXPECTED_CONTENT_LENGTH'
+        ];
+
+        for (const code of parserErrors) {
+            it(`${code} → null category (retry with GET)`, () => {
+                const result = classifySingleResponse({
+                    statusCode: null, headers: {}, error: code, redirectUrl: null, latency_ms: 50
+                });
+                assert.equal(result.category, null);
+                assert.notEqual(result.category, Category.BROKEN);
+                assert.ok(result.evidence.includes('parser'));
+                assert.ok(result.evidence.includes(code));
+            });
+        }
+    });
+
+    it('isParserError only matches HPE_ codes', () => {
+        assert.equal(isParserError('HPE_HEADER_OVERFLOW'), true);
+        assert.equal(isParserError('ECONNRESET'), false);
+        assert.equal(isParserError('ENOTFOUND'), false);
+        assert.equal(isParserError(null), false);
+        assert.equal(isParserError(undefined), false);
+    });
+});
+
+// ===================================================================
+// Oversized response headers — end-to-end against a local server
+// ===================================================================
+
+describe('oversized response headers', () => {
+
+    it('MAX_HEADER_SIZE is above Node\'s 16KB default', () => {
+        assert.ok(MAX_HEADER_SIZE > 16 * 1024);
+    });
+
+    it('checkUrl returns ok for a 200 with headers larger than Node\'s default', async () => {
+        // ~40KB of response headers — overflows Node's 16KB default parser
+        // limit, well under the engine's raised MAX_HEADER_SIZE.
+        const server = http.createServer((req, res) => {
+            const headers = {};
+            for (let i = 0; i < 40; i++) {
+                headers[`x-bulk-${i}`] = 'a'.repeat(1000);
+            }
+            res.writeHead(200, headers);
+            res.end('ok');
+        });
+
+        await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
+        const port = server.address().port;
+
+        try {
+            const result = await checkUrl(`http://127.0.0.1:${port}/`, { timeout: 5000 });
+            assert.equal(result.category, Category.OK);
+            assert.equal(result.http_code, 200);
+        } finally {
+            await new Promise(resolve => server.close(resolve));
+        }
+    });
+
+    it('makeRequest surfaces HPE_HEADER_OVERFLOW when the limit is too low', async () => {
+        const server = http.createServer((req, res) => {
+            res.writeHead(200, { 'x-bulk': 'a'.repeat(4000) });
+            res.end('ok');
+        });
+
+        await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
+        const port = server.address().port;
+
+        try {
+            const res = await makeRequest(
+                `http://127.0.0.1:${port}/`, 'GET', {}, 5000, { maxHeaderSize: 1024 }
+            );
+            assert.equal(res.statusCode, null);
+            assert.ok(isParserError(res.error), `expected HPE_* error, got ${res.error}`);
+
+            // The whole point: this must not be classified as broken.
+            assert.equal(classifySingleResponse(res).category, null);
+        } finally {
+            await new Promise(resolve => server.close(resolve));
+        }
     });
 });
 
