@@ -1,11 +1,39 @@
 {
   "meta": {
-    "generated": "2026-07-23T04:04:03.079Z",
+    "generated": "2026-07-25T21:15:28.786Z",
     "version": "1.0"
   },
   "products": {
     "chatgpt": {
       "plans": {
+        "Free": {
+          "price": "$0",
+          "implementations": [
+            "chatgpt-advanced-voice-mode",
+            "chatgpt-atlas-browser",
+            "chatgpt-canvas",
+            "chatgpt-search",
+            "chatgpt-projects",
+            "chatgpt-vision-image-understanding",
+            "chatgpt-chat"
+          ],
+          "capabilities": [
+            "hear-audio-and-speech",
+            "speak-back-in-real-time",
+            "search-the-web",
+            "take-actions-and-run-tools",
+            "make-and-edit-documents",
+            "write-and-edit-code",
+            "organize-work-in-projects",
+            "use-files-i-provide",
+            "read-text-and-documents",
+            "see-images-and-screens",
+            "write-and-explain",
+            "use-it-on-my-surfaces"
+          ],
+          "implementation_count": 7,
+          "capability_count": 12
+        },
         "Go": {
           "price": "$8/mo",
           "implementations": [
@@ -193,31 +221,6 @@
           ],
           "implementation_count": 12,
           "capability_count": 16
-        },
-        "Free": {
-          "price": "$0",
-          "implementations": [
-            "chatgpt-atlas-browser",
-            "chatgpt-canvas",
-            "chatgpt-search",
-            "chatgpt-projects",
-            "chatgpt-vision-image-understanding",
-            "chatgpt-chat"
-          ],
-          "capabilities": [
-            "search-the-web",
-            "take-actions-and-run-tools",
-            "make-and-edit-documents",
-            "write-and-edit-code",
-            "organize-work-in-projects",
-            "use-files-i-provide",
-            "read-text-and-documents",
-            "see-images-and-screens",
-            "write-and-explain",
-            "use-it-on-my-surfaces"
-          ],
-          "implementation_count": 6,
-          "capability_count": 10
         },
         "Business": {
           "price": null,

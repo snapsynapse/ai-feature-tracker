@@ -4,7 +4,7 @@ vendor: OpenAI
 logo: https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg
 status_page: https://status.openai.com
 pricing_page: https://chatgpt.com/pricing
-last_verified: 2026-07-22
+last_verified: 2026-07-25
 ---
 
 ## Pricing
@@ -26,29 +26,29 @@ last_verified: 2026-07-22
 |----------|-------|
 | Category | voice |
 | Status | ga |
-| Gating | paid |
+| Gating | mixed |
 | URL | https://help.openai.com/en/articles/8400625-voice-mode |
 | Launched | 2024-09-24T12:00Z |
-| Verified | 2026-03-15|
-| Checked | 2026-07-24|
+| Verified | 2026-07-25|
+| Checked | 2026-07-25|
 
 ### Availability
 
 | Plan | Available | Limits | Notes |
 |------|-----------|--------|-------|
-| Free | ⚠️ | Limited | Basic voice only, not Advanced Voice |
-| Go | ✅ | Standard | Full Advanced Voice |
-| Plus | ✅ | Higher | Priority access |
-| Pro | ✅ | Unlimited | Maximum quality |
-| Team | ✅ | Higher | Priority access |
-| Enterprise | ✅ | Custom | Full access |
+| Free | ✅ | Limited | GPT-Live-1 mini; web + mobile only, no desktop app |
+| Go | ✅ | Standard | GPT-Live-1; web + mobile |
+| Plus | ✅ | Daily cap | GPT-Live-1; incl. desktop app |
+| Pro | ✅ | Higher | GPT-Live-1; incl. desktop app |
+| Team | ✅ | Daily cap | GPT-Live-1; incl. desktop app |
+| Enterprise | ✅ | Custom | GPT-Live-1; incl. desktop app, admin-enabled |
 
 ### Platforms
 
 | Platform | Available | Notes |
 |----------|-----------|-------|
-| Windows | ✅ | Desktop app |
-| macOS | ❌ | Retired Jan 15, 2026 |
+| Windows | ✅ | Desktop app (paid plans) |
+| macOS | ✅ | Desktop app (paid plans), returned Jul 2026 |
 | Linux | ❌ |  |
 | iOS | ✅ | Best mobile experience |
 | Android | ✅ | Full support |
@@ -63,29 +63,34 @@ Available globally.
 
 ### Talking Point
 
-> "Advanced Voice Mode enables natural, real-time conversations with GPT-4o. Available on **Windows, iOS, Android, and web**. **macOS desktop voice was retired January 15, 2026**—Mac users should use the web version instead."
+> "Advanced voice is now **available on every plan, including free**—OpenAI's GPT-Live replaced the old Advanced Voice Mode as the default, with GPT-Live-1 mini for free accounts and GPT-Live-1 for paid. Free users get it on **web and mobile**; **voice in the macOS and Windows desktop apps is paid-only** and returned in July 2026 after being retired in January."
 
 ### Notes
 
-**macOS Desktop Deprecation (January 15, 2026):**
-OpenAI retired ALL voice functionality from the ChatGPT macOS desktop app on January 15, 2026, including Advanced Voice Mode. This was done to "focus on more unified and improved voice experiences across our apps."
+**GPT-Live replaced Advanced Voice Mode (July 2026):**
+OpenAI's GPT-Live is now the default ChatGPT voice experience. Per the GPT-Live system card, GPT-Live-1 is the default voice model for paid users and GPT-Live-1 mini for free users. The legacy Advanced Voice Mode remains reachable only as a fallback for features GPT-Live does not yet support (video and screen sharing) on web and mobile.
 
-Mac users can still access Advanced Voice Mode via:
-- **Web browser** at chatgpt.com (Safari, Chrome, etc.)
-- **iOS app** on iPhone/iPad
-- **Windows app** (if using Parallels or Boot Camp)
+**Usage limits:** OpenAI publishes no per-tier numeric caps. The model release notes state only that "usage of advanced Voice (audio inputs and outputs) by Plus and Team users is limited on a daily basis." Limits are dynamic and surfaced in-app. Specific minute figures circulating in third-party guides are not OpenAI-confirmed.
 
-OpenAI has indicated this may be temporary, with voice potentially returning to macOS in an improved form later.
+**macOS desktop voice — retired then restored:**
+- **January 15, 2026** — OpenAI retired all voice functionality from the ChatGPT macOS desktop app, to "focus on more unified and improved voice experiences across our apps." Voice remained on web, iOS, Android, and the Windows app.
+- **July 23, 2026** — ChatGPT Voice returned to the desktop app on both macOS and Windows, powered by GPT-Live, rolling out globally to Plus, Pro, Business, Edu, and Enterprise plans. It integrates with ChatGPT Work and Codex for voice-directed agent control.
+
+Free-tier users still have no desktop voice access and must use chatgpt.com or the mobile apps.
 
 ### Sources
 
 - [Voice Mode Help](https://help.openai.com/en/articles/8400625-voice-mode)
+- [GPT-Live System Card](https://deploymentsafety.openai.com/gpt-live)
+- [Model Release Notes](https://help.openai.com/en/articles/9624314-model-release-notes)
+- [ChatGPT Release Notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes)
 - [ChatGPT Pricing](https://chatgpt.com/pricing)
 
 ### Changelog
 
 | Date | Change |
 |------|--------|
+| 2026-07-25T12:00Z | [Verified] Free tier gained advanced voice (GPT-Live-1 mini); gating paid → mixed; macOS desktop voice returned Jul 23 2026 for paid plans; GPT-Live replaces Advanced Voice Mode as the default experience |
 | 2026-03-15T12:00Z | [Verified] Added Team and Enterprise rows to availability table |
 | 2026-01-15T12:00Z | macOS desktop voice retired |
 | 2024-09-24T12:00Z | Initial entry |

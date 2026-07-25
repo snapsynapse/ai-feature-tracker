@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-07-23T04:04:03.079Z",
+    "generated": "2026-07-25T21:15:28.786Z",
     "version": "1.0",
     "count": 72
   },
@@ -17,44 +17,44 @@
         "speak-back-in-real-time"
       ],
       "category": "voice",
-      "gating": "paid",
+      "gating": "mixed",
       "status": "ga",
       "plans": [
         {
           "plan": "Free",
-          "available": false,
+          "available": true,
           "limits": "Limited",
-          "notes": "Basic voice only, not Advanced Voice"
+          "notes": "GPT-Live-1 mini; web + mobile only, no desktop app"
         },
         {
           "plan": "Go",
           "available": true,
           "limits": "Standard",
-          "notes": "Full Advanced Voice"
+          "notes": "GPT-Live-1; web + mobile"
         },
         {
           "plan": "Plus",
           "available": true,
-          "limits": "Higher",
-          "notes": "Priority access"
+          "limits": "Daily cap",
+          "notes": "GPT-Live-1; incl. desktop app"
         },
         {
           "plan": "Pro",
           "available": true,
-          "limits": "Unlimited",
-          "notes": "Maximum quality"
+          "limits": "Higher",
+          "notes": "GPT-Live-1; incl. desktop app"
         },
         {
           "plan": "Team",
           "available": true,
-          "limits": "Higher",
-          "notes": "Priority access"
+          "limits": "Daily cap",
+          "notes": "GPT-Live-1; incl. desktop app"
         },
         {
           "plan": "Enterprise",
           "available": true,
           "limits": "Custom",
-          "notes": "Full access"
+          "notes": "GPT-Live-1; incl. desktop app, admin-enabled"
         }
       ],
       "surfaces": [
@@ -62,13 +62,13 @@
           "surface": "windows",
           "name": "Windows",
           "available": true,
-          "notes": "Desktop app"
+          "notes": "Desktop app (paid plans)"
         },
         {
           "surface": "macos",
           "name": "macOS",
-          "available": false,
-          "notes": "Retired Jan 15, 2026"
+          "available": true,
+          "notes": "Desktop app (paid plans), returned Jul 2026"
         },
         {
           "surface": "linux",
@@ -113,11 +113,11 @@
           "notes": "OpenAI API"
         }
       ],
-      "talking_point": "Advanced Voice Mode enables natural, real-time conversations with GPT-4o. Available on **Windows, iOS, Android, and web**. **macOS desktop voice was retired January 15, 2026**—Mac users should use the web version instead.",
+      "talking_point": "Advanced voice is now **available on every plan, including free**—OpenAI's GPT-Live replaced the old Advanced Voice Mode as the default, with GPT-Live-1 mini for free accounts and GPT-Live-1 for paid. Free users get it on **web and mobile**; **voice in the macOS and Windows desktop apps is paid-only** and returned in July 2026 after being retired in January.",
       "launched": "2024-09-24T12:00Z",
-      "verified": "2026-03-15",
+      "verified": "2026-07-25",
       "evidence_id": "implementation-chatgpt-advanced-voice-mode",
-      "evidence_verified": "2026-03-15"
+      "evidence_verified": "2026-07-25"
     },
     {
       "id": "chatgpt-agent-mode",

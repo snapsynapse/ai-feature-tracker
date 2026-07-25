@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-07-23T04:04:03.079Z",
+    "generated": "2026-07-25T21:15:28.786Z",
     "version": "1.0"
   },
   "capabilities": [
@@ -38,7 +38,7 @@
         "implementations": [
           "chatgpt-advanced-voice-mode"
         ],
-        "best_gating": "paid"
+        "best_gating": "mixed"
       },
       "claude": {
         "available": false,
@@ -166,7 +166,7 @@
         "implementations": [
           "chatgpt-advanced-voice-mode"
         ],
-        "best_gating": "paid"
+        "best_gating": "mixed"
       },
       "claude": {
         "available": false,

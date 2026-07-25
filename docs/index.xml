@@ -5,8 +5,15 @@
     <link>https://aitool.watch/</link>
     <description>Recent AI feature launches and changes across ChatGPT, Claude, Gemini, Copilot, Grok, and Perplexity.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 23 Jul 2026 04:04:03 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 25 Jul 2026 21:15:28 GMT</lastBuildDate>
     <atom:link href="https://aitool.watch/index.xml" rel="self" type="application/rss+xml"/>
+    <item>
+        <title>ChatGPT — [Verified] Free tier gained advanced voice (GPT-Live-1 mini); gating paid → mixed; macOS desktop voice returned Jul 23 2026 for paid plans; GPT-Live replaces Advanced Voice Mode as the default experience</title>
+        <link>https://aitool.watch/implementations.html#impl-chatgpt-advanced-voice-mode</link>
+        <guid isPermaLink="true">https://aitool.watch/implementations.html#impl-chatgpt-advanced-voice-mode?d=2026-07-25</guid>
+        <pubDate>Sat, 25 Jul 2026 12:00:00 GMT</pubDate>
+        <description>ChatGPT: [Verified] Free tier gained advanced voice (GPT-Live-1 mini); gating paid → mixed; macOS desktop voice returned Jul 23 2026 for paid plans; GPT-Live replaces Advanced Voice Mode as the default experience</description>
+    </item>
     <item>
         <title>ChatGPT — [Verified] Status ga → deprecated. Canvas removed from GPT-5.5 Instant/Thinking (replaced by inline writing/code blocks); still default in GPT-4o for all users; paid legacy-model access sunsets 2026-08-26. Availability notes updated; talking point rewritten.</title>
         <link>https://aitool.watch/implementations.html#impl-chatgpt-canvas</link>
@@ -349,13 +356,6 @@
         <guid isPermaLink="true">https://aitool.watch/implementations.html#impl-perplexity-chat?d=2026-03-07</guid>
         <pubDate>Sat, 07 Mar 2026 12:00:00 GMT</pubDate>
         <description>Perplexity: Initial entry</description>
-    </item>
-    <item>
-        <title>ChatGPT — Codex Security launched</title>
-        <link>https://aitool.watch/implementations.html#impl-chatgpt-codex-security</link>
-        <guid isPermaLink="true">https://aitool.watch/implementations.html#impl-chatgpt-codex-security?d=2026-03-06</guid>
-        <pubDate>Fri, 06 Mar 2026 12:00:00 GMT</pubDate>
-        <description>ChatGPT: Codex Security launched</description>
     </item>
 </channel>
 </rss>
