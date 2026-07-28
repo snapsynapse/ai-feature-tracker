@@ -817,7 +817,7 @@ Available in US, Canada, Japan, Korea, Thailand, Vietnam, Taiwan. Not available 
 | URL | https://openai.com/index/hello-gpt-4o/ |
 | Launched | 2024-05-13T12:00Z |
 | Verified | 2026-03-22|
-| Checked | 2026-07-24|
+| Checked | 2026-07-28|
 
 ### Availability
 
@@ -876,7 +876,7 @@ Available globally where ChatGPT is available.
 | URL      | https://chatgpt.com |
 | Launched | 2022-11-30T12:00Z |
 | Verified | 2026-03-21|
-| Checked  | 2026-07-24 |
+| Checked  | 2026-07-28 |
 
 ### Availability
 
