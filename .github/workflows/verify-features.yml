@@ -27,6 +27,11 @@ on:
         required: false
         type: number
         default: 50
+      auto_resolve:
+        description: 'Run the Claude auto-resolve agent (edits data/ and commits)'
+        required: false
+        type: boolean
+        default: false
 
 jobs:
   verify:
@@ -37,6 +42,9 @@ jobs:
       contents: write
       issues: write
       pull-requests: write
+      # claude-code-action mints its GitHub token via OIDC. Without this the
+      # auto-resolve step dies with "Unable to get ACTIONS_ID_TOKEN_REQUEST_URL".
+      id-token: write
 
     steps:
       - name: Checkout repository
@@ -130,8 +138,19 @@ jobs:
           echo "count=$COUNT" >> $GITHUB_OUTPUT
           echo "Found $COUNT open issues needing resolution"
 
+      # Gated to opt-in manual dispatch only.
+      #
+      # This step ran 5 times between 2026-03-25 and 2026-07-21 and failed all 5
+      # (missing id-token: write, fixed above) — it has never completed a single
+      # successful run. Until one supervised dispatch proves it behaves, it stays
+      # off the schedule: it edits data/platforms/ autonomously and commits.
+      # Once trusted, drop the event_name/auto_resolve conditions to re-arm it.
       - name: Auto-resolve verification issues
-        if: inputs.dry_run != true && steps.issues.outputs.count > 0
+        if: >-
+          github.event_name == 'workflow_dispatch'
+          && inputs.auto_resolve == true
+          && inputs.dry_run != true
+          && steps.issues.outputs.count > 0
         uses: anthropics/claude-code-action@v1
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -146,14 +165,23 @@ jobs:
             gh issue list --repo ${{ github.repository }} --state open --label "needs-review" --json number,title
 
             Then resolve them by platform. Be thorough but efficient — use batch mode.
-          allowed_tools: "Bash,Read,Edit,Write,Grep,Glob,WebFetch"
-          claude_args: "--model claude-sonnet-5 --max-turns 30"
+          # allowed_tools is NOT a valid @v1 input — it was silently ignored,
+          # so this step never actually ran under the tool restrictions it
+          # appeared to declare. Tool permissions belong in claude_args.
+          claude_args: >-
+            --model claude-sonnet-5
+            --max-turns 30
+            --allowedTools Bash,Read,Edit,Write,Grep,Glob,WebFetch
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PERPLEXITY_API_KEY: ${{ secrets.PERPLEXITY_API_KEY }}
 
       - name: Commit resolution updates
-        if: inputs.dry_run != true && steps.issues.outputs.count > 0
+        if: >-
+          github.event_name == 'workflow_dispatch'
+          && inputs.auto_resolve == true
+          && inputs.dry_run != true
+          && steps.issues.outputs.count > 0
         run: |
           if git diff --quiet data/platforms/ data/watchlist/; then
             echo "No additional changes from issue resolution"
