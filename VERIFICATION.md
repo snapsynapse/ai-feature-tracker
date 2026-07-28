@@ -89,6 +89,18 @@ A positive vote never dies silently:
   NO_CHANGE, but the signal is recorded and rolled into the open
   `[Signals] Unconfirmed change signals digest` issue (label
   `unconfirmed-signals`) so a human can spot recurring claims.
+- The digest **auto-closes after 28 quiet days** (no new signal appended). The
+  clock is the digest's own last-activity time, not the current run's scope —
+  scheduled runs are partial (`--max 50`, most-stale-first), so "no signals this
+  run" never means "no signals anywhere". Full corpus coverage (88 features)
+  takes two *successful* runs, nominally ~4 days; in practice scheduled runs
+  fail often enough that one cohort went 14 days between passes when 07-17 and
+  07-21 failed back to back. 28 days keeps a 2+ pass margin against that real
+  failure rate, so a signal that never resurfaces is noise rather than a feature
+  the rotation simply missed. A human comment on the digest resets the clock,
+  deferring the close. Override with `SIGNALS_DIGEST_QUIET_DAYS`. The next run
+  that records an outvoted positive opens a fresh digest, since digest lookup
+  matches open issues only.
 - The run summary reports `Positive votes discarded` — a nonzero value with zero
   issues filed would indicate suppression.
 

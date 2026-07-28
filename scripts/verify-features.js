@@ -49,8 +49,11 @@ const {
     printResults,
     createGitHubIssue,
     commentOnGitHubIssue,
+    closeGitHubIssue,
     findExistingIssue,
+    findExistingIssueDetails,
     generateSignalsDigestBody,
+    generateSignalsDigestCloseComment,
     generateCascadeHealthIssue
 } = require('./lib/reporter');
 
@@ -61,6 +64,17 @@ const {
     batchUpdateVerifiedDates,
     batchAddChangelogEntries
 } = require('./lib/file-updater');
+
+// Days the unconfirmed-signals digest may sit without a new signal before the
+// pipeline auto-closes it.
+//
+// Sizing: 88 features at --max 50 needs two SUCCESSFUL runs for full coverage.
+// Nominally that is ~4 days on the Mon/Thu schedule, but scheduled runs do fail
+// (4 of the 15 runs to 2026-07-28), and back-to-back failures on 07-17 and 07-21
+// stretched one cohort's coverage gap to 14 days. 28 days keeps a real 2+ pass
+// margin against that observed failure rate rather than assuming the happy path.
+// Override with SIGNALS_DIGEST_QUIET_DAYS.
+const SIGNALS_DIGEST_QUIET_DAYS = parseInt(process.env.SIGNALS_DIGEST_QUIET_DAYS, 10) || 28;
 
 // Parse command line arguments
 function parseArgs() {
@@ -440,8 +454,9 @@ async function main() {
         // it silently is how the pipeline went dark — keep one digest issue
         // open and append each run's signals as a comment.
         const withSignals = results.filter(r => (r.discardedPositives || []).length > 0);
+        const digestTitle = '[Signals] Unconfirmed change signals digest';
+
         if (withSignals.length > 0) {
-            const digestTitle = '[Signals] Unconfirmed change signals digest';
             const digestBody = generateSignalsDigestBody(withSignals);
 
             const existingDigest = findExistingIssue(digestTitle);
@@ -453,6 +468,34 @@ async function main() {
                 const issueUrl = createGitHubIssue(digestTitle, digestBody, ['unconfirmed-signals']);
                 if (issueUrl) {
                     console.log(`  Digest issue: ${issueUrl}`);
+                }
+            }
+        } else {
+            // No signals this run — consider auto-closing a digest that has gone quiet.
+            //
+            // Deliberately keyed off the digest's own quiet period, NOT this run's
+            // scope. Scheduled runs are partial (--max 50, most-stale-first), so
+            // "no signals this run" never implies "no signals anywhere". Over the
+            // quiet threshold the rotation covers the whole corpus several times,
+            // so a signal that never resurfaces is noise.
+            //
+            // updatedAt (not just bot comments) is the clock on purpose: a human
+            // actively discussing the digest should defer the auto-close.
+            const existing = findExistingIssueDetails(digestTitle);
+            if (existing) {
+                const quietDays = Math.floor(
+                    (Date.now() - new Date(existing.updatedAt).getTime()) / 86400000
+                );
+                if (quietDays >= SIGNALS_DIGEST_QUIET_DAYS) {
+                    console.log(`\nSignals digest quiet for ${quietDays} day(s) — auto-closing ${existing.url}`);
+                    closeGitHubIssue(
+                        existing.number,
+                        generateSignalsDigestCloseComment(quietDays, SIGNALS_DIGEST_QUIET_DAYS)
+                    );
+                } else {
+                    console.log(
+                        `\nSignals digest open and quiet for ${quietDays}/${SIGNALS_DIGEST_QUIET_DAYS} day(s) — leaving open`
+                    );
                 }
             }
         }
