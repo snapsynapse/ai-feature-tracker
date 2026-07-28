@@ -865,7 +865,7 @@ Beta available in the US and South Korea.
 | URL | https://support.google.com/gemini/answer/14901455 |
 | Launched | 2026-02-26T12:00Z |
 | Verified | 2026-03-07 |
-| Checked | 2026-07-14|
+| Checked | 2026-07-28|
 
 ### Availability
 
@@ -922,7 +922,7 @@ Available where Gemini Apps are available (230+ countries on web, 150+ on mobile
 | URL      | https://gemini.google.com |
 | Launched | 2024-02-08T12:00Z |
 | Verified | 2026-03-21 |
-| Checked  | 2026-07-14 |
+| Checked  | 2026-07-28 |
 
 ### Availability
 
