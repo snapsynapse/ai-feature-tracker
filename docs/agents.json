@@ -8,7 +8,7 @@
   "repository": "https://github.com/snapsynapse/ai-tool-watch",
   "license": "MIT",
   "maintainer": "Snap Synapse LLC",
-  "generated": "2026-07-30T01:35:51.131Z",
+  "generated": "2026-07-30T17:54:27.201Z",
   "capabilities": {
     "read": true,
     "write": false,
@@ -78,6 +78,10 @@
   "mcp": {
     "transport": "stdio",
     "server_script": "scripts/mcp-server.js",
+    "protocol_versions": [
+      "2026-07-28",
+      "2024-11-05"
+    ],
     "tools_count": 15,
     "description": "Read-only MCP server with 15 tools for querying capabilities, products, implementations, and evidence.",
     "tools": [

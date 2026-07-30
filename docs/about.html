@@ -172,7 +172,7 @@
 <h3>API and agents</h3>
 
 <ul><li><strong>JSON API</strong> — 10 stable files at <code>docs/api/v1/</code> covering all entity types and derived views (<a href="https://github.com/snapsynapse/ai-tool-watch/blob/main/docs/api/v1/USAGE.md">usage guide</a>)</li>
-<li><strong>MCP server</strong> — 15 read-only tools via <code>scripts/mcp-server.js</code> for agent-queryable access (config: <code>mcp.json</code>). Error responses follow the <a href="https://github.com/snapsynapse/graceful-boundaries">Graceful Boundaries</a> pattern with structured refusal and constructive guidance.</li>
+<li><strong>MCP server</strong> — 15 read-only tools via <code>scripts/mcp-server.js</code> for agent-queryable access (config: <code>mcp.json</code>). Dual-era: speaks MCP spec 2026-07-28 (stateless, <code>server/discover</code>, cacheable tool lists) and legacy 2024-11-05 in the same process. Error responses follow the <a href="https://github.com/snapsynapse/graceful-boundaries">Graceful Boundaries</a> pattern with structured refusal and constructive guidance.</li>
 <p></ul></p>
 <h3>Automation</h3>
 

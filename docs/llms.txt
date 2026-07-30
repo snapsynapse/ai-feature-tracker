@@ -52,7 +52,7 @@ Start with the index: https://aitool.watch/api/v1/index.json
 ## Agent access
 
 - [agents.json](https://aitool.watch/agents.json): Agent capability manifest describing API endpoints and MCP tools
-- [MCP server](https://github.com/snapsynapse/ai-tool-watch/blob/main/scripts/mcp-server.js): 15 read-only tools over stdio JSON-RPC
+- [MCP server](https://github.com/snapsynapse/ai-tool-watch/blob/main/scripts/mcp-server.js): 15 read-only tools over stdio JSON-RPC; speaks MCP spec 2026-07-28 (stateless, server/discover) and legacy 2024-11-05
 - [RSS feed](https://aitool.watch/index.xml): Recent feature changes as RSS 2.0
 
 ## Site pages

@@ -50,6 +50,9 @@ const VALID_IDS = {
 // ---------------------------------------------------------------------------
 
 const SERVER_INFO = { name: 'ai-tool-watch', version: '2.0.0' };
+const SUPPORTED_PROTOCOL_VERSIONS = ['2026-07-28', '2024-11-05'];
+const LEGACY_PROTOCOL_VERSION = '2024-11-05';
+const PROTOCOL_VERSION_META_KEY = 'io.modelcontextprotocol/protocolVersion';
 
 function meta() {
     return {
@@ -632,21 +635,35 @@ const TOOL_HANDLERS = {
 // JSON-RPC / MCP transport (stdio)
 // ---------------------------------------------------------------------------
 
+// resultType: 'complete' is required by the 2026-07-28 revision; legacy clients
+// MUST treat its absence as complete, so unconditional inclusion is safe.
 function jsonRpcResponse(id, result) {
-    return JSON.stringify({ jsonrpc: '2.0', id, result });
+    return JSON.stringify({ jsonrpc: '2.0', id, result: { resultType: 'complete', ...result } });
 }
 
-function jsonRpcError(id, code, message) {
-    return JSON.stringify({ jsonrpc: '2.0', id, error: { code, message } });
+function jsonRpcError(id, code, message, data) {
+    return JSON.stringify({ jsonrpc: '2.0', id, error: { code, message, ...(data ? { data } : {}) } });
 }
 
 function handleMessage(msg) {
     const { id, method, params } = msg;
 
+    // Modern (2026-07-28) requests carry the protocol version in per-request _meta.
+    // Reject unsupported versions; bare/legacy requests are served as before.
+    const requestedVersion = params?._meta?.[PROTOCOL_VERSION_META_KEY];
+    if (id !== undefined && requestedVersion !== undefined && !SUPPORTED_PROTOCOL_VERSIONS.includes(requestedVersion)) {
+        return jsonRpcError(id, -32022, 'Unsupported protocol version', {
+            supported: SUPPORTED_PROTOCOL_VERSIONS,
+            requested: requestedVersion
+        });
+    }
+
     switch (method) {
         case 'initialize':
             return jsonRpcResponse(id, {
-                protocolVersion: '2024-11-05',
+                protocolVersion: SUPPORTED_PROTOCOL_VERSIONS.includes(params?.protocolVersion)
+                    ? params.protocolVersion
+                    : LEGACY_PROTOCOL_VERSION,
                 capabilities: { tools: {} },
                 serverInfo: SERVER_INFO
             });
@@ -657,8 +674,18 @@ function handleMessage(msg) {
         case 'ping':
             return jsonRpcResponse(id, {});
 
+        case 'server/discover':
+            return jsonRpcResponse(id, {
+                supportedVersions: SUPPORTED_PROTOCOL_VERSIONS,
+                capabilities: { tools: {} },
+                _meta: { 'io.modelcontextprotocol/serverInfo': SERVER_INFO },
+                ttlMs: 3600000,
+                cacheScope: 'public'
+            });
+
         case 'tools/list':
-            return jsonRpcResponse(id, { tools: TOOLS });
+            // Tool list is static per process; underlying data rebuilds Mon/Thu.
+            return jsonRpcResponse(id, { tools: TOOLS, ttlMs: 3600000, cacheScope: 'public' });
 
         case 'tools/call': {
             const toolName = params?.name;

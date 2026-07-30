@@ -4559,7 +4559,7 @@ Start with the index: ${SITE_URL}api/v1/index.json
 ## Agent access
 
 - [agents.json](${SITE_URL}agents.json): Agent capability manifest describing API endpoints and MCP tools
-- [MCP server](${REPO_URL}/blob/main/scripts/mcp-server.js): 15 read-only tools over stdio JSON-RPC
+- [MCP server](${REPO_URL}/blob/main/scripts/mcp-server.js): 15 read-only tools over stdio JSON-RPC; speaks MCP spec 2026-07-28 (stateless, server/discover) and legacy 2024-11-05
 - [RSS feed](${SITE_URL}index.xml): Recent feature changes as RSS 2.0
 
 ## Site pages
@@ -4654,6 +4654,7 @@ function generateAgentsJson(ontologyData) {
         mcp: {
             transport: 'stdio',
             server_script: 'scripts/mcp-server.js',
+            protocol_versions: ['2026-07-28', '2024-11-05'],
             tools_count: 15,
             description: 'Read-only MCP server with 15 tools for querying capabilities, products, implementations, and evidence.',
             tools: [

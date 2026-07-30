@@ -76,7 +76,7 @@ Scope criteria and watchlist: [design/SCOPE.md](design/SCOPE.md), [design/WATCHL
 ### API and agents
 
 - **JSON API** — 10 stable files at `docs/api/v1/` covering all entity types and derived views ([usage guide](docs/api/v1/USAGE.md))
-- **MCP server** — 15 read-only tools via `scripts/mcp-server.js` for agent-queryable access (config: `mcp.json`). Error responses follow the [Graceful Boundaries](https://github.com/snapsynapse/graceful-boundaries) pattern with structured refusal and constructive guidance.
+- **MCP server** — 15 read-only tools via `scripts/mcp-server.js` for agent-queryable access (config: `mcp.json`). Dual-era: speaks MCP spec 2026-07-28 (stateless, `server/discover`, cacheable tool lists) and legacy 2024-11-05 in the same process. Error responses follow the [Graceful Boundaries](https://github.com/snapsynapse/graceful-boundaries) pattern with structured refusal and constructive guidance.
 
 ### Automation
 
