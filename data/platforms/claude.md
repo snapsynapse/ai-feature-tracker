@@ -30,7 +30,7 @@ last_verified: 2026-04-14
 | URL | https://support.anthropic.com/en/articles/9487310-what-are-artifacts-and-how-do-i-use-them |
 | Launched | 2024-06-20T12:00Z |
 | Verified | 2026-04-06|
-| Checked | 2026-08-04|
+| Checked | 2026-08-11|
 
 ### Availability
 
@@ -86,7 +86,7 @@ Available globally.
 | URL | https://code.claude.com/docs/en/features-overview |
 | Launched | 2025-02-24T12:00Z |
 | Verified | 2026-03-22|
-| Checked | 2026-08-04|
+| Checked | 2026-08-11|
 
 ### Availability
 
@@ -146,7 +146,7 @@ Available globally via CLI and VS Code extension (Windows, macOS, Linux).
 | URL | https://claude.ai/directory |
 | Launched | 2025-05-01T12:00Z |
 | Verified | 2026-04-08|
-| Checked | 2026-08-04|
+| Checked | 2026-08-11|
 
 ### Availability
 
