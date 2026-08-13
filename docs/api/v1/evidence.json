@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-08-10T01:33:42.367Z",
+    "generated": "2026-08-13T01:34:13.834Z",
     "version": "1.0",
     "count": 90
   },
@@ -13,7 +13,7 @@
       "source_heading": "Advanced Voice Mode",
       "launched": "2024-09-24T12:00Z",
       "verified": "2026-07-25",
-      "checked": "2026-08-07",
+      "checked": "2026-08-11",
       "sources": [
         {
           "title": "Voice Mode Help",
@@ -64,7 +64,7 @@
       "source_heading": "Agent Mode",
       "launched": "2025-07-17T12:00Z",
       "verified": "2026-03-20",
-      "checked": "2026-08-07",
+      "checked": "2026-08-11",
       "sources": [
         {
           "title": "ChatGPT Agent Help",
@@ -99,7 +99,7 @@
       "source_heading": "Atlas Browser",
       "launched": "2025-10-21T12:00Z",
       "verified": "2026-03-27",
-      "checked": "2026-08-07",
+      "checked": "2026-08-11",
       "sources": [
         {
           "title": "Introducing ChatGPT Atlas",
@@ -130,7 +130,7 @@
       "source_heading": "Canvas",
       "launched": "2024-10-03T12:00Z",
       "verified": "2026-07-22",
-      "checked": "2026-08-07",
+      "checked": "2026-08-11",
       "sources": [
         {
           "title": "Introducing Canvas",
@@ -161,7 +161,7 @@
       "source_heading": "Chat",
       "launched": "2022-11-30T12:00Z",
       "verified": "2026-03-21",
-      "checked": "2026-08-04",
+      "checked": "2026-08-11",
       "sources": [
         {
           "title": "ChatGPT",
@@ -212,7 +212,7 @@
       "source_heading": "Codex (Code Agent)",
       "launched": "2025-04-16T12:00Z",
       "verified": "2026-03-15",
-      "checked": "2026-08-07",
+      "checked": "2026-08-11",
       "sources": [
         {
           "title": "ChatGPT Pricing",
@@ -251,7 +251,7 @@
       "source_heading": "Codex Security",
       "launched": "2026-03-06T12:00Z",
       "verified": "2026-03-15",
-      "checked": "2026-08-07",
+      "checked": "2026-08-11",
       "sources": [
         {
           "title": "Codex Security: now in research preview",
@@ -433,7 +433,7 @@
       "source_heading": "ChatGPT Search",
       "launched": "2024-10-31T12:00Z",
       "verified": "2026-03-20",
-      "checked": "2026-08-07",
+      "checked": "2026-08-11",
       "sources": [
         {
           "title": "Introducing ChatGPT Search",
@@ -503,7 +503,7 @@
       "source_heading": "Vision (Image Understanding)",
       "launched": "2024-05-13T12:00Z",
       "verified": "2026-03-22",
-      "checked": "2026-08-04",
+      "checked": "2026-08-11",
       "sources": [
         {
           "title": "Hello GPT-4o",
@@ -534,7 +534,7 @@
       "source_heading": "Artifacts",
       "launched": "2024-06-20T12:00Z",
       "verified": "2026-04-06",
-      "checked": "2026-08-04",
+      "checked": "2026-08-11",
       "sources": [
         {
           "title": "Artifacts Documentation",
@@ -592,7 +592,7 @@
       "source_heading": "Claude Code",
       "launched": "2025-02-24T12:00Z",
       "verified": "2026-03-22",
-      "checked": "2026-08-04",
+      "checked": "2026-08-11",
       "sources": [
         {
           "title": "Claude Code Documentation",
@@ -627,7 +627,7 @@
       "source_heading": "Connectors",
       "launched": "2025-05-01T12:00Z",
       "verified": "2026-04-08",
-      "checked": "2026-08-04",
+      "checked": "2026-08-11",
       "sources": [
         {
           "title": "Claude Integrations",
@@ -1275,7 +1275,7 @@
       "source_heading": "Chat",
       "launched": "2024-02-08T12:00Z",
       "verified": "2026-03-21",
-      "checked": "2026-08-04",
+      "checked": "2026-08-11",
       "sources": [
         {
           "title": "Gemini",
@@ -1566,7 +1566,7 @@
       "source_heading": "Past Chats (Memory)",
       "launched": "2026-02-26T12:00Z",
       "verified": "2026-03-07",
-      "checked": "2026-08-04",
+      "checked": "2026-08-11",
       "sources": [
         {
           "title": "Gemini Past Chats Free (9to5Google)",
@@ -1718,7 +1718,7 @@
       "source_heading": "Grok Chat",
       "launched": "2023-11-04T12:00Z",
       "verified": "2026-03-24",
-      "checked": "2026-08-04",
+      "checked": "2026-08-11",
       "sources": [
         {
           "title": "Grok Official",
@@ -1745,7 +1745,7 @@
       "source_heading": "DeepSearch",
       "launched": "2025-02-17T12:00Z",
       "verified": "2026-03-24",
-      "checked": "2026-08-04",
+      "checked": "2026-08-11",
       "sources": [
         {
           "title": "Grok DeepSearch",
@@ -1768,7 +1768,7 @@
       "source_heading": "Grok Image Generation (Aurora)",
       "launched": "2024-12-09T12:00Z",
       "verified": "2026-03-24",
-      "checked": "2026-08-04",
+      "checked": "2026-08-11",
       "sources": [
         {
           "title": "Grok Image Generation",
@@ -1795,7 +1795,7 @@
       "source_heading": "Grok Imagine (Video Generation)",
       "launched": "2025-08-04T12:00Z",
       "verified": "2026-03-24",
-      "checked": "2026-08-04",
+      "checked": "2026-08-11",
       "sources": [
         {
           "title": "Grok Imagine - TechCrunch",
@@ -1834,7 +1834,7 @@
       "source_heading": "Memory",
       "launched": "2025-02-17T12:00Z",
       "verified": "2026-03-07",
-      "checked": "2026-08-04",
+      "checked": "2026-08-11",
       "sources": [
         {
           "title": "How Grok Memory Works",
@@ -1865,7 +1865,7 @@
       "source_heading": "Real-time X/Twitter Data",
       "launched": "2023-11-04T12:00Z",
       "verified": "2026-06-18",
-      "checked": "2026-08-04",
+      "checked": "2026-08-11",
       "sources": [
         {
           "title": "Grok (consumer)",
@@ -1896,7 +1896,7 @@
       "source_heading": "Grok Studio",
       "launched": "2025-04-16T12:00Z",
       "verified": "2026-03-20",
-      "checked": "2026-08-04",
+      "checked": "2026-08-11",
       "sources": [
         {
           "title": "Grok Studio Announcement",
@@ -1923,7 +1923,7 @@
       "source_heading": "Think Mode",
       "launched": "2025-02-17T12:00Z",
       "verified": "2026-03-24",
-      "checked": "2026-08-04",
+      "checked": "2026-08-11",
       "sources": [
         {
           "title": "Grok Think Mode",
@@ -1946,7 +1946,7 @@
       "source_heading": "Vision (Image Understanding)",
       "launched": "2024-08-13T12:00Z",
       "verified": "2026-03-24",
-      "checked": "2026-08-04",
+      "checked": "2026-08-11",
       "sources": [
         {
           "title": "Grok 2 Announcement",
@@ -1973,7 +1973,7 @@
       "source_heading": "Grok Voice Mode",
       "launched": "2025-02-24T12:00Z",
       "verified": "2026-03-21",
-      "checked": "2026-08-04",
+      "checked": "2026-08-11",
       "sources": [
         {
           "title": "Grok Voice",
@@ -2004,7 +2004,7 @@
       "source_heading": "Agent Mode (Agentic Actions) / Perplexity Computer",
       "launched": "2024-11-01T12:00Z",
       "verified": "2026-03-21",
-      "checked": "2026-08-04",
+      "checked": "2026-08-11",
       "sources": [
         {
           "title": "Everything is Computer",
@@ -2043,7 +2043,7 @@
       "source_heading": "Buy with Pro (Shopping)",
       "launched": "2024-11-18T12:00Z",
       "verified": "2026-02-07",
-      "checked": "2026-08-04",
+      "checked": "2026-08-11",
       "sources": [
         {
           "title": "Shop like a Pro",
@@ -2078,7 +2078,7 @@
       "source_heading": "Chat",
       "launched": "2022-12-07T12:00Z",
       "verified": "2026-03-07",
-      "checked": "2026-08-04",
+      "checked": "2026-08-11",
       "sources": [
         {
           "title": "Perplexity AI",
@@ -2113,7 +2113,7 @@
       "source_heading": "Collections (Spaces)",
       "launched": "2024-10-17T12:00Z",
       "verified": "2026-03-25",
-      "checked": "2026-08-04",
+      "checked": "2026-08-11",
       "sources": [
         {
           "title": "Perplexity Spaces",
@@ -2140,7 +2140,7 @@
       "source_heading": "Comet Browser",
       "launched": "2025-07-09T12:00Z",
       "verified": "2026-03-31",
-      "checked": "2026-08-04",
+      "checked": "2026-08-11",
       "sources": [
         {
           "title": "Comet Browser",
@@ -2183,7 +2183,7 @@
       "source_heading": "Enterprise App Connectors",
       "launched": "2024-09-01T12:00Z",
       "verified": "2026-03-31",
-      "checked": "2026-08-04",
+      "checked": "2026-08-11",
       "sources": [
         {
           "title": "Perplexity Enterprise App Connectors",
@@ -2206,7 +2206,7 @@
       "source_heading": "Focus Modes",
       "launched": "2024-01-01T12:00Z",
       "verified": "2026-03-25",
-      "checked": "2026-08-04",
+      "checked": "2026-08-11",
       "sources": [
         {
           "title": "Perplexity Help",
@@ -2233,7 +2233,7 @@
       "source_heading": "Model Selection",
       "launched": "2024-01-01T12:00Z",
       "verified": "2026-01-29",
-      "checked": "2026-08-04",
+      "checked": "2026-08-11",
       "sources": [
         {
           "title": "Perplexity Pro Features",
@@ -2256,7 +2256,7 @@
       "source_heading": "Pages",
       "launched": "2024-05-30T12:00Z",
       "verified": "2026-01-29",
-      "checked": "2026-08-04",
+      "checked": "2026-08-11",
       "sources": [
         {
           "title": "Perplexity Pages",
@@ -2283,7 +2283,7 @@
       "source_heading": "Pro Search",
       "launched": "2024-07-02T12:00Z",
       "verified": "2026-02-07",
-      "checked": "2026-08-04",
+      "checked": "2026-08-11",
       "sources": [
         {
           "title": "Perplexity Pro",
@@ -2306,7 +2306,7 @@
       "source_heading": "Voice Mode",
       "launched": "2024-10-24T12:00Z",
       "verified": "2026-04-08",
-      "checked": "2026-08-04",
+      "checked": "2026-08-11",
       "sources": [
         {
           "title": "Perplexity Mobile App",
@@ -2329,7 +2329,7 @@
       "source_heading": "Codestral (Mistral)",
       "launched": "2024-05-29T12:00Z",
       "verified": "2026-03-20",
-      "checked": "2026-08-04",
+      "checked": "2026-08-11",
       "sources": [
         {
           "title": "Codestral",
@@ -2356,7 +2356,7 @@
       "source_heading": "Leanstral (Mistral)",
       "launched": "2026-03-16T12:00Z",
       "verified": "2026-03-24",
-      "checked": "2026-08-04",
+      "checked": "2026-08-11",
       "sources": [
         {
           "title": "Leanstral Announcement",
@@ -2383,7 +2383,7 @@
       "source_heading": "Llama 3.3 (Meta)",
       "launched": "2024-12-06T12:00Z",
       "verified": "2026-03-20",
-      "checked": "2026-08-04",
+      "checked": "2026-08-11",
       "sources": [
         {
           "title": "Llama 3.3 Release",
@@ -2410,7 +2410,7 @@
       "source_heading": "Llama 4 (Meta)",
       "launched": "2025-04-05T12:00Z",
       "verified": "2026-04-07",
-      "checked": "2026-08-04",
+      "checked": "2026-08-11",
       "sources": [
         {
           "title": "Llama 4 Blog",
@@ -2441,7 +2441,7 @@
       "source_heading": "Mistral Large / Mistral Nemo",
       "launched": "2024-07-18T12:00Z",
       "verified": "2026-03-21",
-      "checked": "2026-08-04",
+      "checked": "2026-08-11",
       "sources": [
         {
           "title": "Mistral Models",
@@ -2472,7 +2472,7 @@
       "source_heading": "Mistral Small 3",
       "launched": "2025-01-30T12:00Z",
       "verified": "2026-04-06",
-      "checked": "2026-08-04",
+      "checked": "2026-08-11",
       "sources": [
         {
           "title": "Mistral Small 3",
@@ -2511,7 +2511,7 @@
       "source_heading": "Mistral Small 4",
       "launched": "2026-03-16T12:00Z",
       "verified": "2026-03-24",
-      "checked": "2026-08-04",
+      "checked": "2026-08-11",
       "sources": [
         {
           "title": "Mistral Small 4 Announcement",
@@ -2538,7 +2538,7 @@
       "source_heading": "Qwen 2.5 (Alibaba)",
       "launched": "2024-09-19T12:00Z",
       "verified": "2026-03-22",
-      "checked": "2026-08-07",
+      "checked": "2026-08-11",
       "sources": [
         {
           "title": "Qwen 2.5",
@@ -2565,7 +2565,7 @@
       "source_heading": "Qwen 3 (Alibaba)",
       "launched": "2025-04-28T12:00Z",
       "verified": "2026-04-06",
-      "checked": "2026-08-07",
+      "checked": "2026-08-11",
       "sources": [
         {
           "title": "Qwen 3 Blog",
@@ -2596,7 +2596,7 @@
       "source_heading": null,
       "launched": null,
       "verified": "2026-03-15",
-      "checked": "2026-08-04",
+      "checked": "2026-08-07",
       "sources": [
         {
           "title": "ChatGPT pricing",
@@ -2614,7 +2614,7 @@
       "source_heading": null,
       "launched": null,
       "verified": "2026-03-19",
-      "checked": "2026-08-04",
+      "checked": "2026-08-07",
       "sources": [
         {
           "title": "Claude pricing",
@@ -2650,7 +2650,7 @@
       "source_heading": null,
       "launched": null,
       "verified": "2026-02-22",
-      "checked": "2026-08-04",
+      "checked": "2026-08-07",
       "sources": [
         {
           "title": "Gemini pricing",
@@ -2668,7 +2668,7 @@
       "source_heading": null,
       "launched": null,
       "verified": "2026-03-07",
-      "checked": "2026-08-04",
+      "checked": "2026-08-11",
       "sources": [
         {
           "title": "Grok pricing",
@@ -2686,7 +2686,7 @@
       "source_heading": "LM Studio",
       "launched": "2023-05",
       "verified": "2026-03-24",
-      "checked": "2026-08-04",
+      "checked": "2026-08-11",
       "sources": [
         {
           "title": "LM Studio",
@@ -2721,7 +2721,7 @@
       "source_heading": "Ollama",
       "launched": "2023-08-01T12:00Z",
       "verified": "2026-03-24",
-      "checked": "2026-08-04",
+      "checked": "2026-08-11",
       "sources": [
         {
           "title": "Ollama",
@@ -2752,7 +2752,7 @@
       "source_heading": null,
       "launched": null,
       "verified": "2026-01-29",
-      "checked": "2026-08-04",
+      "checked": "2026-08-11",
       "sources": [
         {
           "title": "Perplexity pricing",
@@ -2770,7 +2770,7 @@
       "source_heading": "text-generation-webui",
       "launched": "2023-02-27T12:00Z",
       "verified": "2026-03-07",
-      "checked": "2026-08-04",
+      "checked": "2026-08-11",
       "sources": [
         {
           "title": "text-generation-webui",
