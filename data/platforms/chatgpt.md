@@ -4,7 +4,7 @@ vendor: OpenAI
 logo: https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg
 status_page: https://status.openai.com
 pricing_page: https://chatgpt.com/pricing
-last_verified: 2026-07-25
+last_verified: 2026-08-15
 ---
 
 ## Pricing
@@ -15,7 +15,7 @@ last_verified: 2026-07-25
 | Go | $8/mo | GPT-5.4 Mini; 10x free limits, longer memory, may have ads |
 | Plus | $20/mo | GPT-5.4 Thinking, 5x Go limits, ad-free |
 | Pro | $200/mo | Unlimited GPT-5.4 Pro, Sora 2 Pro, 1M context |
-| Team | $25-30/user/mo | Plus features + admin, 2 user minimum |
+| Business | $25-30/user/mo | Plus features + admin, 2 user minimum |
 | Enterprise | Custom | SSO, advanced security, dedicated support |
 
 ---
@@ -29,8 +29,8 @@ last_verified: 2026-07-25
 | Gating | mixed |
 | URL | https://help.openai.com/en/articles/8400625-voice-mode |
 | Launched | 2024-09-24T12:00Z |
-| Verified | 2026-07-25|
-| Checked | 2026-08-14|
+| Verified | 2026-08-15|
+| Checked | 2026-08-15|
 
 ### Availability
 
@@ -40,7 +40,7 @@ last_verified: 2026-07-25
 | Go | ✅ | Standard | GPT-Live-1; web + mobile |
 | Plus | ✅ | Daily cap | GPT-Live-1; incl. desktop app |
 | Pro | ✅ | Higher | GPT-Live-1; incl. desktop app |
-| Team | ✅ | Daily cap | GPT-Live-1; incl. desktop app |
+| Business | ✅ | Daily cap | GPT-Live-1; incl. desktop app |
 | Enterprise | ✅ | Custom | GPT-Live-1; incl. desktop app, admin-enabled |
 
 ### Platforms
@@ -90,6 +90,7 @@ Free-tier users still have no desktop voice access and must use chatgpt.com or t
 
 | Date | Change |
 |------|--------|
+| 2026-08-15T12:00Z | [Verified] Plan renamed Team → Business (OpenAI help-center rename FAQ, effective 2025-08-29) |
 | 2026-07-25T12:00Z | [Verified] Free tier gained advanced voice (GPT-Live-1 mini); gating paid → mixed; macOS desktop voice returned Jul 23 2026 for paid plans; GPT-Live replaces Advanced Voice Mode as the default experience |
 | 2026-03-15T12:00Z | [Verified] Added Team and Enterprise rows to availability table |
 | 2026-01-15T12:00Z | macOS desktop voice retired |
@@ -106,8 +107,8 @@ Free-tier users still have no desktop voice access and must use chatgpt.com or t
 | Gating | paid |
 | URL | https://openai.com/index/introducing-chatgpt-agent/ |
 | Launched | 2025-07-17T12:00Z |
-| Verified | 2026-03-20|
-| Checked | 2026-08-14|
+| Verified | 2026-08-15|
+| Checked | 2026-08-15|
 
 ### Availability
 
@@ -117,7 +118,7 @@ Free-tier users still have no desktop voice access and must use chatgpt.com or t
 | Go | ❌ | — | Not available |
 | Plus | ✅ | 40/month | Initial requests only count |
 | Pro | ✅ | 400/month | 10x Plus limits |
-| Team | ✅ | 40/month | Can upgrade to flex pricing |
+| Business | ✅ | 40/month | Can upgrade to flex pricing |
 | Enterprise | ✅ | Custom | Configurable limits |
 
 ### Platforms
@@ -152,6 +153,7 @@ Available globally including EEA. Some Connector-based agent actions remain rest
 
 | Date | Change |
 |------|--------|
+| 2026-08-15T12:00Z | [Verified] Plan renamed Team → Business (OpenAI help-center rename FAQ, effective 2025-08-29) |
 | 2026-03-04T12:00Z | [Verified] Regional section updated: EEA now available for basic agent tasks (rolled out late July 2025); Connector-based actions still restricted in EEA/CH/UK |
 | 2025-07-17T12:00Z | Initial entry |
 
@@ -223,8 +225,8 @@ Available where ChatGPT is available. Same regional restrictions apply.
 | Gating | free |
 | URL | https://openai.com/index/introducing-canvas/ |
 | Launched | 2024-10-03T12:00Z |
-| Verified | 2026-07-22|
-| Checked | 2026-08-14|
+| Verified | 2026-08-15|
+| Checked | 2026-08-15|
 
 ### Availability
 
@@ -234,7 +236,7 @@ Available where ChatGPT is available. Same regional restrictions apply.
 | Go | ✅ | GPT-4o only | Via GPT-4o default; removed from GPT-5.5 |
 | Plus | ✅ | GPT-4o + legacy | GPT-4o default; legacy-model access sunsets 2026-08-26 |
 | Pro | ✅ | GPT-4o + legacy | GPT-4o default; legacy-model access sunsets 2026-08-26 |
-| Team | ✅ | GPT-4o + legacy | GPT-4o default; legacy-model access sunsets 2026-08-26 |
+| Business | ✅ | GPT-4o + legacy | GPT-4o default; legacy-model access sunsets 2026-08-26 |
 | Enterprise | ✅ | GPT-4o + legacy | GPT-4o default; legacy-model access sunsets 2026-08-26 |
 
 ### Platforms
@@ -268,6 +270,7 @@ Available globally where ChatGPT is available.
 
 | Date | Change |
 |------|--------|
+| 2026-08-15T12:00Z | [Verified] Plan renamed Team → Business (OpenAI help-center rename FAQ, effective 2025-08-29) |
 | 2026-07-22T12:00Z | [Verified] Status ga → deprecated. Canvas removed from GPT-5.5 Instant/Thinking (replaced by inline writing/code blocks); still default in GPT-4o for all users; paid legacy-model access sunsets 2026-08-26. Availability notes updated; talking point rewritten. |
 | 2024-10-03T12:00Z | Initial entry |
 
@@ -282,8 +285,8 @@ Available globally where ChatGPT is available.
 | Gating | free |
 | URL | https://openai.com/index/introducing-chatgpt-search/ |
 | Launched | 2024-10-31T12:00Z |
-| Verified | 2026-03-20|
-| Checked | 2026-08-14|
+| Verified | 2026-08-15|
+| Checked | 2026-08-15|
 
 ### Availability
 
@@ -293,7 +296,7 @@ Available globally where ChatGPT is available.
 | Go | ✅ | Higher | Full access |
 | Plus | ✅ | Higher | Priority |
 | Pro | ✅ | Highest | Priority |
-| Team | ✅ | Higher | Full access |
+| Business | ✅ | Higher | Full access |
 | Enterprise | ✅ | Custom | Full access |
 
 ### Platforms
@@ -327,6 +330,7 @@ Available globally where ChatGPT is available.
 
 | Date | Change |
 |------|--------|
+| 2026-08-15T12:00Z | [Verified] Plan renamed Team → Business (OpenAI help-center rename FAQ, effective 2025-08-29) |
 | 2025-02-05T12:00Z | Available to all users including logged-out |
 | 2024-12-16T12:00Z | Available to all logged-in users |
 | 2024-10-31T12:00Z | Initial entry
@@ -342,18 +346,18 @@ Available globally where ChatGPT is available.
 | Gating | paid |
 | URL | https://openai.com/index/introducing-codex/ |
 | Launched | 2025-04-16T12:00Z |
-| Verified | 2026-03-15|
-| Checked | 2026-08-14|
+| Verified | 2026-08-15|
+| Checked | 2026-08-15|
 
 ### Availability
 
 | Plan | Available | Limits | Notes |
 |------|-----------|--------|-------|
-| Free | ⚠️ | Limited | Temporary promotion |
-| Go | ⚠️ | Limited | Temporary promotion |
+| Free | ✅ | Limited | Tool-usage caps apply |
+| Go | ✅ | Limited | Higher caps than Free |
 | Plus | ✅ | Included | Access to Codex |
 | Pro | ✅ | Higher | Priority compute |
-| Team | ✅ | Included | |
+| Business | ✅ | Included | |
 | Enterprise | ✅ | Custom | |
 
 ### Platforms
@@ -376,7 +380,7 @@ Available globally.
 
 ### Talking Point
 
-> "Codex is ChatGPT's coding agent that can write, run, and debug code autonomously. Normally requires **Plus or higher**, but **Free and Go users have temporary promotional access** (limited). Available via **web, desktop apps, and CLI** (`npm i -g @openai/codex`) on macOS, Linux, and Windows (WSL)."
+> "Codex is ChatGPT's coding agent that can write, run, and debug code autonomously. **Available on every plan including Free**, but usage is quota-gated—Free and Go get limited runs, while **Plus ($20/mo) and above** get the usable allowances. Available via **web, desktop apps, and CLI** (`npm i -g @openai/codex`) on macOS, Linux, and Windows (WSL)."
 
 ### Sources
 
@@ -388,6 +392,8 @@ Available globally.
 
 | Date | Change |
 |------|--------|
+| 2026-08-15T12:00Z | [Verified] Free/Go access no longer framed as a temporary promotion — OpenAI documents Codex as a standard plan capability with per-tier quotas; rows ⚠️ → ✅ |
+| 2026-08-15T12:00Z | [Verified] Plan renamed Team → Business (OpenAI help-center rename FAQ, effective 2025-08-29) |
 | 2026-03-15T18:00Z | [Verified] Temporary Free/Go promotional access; paid plan rate limits doubled |
 | 2026-03-15T12:00Z | [Verified] Terminal/CLI access added (Codex CLI on macOS/Linux/Windows WSL); Linux support corrected; sources expanded |
 | 2025-04-16T12:00Z | Initial entry |
@@ -403,8 +409,8 @@ Available globally.
 | Gating | paid |
 | URL | https://openai.com/index/codex-security-now-in-research-preview/ |
 | Launched | 2026-03-06T12:00Z |
-| Verified | 2026-03-15|
-| Checked | 2026-08-14|
+| Verified | 2026-08-15|
+| Checked | 2026-08-15|
 
 ### Availability
 
@@ -414,9 +420,8 @@ Available globally.
 | Go | ❌ | — | Not available |
 | Plus | ❌ | — | Not available |
 | Pro | ✅ | Included | Research preview, free for first month |
-| Team | ❌ | — | Not available |
-| Enterprise | ✅ | Included | RBAC admin controls |
 | Business | ✅ | Included | Research preview |
+| Enterprise | ✅ | Included | RBAC admin controls |
 | Edu | ✅ | Included | Research preview |
 
 ### Platforms
@@ -450,6 +455,8 @@ Available globally.
 
 | Date | Change |
 |------|--------|
+| 2026-08-15T12:00Z | [Verified] Removed contradictory Team row (Team ❌ alongside Business ✅ for the same renamed plan); Business row reordered |
+| 2026-08-15T12:00Z | [Verified] Plan renamed Team → Business (OpenAI help-center rename FAQ, effective 2025-08-29) |
 | 2026-03-14T12:00Z | Initial entry |
 | 2026-03-06T12:00Z | Research preview launched for Pro/Enterprise/Business/Edu |
 
@@ -464,8 +471,8 @@ Available globally.
 | Gating | paid |
 | URL | https://chatgpt.com/gpts |
 | Launched | 2023-11-06T12:00Z |
-| Verified | 2026-03-15|
-| Checked | 2026-08-14|
+| Verified | 2026-08-15|
+| Checked | 2026-08-15|
 
 ### Availability
 
@@ -475,7 +482,7 @@ Available globally.
 | Go | ⚠️ | Use only | Can use public GPTs, cannot create |
 | Plus | ✅ | Create & use | Full access to GPT Builder + Actions |
 | Pro | ✅ | Create & use | Full access |
-| Team | ✅ | Create & share | Private GPTs for team |
+| Business | ✅ | Create & share | Private GPTs for team |
 | Enterprise | ✅ | Create & share | Private GPTs + admin controls |
 
 ### Platforms
@@ -510,6 +517,7 @@ Available globally where ChatGPT is available.
 
 | Date | Change |
 |------|--------|
+| 2026-08-15T12:00Z | [Verified] Plan renamed Team → Business (OpenAI help-center rename FAQ, effective 2025-08-29) |
 | 2024-04-09T12:00Z | Plugins deprecated, replaced by Actions |
 | 2023-11-06T12:00Z | Initial entry |
 
@@ -581,8 +589,8 @@ Available globally.
 | Gating | free |
 | URL | https://help.openai.com/en/articles/11011518-chatgpt-deep-research |
 | Launched | 2025-02-03T12:00Z |
-| Verified | 2026-03-20|
-| Checked | 2026-08-14|
+| Verified | 2026-08-15|
+| Checked | 2026-08-15|
 
 ### Availability
 
@@ -592,7 +600,7 @@ Available globally.
 | Go | ⚠️ | 5/month | Lightweight only (o4-mini) |
 | Plus | ✅ | 10+15 lightweight/month | Full + lightweight research |
 | Pro | ✅ | 125+125 lightweight/month | Full + lightweight research |
-| Team | ✅ | 10+15 lightweight/month | Full + lightweight research |
+| Business | ✅ | 10+15 lightweight/month | Full + lightweight research |
 | Enterprise | ✅ | Custom | Configurable limits |
 
 ### Platforms
@@ -625,6 +633,7 @@ Available globally.
 
 | Date | Change |
 |------|--------|
+| 2026-08-15T12:00Z | [Verified] Plan renamed Team → Business (OpenAI help-center rename FAQ, effective 2025-08-29) |
 | 2026-02-28T12:00Z | [Verified] Free tier access added (5 lightweight queries/month via o4-mini); Plus/Pro limits updated to include lightweight queries; Team/Enterprise rows added |
 | 2025-02-03T12:00Z | Initial entry |
 
@@ -639,8 +648,8 @@ Available globally.
 | Gating | free |
 | URL | https://openai.com/index/memory-and-new-controls-for-chatgpt/ |
 | Launched | 2024-09-05T12:00Z |
-| Verified | 2026-03-19|
-| Checked | 2026-08-14|
+| Verified | 2026-08-15|
+| Checked | 2026-08-15|
 
 ### Availability
 
@@ -650,7 +659,7 @@ Available globally.
 | Go | ✅ | Standard | Full chat history reference |
 | Plus | ✅ | Full | Full memory + chat history |
 | Pro | ✅ | Full | Full memory + chat history |
-| Team | ✅ | Full | Admin controls |
+| Business | ✅ | Full | Admin controls |
 | Enterprise | ✅ | Full | Admin controls, no training |
 
 ### Platforms
@@ -684,6 +693,7 @@ Available globally; off by default in EEA/UK/Switzerland (must enable manually).
 
 | Date | Change |
 |------|--------|
+| 2026-08-15T12:00Z | [Verified] Plan renamed Team → Business (OpenAI help-center rename FAQ, effective 2025-08-29) |
 | 2025-06-03T12:00Z | Memory improvements for free users |
 | 2025-04-10T12:00Z | Enhanced memory for Plus/Pro |
 | 2024-09-05T12:00Z | Initial entry |
@@ -699,8 +709,8 @@ Available globally; off by default in EEA/UK/Switzerland (must enable manually).
 | Gating | free |
 | URL | https://help.openai.com/en/articles/10169521-using-projects-in-chatgpt |
 | Launched | 2024-12-13T12:00Z |
-| Verified | 2026-03-22|
-| Checked | 2026-08-14|
+| Verified | 2026-08-15|
+| Checked | 2026-08-15|
 
 ### Availability
 
@@ -710,7 +720,7 @@ Available globally; off by default in EEA/UK/Switzerland (must enable manually).
 | Go | ✅ | Standard | Full access |
 | Plus | ✅ | Standard | Full access |
 | Pro | ✅ | Standard | Full access |
-| Team | ✅ | Standard | Shared projects |
+| Business | ✅ | Standard | Shared projects |
 | Enterprise | ✅ | Standard | Admin controls |
 
 ### Platforms
@@ -743,6 +753,7 @@ Available globally where ChatGPT is available.
 
 | Date | Change |
 |------|--------|
+| 2026-08-15T12:00Z | [Verified] Plan renamed Team → Business (OpenAI help-center rename FAQ, effective 2025-08-29) |
 | 2024-12-13T12:00Z | Initial entry |
 
 ---
@@ -756,8 +767,8 @@ Available globally where ChatGPT is available.
 | Gating | paid |
 | URL | https://openai.com/index/sora-is-here/ |
 | Launched | 2024-12-09T12:00Z |
-| Verified | 2026-03-22|
-| Checked | 2026-08-14|
+| Verified | 2026-08-15|
+| Checked | 2026-08-15|
 
 ### Availability
 
@@ -767,7 +778,7 @@ Available globally where ChatGPT is available.
 | Go | ❌ | — | Not available |
 | Plus | ✅ | 1000 credits/mo | ~50 videos at 480p |
 | Pro | ✅ | 10000 credits/mo | Unlimited relaxed mode |
-| Team | ⚠️ | Limited | Consumer ToS applies |
+| Business | ⚠️ | Limited | Consumer ToS applies |
 | Enterprise | ❌ | — | Business version in development |
 
 ### Platforms
@@ -801,6 +812,7 @@ Available in US, Canada, Japan, Korea, Thailand, Vietnam, Taiwan. Not available 
 
 | Date | Change |
 |------|--------|
+| 2026-08-15T12:00Z | [Verified] Plan renamed Team → Business (OpenAI help-center rename FAQ, effective 2025-08-29) |
 | 2026-01-10T12:00Z | Free tier access discontinued |
 | 2025-10-01T12:00Z | API access launched |
 | 2024-12-09T12:00Z | Initial entry
@@ -816,8 +828,8 @@ Available in US, Canada, Japan, Korea, Thailand, Vietnam, Taiwan. Not available 
 | Gating | free |
 | URL | https://openai.com/index/hello-gpt-4o/ |
 | Launched | 2024-05-13T12:00Z |
-| Verified | 2026-03-22|
-| Checked | 2026-08-11|
+| Verified | 2026-08-15|
+| Checked | 2026-08-15|
 
 ### Availability
 
@@ -827,7 +839,7 @@ Available in US, Canada, Japan, Korea, Thailand, Vietnam, Taiwan. Not available 
 | Go | ✅ | Standard | Full access |
 | Plus | ✅ | Higher | Priority |
 | Pro | ✅ | Unlimited | Maximum quality |
-| Team | ✅ | Full | Full access |
+| Business | ✅ | Full | Full access |
 | Enterprise | ✅ | Full | Full access |
 
 ### Platforms
@@ -861,6 +873,7 @@ Available globally where ChatGPT is available.
 
 | Date | Change |
 |------|--------|
+| 2026-08-15T12:00Z | [Verified] Plan renamed Team → Business (OpenAI help-center rename FAQ, effective 2025-08-29) |
 | 2026-03-07T12:00Z | Initial entry |
 | 2024-05-13T12:00Z | GPT-4o launched with native image understanding |
 
@@ -875,8 +888,8 @@ Available globally where ChatGPT is available.
 | Gating   | free |
 | URL      | https://chatgpt.com |
 | Launched | 2022-11-30T12:00Z |
-| Verified | 2026-03-21|
-| Checked  | 2026-08-11 |
+| Verified | 2026-08-15|
+| Checked | 2026-08-15|
 
 ### Availability
 
@@ -886,7 +899,7 @@ Available globally where ChatGPT is available.
 | Go | ✅ | Higher | GPT-5.4 Mini; 10× free limits |
 | Plus | ✅ | Higher | GPT-5.4 Thinking + Mini; 5× Go limits |
 | Pro | ✅ | Unlimited | GPT-5.4 Pro + Mini; no rate caps; 1M context |
-| Team | ✅ | Full | Plus features + workspace admin |
+| Business | ✅ | Full | Plus features + workspace admin |
 | Enterprise | ✅ | Custom | SSO, advanced security |
 
 ### Platforms
@@ -923,6 +936,7 @@ Available globally where ChatGPT is permitted. Some advanced features may be US-
 
 | Date | Change |
 |------|--------|
+| 2026-08-15T12:00Z | [Verified] Plan renamed Team → Business (OpenAI help-center rename FAQ, effective 2025-08-29) |
 | 2026-03-21T12:00Z | [Verified] GPT-5.4 Mini and Nano released: Mini available in ChatGPT (Free/Go via Thinking menu), API, and Codex; Nano is API-only; Mini $0.75/$4.50 per 1M tokens, Nano $0.20/$1.25 per 1M tokens; 400K context; vision support |
 | 2026-03-14T12:00Z | [Verified] GPT-5.4 family released: Plus gets GPT-5.4 Thinking, Pro gets GPT-5.4 Pro; GPT-5.2 Thinking moved to Legacy Models (90-day retirement); 1M context in API; native computer use tool |
 | 2026-03-07T12:00Z | Initial entry |

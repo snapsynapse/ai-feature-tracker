@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-08-13T01:34:13.834Z",
+    "generated": "2026-08-16T14:57:00.345Z",
     "version": "1.0",
     "count": 72
   },
@@ -45,7 +45,7 @@
           "notes": "GPT-Live-1; incl. desktop app"
         },
         {
-          "plan": "Team",
+          "plan": "Business",
           "available": true,
           "limits": "Daily cap",
           "notes": "GPT-Live-1; incl. desktop app"
@@ -115,9 +115,9 @@
       ],
       "talking_point": "Advanced voice is now **available on every plan, including free**—OpenAI's GPT-Live replaced the old Advanced Voice Mode as the default, with GPT-Live-1 mini for free accounts and GPT-Live-1 for paid. Free users get it on **web and mobile**; **voice in the macOS and Windows desktop apps is paid-only** and returned in July 2026 after being retired in January.",
       "launched": "2024-09-24T12:00Z",
-      "verified": "2026-07-25",
+      "verified": "2026-08-15",
       "evidence_id": "implementation-chatgpt-advanced-voice-mode",
-      "evidence_verified": "2026-07-25"
+      "evidence_verified": "2026-08-15"
     },
     {
       "id": "chatgpt-agent-mode",
@@ -160,7 +160,7 @@
           "notes": "10x Plus limits"
         },
         {
-          "plan": "Team",
+          "plan": "Business",
           "available": true,
           "limits": "40/month",
           "notes": "Can upgrade to flex pricing"
@@ -230,9 +230,9 @@
       ],
       "talking_point": "ChatGPT's Agent Mode lets it browse the web and take actions on your behalf. It's available on **Plus ($20/mo) and higher**—the new $8 Go plan does NOT include it. Plus gives you 40 agent tasks per month; Pro gives you 400. **Now available in EEA**—basic agent tasks rolled out to Europe in late July 2025; some Connector features remain restricted.",
       "launched": "2025-07-17T12:00Z",
-      "verified": "2026-03-20",
+      "verified": "2026-08-15",
       "evidence_id": "implementation-chatgpt-agent-mode",
-      "evidence_verified": "2026-03-20"
+      "evidence_verified": "2026-08-15"
     },
     {
       "id": "chatgpt-atlas-browser",
@@ -376,7 +376,7 @@
           "notes": "GPT-4o default; legacy-model access sunsets 2026-08-26"
         },
         {
-          "plan": "Team",
+          "plan": "Business",
           "available": true,
           "limits": "GPT-4o + legacy",
           "notes": "GPT-4o default; legacy-model access sunsets 2026-08-26"
@@ -446,9 +446,9 @@
       ],
       "talking_point": "Canvas is **being sunset**. OpenAI removed the split-screen Canvas interface from its GPT-5.5 flagship models (Instant and Thinking), replacing it with inline **writing blocks and code blocks** in the chat thread. Canvas **remains available by default in GPT-4o for all users including free**, and paid users can still reach it through legacy models—but that legacy path **ends when OpenAI o3 retires on August 26, 2026**.",
       "launched": "2024-10-03T12:00Z",
-      "verified": "2026-07-22",
+      "verified": "2026-08-15",
       "evidence_id": "implementation-chatgpt-canvas",
-      "evidence_verified": "2026-07-22"
+      "evidence_verified": "2026-08-15"
     },
     {
       "id": "chatgpt-search",
@@ -489,7 +489,7 @@
           "notes": "Priority"
         },
         {
-          "plan": "Team",
+          "plan": "Business",
           "available": true,
           "limits": "Higher",
           "notes": "Full access"
@@ -559,9 +559,9 @@
       ],
       "talking_point": "ChatGPT Search provides real-time web results with cited sources—news, weather, stocks, and more. **Available on all plans including free** and even logged-out users. Powered by Bing and partner publishers.",
       "launched": "2024-10-31T12:00Z",
-      "verified": "2026-03-20",
+      "verified": "2026-08-15",
       "evidence_id": "implementation-chatgpt-search",
-      "evidence_verified": "2026-03-20"
+      "evidence_verified": "2026-08-15"
     },
     {
       "id": "chatgpt-codex-code-agent",
@@ -580,15 +580,15 @@
       "plans": [
         {
           "plan": "Free",
-          "available": false,
+          "available": true,
           "limits": "Limited",
-          "notes": "Temporary promotion"
+          "notes": "Tool-usage caps apply"
         },
         {
           "plan": "Go",
-          "available": false,
+          "available": true,
           "limits": "Limited",
-          "notes": "Temporary promotion"
+          "notes": "Higher caps than Free"
         },
         {
           "plan": "Plus",
@@ -603,7 +603,7 @@
           "notes": "Priority compute"
         },
         {
-          "plan": "Team",
+          "plan": "Business",
           "available": true,
           "limits": "Included",
           "notes": ""
@@ -671,11 +671,11 @@
           "notes": "Codex API"
         }
       ],
-      "talking_point": "Codex is ChatGPT's coding agent that can write, run, and debug code autonomously. Normally requires **Plus or higher**, but **Free and Go users have temporary promotional access** (limited). Available via **web, desktop apps, and CLI** (`npm i -g @openai/codex`) on macOS, Linux, and Windows (WSL).",
+      "talking_point": "Codex is ChatGPT's coding agent that can write, run, and debug code autonomously. **Available on every plan including Free**, but usage is quota-gated—Free and Go get limited runs, while **Plus ($20/mo) and above** get the usable allowances. Available via **web, desktop apps, and CLI** (`npm i -g @openai/codex`) on macOS, Linux, and Windows (WSL).",
       "launched": "2025-04-16T12:00Z",
-      "verified": "2026-03-15",
+      "verified": "2026-08-15",
       "evidence_id": "implementation-chatgpt-codex-code-agent",
-      "evidence_verified": "2026-03-15"
+      "evidence_verified": "2026-08-15"
     },
     {
       "id": "chatgpt-codex-security",
@@ -718,22 +718,16 @@
           "notes": "Research preview, free for first month"
         },
         {
-          "plan": "Team",
-          "available": false,
-          "limits": "—",
-          "notes": "Not available"
+          "plan": "Business",
+          "available": true,
+          "limits": "Included",
+          "notes": "Research preview"
         },
         {
           "plan": "Enterprise",
           "available": true,
           "limits": "Included",
           "notes": "RBAC admin controls"
-        },
-        {
-          "plan": "Business",
-          "available": true,
-          "limits": "Included",
-          "notes": "Research preview"
         },
         {
           "plan": "Edu",
@@ -800,9 +794,9 @@
       ],
       "talking_point": "Codex Security is OpenAI's AI security agent—it connects to your GitHub repos, builds a codebase-specific threat model, validates vulnerabilities in sandboxed environments, and generates fix PRs. **Requires Pro ($200/mo), Enterprise, Business, or Edu**—not available on Plus or lower. Launched March 6, 2026 as a research preview with free usage for the first month.",
       "launched": "2026-03-06T12:00Z",
-      "verified": "2026-03-15",
+      "verified": "2026-08-15",
       "evidence_id": "implementation-chatgpt-codex-security",
-      "evidence_verified": "2026-03-15"
+      "evidence_verified": "2026-08-15"
     },
     {
       "id": "chatgpt-custom-gpts-actions",
@@ -844,7 +838,7 @@
           "notes": "Full access"
         },
         {
-          "plan": "Team",
+          "plan": "Business",
           "available": true,
           "limits": "Create & share",
           "notes": "Private GPTs for team"
@@ -914,9 +908,9 @@
       ],
       "talking_point": "Custom GPTs let you create specialized AI assistants with custom instructions, knowledge files, and **Actions for external API integrations**. Actions replaced the old plugin system in April 2024. **Anyone can use public GPTs**, but creating your own with Actions requires Plus ($20/mo) or higher.",
       "launched": "2023-11-06T12:00Z",
-      "verified": "2026-03-15",
+      "verified": "2026-08-15",
       "evidence_id": "implementation-chatgpt-custom-gpts-actions",
-      "evidence_verified": "2026-03-15"
+      "evidence_verified": "2026-08-15"
     },
     {
       "id": "chatgpt-dall-e-image-generation",
@@ -1059,7 +1053,7 @@
           "notes": "Full + lightweight research"
         },
         {
-          "plan": "Team",
+          "plan": "Business",
           "available": true,
           "limits": "10+15 lightweight/month",
           "notes": "Full + lightweight research"
@@ -1129,9 +1123,9 @@
       ],
       "talking_point": "Deep Research lets ChatGPT spend minutes researching a topic thoroughly. **Now available on all plans including free**—free users get 5 lightweight queries/month (powered by o4-mini). Plus gets 10 full + 15 lightweight per month; Pro gets 125 + 125.",
       "launched": "2025-02-03T12:00Z",
-      "verified": "2026-03-20",
+      "verified": "2026-08-15",
       "evidence_id": "implementation-chatgpt-deep-research",
-      "evidence_verified": "2026-03-20"
+      "evidence_verified": "2026-08-15"
     },
     {
       "id": "chatgpt-memory",
@@ -1172,7 +1166,7 @@
           "notes": "Full memory + chat history"
         },
         {
-          "plan": "Team",
+          "plan": "Business",
           "available": true,
           "limits": "Full",
           "notes": "Admin controls"
@@ -1242,9 +1236,9 @@
       ],
       "talking_point": "Memory lets ChatGPT remember your preferences and context across conversations. **All plans get saved memories**; Plus/Pro also get full chat history reference for richer personalization.",
       "launched": "2024-09-05T12:00Z",
-      "verified": "2026-03-19",
+      "verified": "2026-08-15",
       "evidence_id": "implementation-chatgpt-memory",
-      "evidence_verified": "2026-03-19"
+      "evidence_verified": "2026-08-15"
     },
     {
       "id": "chatgpt-projects",
@@ -1287,7 +1281,7 @@
           "notes": "Full access"
         },
         {
-          "plan": "Team",
+          "plan": "Business",
           "available": true,
           "limits": "Standard",
           "notes": "Shared projects"
@@ -1357,9 +1351,9 @@
       ],
       "talking_point": "Projects let you group related chats, files, and custom instructions into workspaces. **Available on all plans including free**—organize your work across topics with project-specific context.",
       "launched": "2024-12-13T12:00Z",
-      "verified": "2026-03-22",
+      "verified": "2026-08-15",
       "evidence_id": "implementation-chatgpt-projects",
-      "evidence_verified": "2026-03-22"
+      "evidence_verified": "2026-08-15"
     },
     {
       "id": "chatgpt-vision-image-understanding",
@@ -1400,7 +1394,7 @@
           "notes": "Maximum quality"
         },
         {
-          "plan": "Team",
+          "plan": "Business",
           "available": true,
           "limits": "Full",
           "notes": "Full access"
@@ -1470,9 +1464,9 @@
       ],
       "talking_point": "GPT-4o understands images natively—upload a photo, screenshot, chart, or diagram and ChatGPT will analyze it. **Available on all plans including free**, subject to your plan's message quota. Works across web, desktop, iOS, and Android. Also accessible via the OpenAI API using the `gpt-4o` model.",
       "launched": "2024-05-13T12:00Z",
-      "verified": "2026-03-22",
+      "verified": "2026-08-15",
       "evidence_id": "implementation-chatgpt-vision-image-understanding",
-      "evidence_verified": "2026-03-22"
+      "evidence_verified": "2026-08-15"
     },
     {
       "id": "chatgpt-sora-video-generation",
@@ -1513,7 +1507,7 @@
           "notes": "Unlimited relaxed mode"
         },
         {
-          "plan": "Team",
+          "plan": "Business",
           "available": false,
           "limits": "Limited",
           "notes": "Consumer ToS applies"
@@ -1583,9 +1577,9 @@
       ],
       "talking_point": "Sora generates videos from text prompts—up to 25 seconds at 1080p. **Requires Plus ($20/mo) or Pro ($200/mo)**. Plus gets 1,000 credits/month (~50 short videos); Pro gets 10,000 credits plus unlimited relaxed-mode generations. Not available in Europe.",
       "launched": "2024-12-09T12:00Z",
-      "verified": "2026-03-22",
+      "verified": "2026-08-15",
       "evidence_id": "implementation-chatgpt-sora-video-generation",
-      "evidence_verified": "2026-03-22"
+      "evidence_verified": "2026-08-15"
     },
     {
       "id": "chatgpt-chat",
@@ -1627,7 +1621,7 @@
           "notes": "GPT-5.4 Pro + Mini; no rate caps; 1M context"
         },
         {
-          "plan": "Team",
+          "plan": "Business",
           "available": true,
           "limits": "Full",
           "notes": "Plus features + workspace admin"
@@ -1697,9 +1691,9 @@
       ],
       "talking_point": "ChatGPT's core text conversation is **available on all plans including free** at chatgpt.com, with apps for iOS, Android, Windows, and macOS. Free and Go users now get **GPT-5.4 Mini** (via the Thinking menu); Plus unlocks **GPT-5.4 Thinking**; Pro gets **GPT-5.4 Pro** with 1M context. **GPT-5.4 Nano** is **API-only** ($0.20/1M input tokens). GPT-5.2 Thinking moved to Legacy Models with a 90-day retirement window.",
       "launched": "2022-11-30T12:00Z",
-      "verified": "2026-03-21",
+      "verified": "2026-08-15",
       "evidence_id": "implementation-chatgpt-chat",
-      "evidence_verified": "2026-03-21"
+      "evidence_verified": "2026-08-15"
     },
     {
       "id": "claude-artifacts",
@@ -4870,6 +4864,12 @@
           "notes": "Veo 3.1 via Gemini app and Flow"
         },
         {
+          "plan": "AI Ultra",
+          "available": true,
+          "limits": "Highest",
+          "notes": "Full Veo 3.1 access, largest Flow credit pool"
+        },
+        {
           "plan": "Workspace add-on",
           "available": false,
           "limits": "Limited",
@@ -4892,8 +4892,8 @@
         {
           "surface": "linux",
           "name": "Linux",
-          "available": false,
-          "notes": ""
+          "available": true,
+          "notes": "Web-based"
         },
         {
           "surface": "ios",
@@ -4932,11 +4932,11 @@
           "notes": "Gemini API via AI Studio and Vertex AI"
         }
       ],
-      "talking_point": "Veo is Google's video generation model. **Veo 3.1 generates 4K video up to 8 seconds with native audio**—including dialogue, sound effects, and ambient noise. Requires **AI Pro ($19.99/mo)**. Available in the Gemini app, Flow, and via API. Supports text-to-video and image-to-video with up to 3 reference images for character consistency.",
+      "talking_point": "Veo is Google's video generation model. **Veo 3.1 generates 4K video up to 8 seconds with native audio**—including dialogue, sound effects, and ambient noise. Requires **AI Pro ($19.99/mo)** or **AI Ultra ($249.99/mo)** for the highest limits. Available in the Gemini app, Flow, and via API. Supports text-to-video and image-to-video with up to 3 reference images—though **image-to-video is blocked in the EEA, UK, and Switzerland**.",
       "launched": "2024-05-14T12:00Z",
-      "verified": "2026-02-22",
+      "verified": "2026-08-15",
       "evidence_id": "implementation-gemini-veo-video-generation",
-      "evidence_verified": "2026-02-22"
+      "evidence_verified": "2026-08-15"
     },
     {
       "id": "gemini-agentic-app-actions-android",

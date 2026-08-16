@@ -4,7 +4,7 @@ vendor: Google
 logo: https://cdn.simpleicons.org/googlegemini
 status_page: https://status.cloud.google.com
 pricing_page: https://one.google.com/intl/en/about/google-ai-plans/
-last_verified: 2026-04-14
+last_verified: 2026-08-15
 ---
 
 ## Pricing
@@ -748,8 +748,8 @@ Available globally where Gemini is available.
 | Gating | paid |
 | URL | https://deepmind.google/models/veo/ |
 | Launched | 2024-05-14T12:00Z |
-| Verified | 2026-02-22|
-| Checked | 2026-08-14|
+| Verified | 2026-08-15|
+| Checked | 2026-08-15|
 
 ### Availability
 
@@ -757,6 +757,7 @@ Available globally where Gemini is available.
 |------|-----------|--------|-------|
 | Free | ❌ | — | Not available |
 | AI Pro | ✅ | Full | Veo 3.1 via Gemini app and Flow |
+| AI Ultra | ✅ | Highest | Full Veo 3.1 access, largest Flow credit pool |
 | Workspace add-on | ⚠️ | Limited | Veo 3.1 avatars in Google Vids |
 
 ### Platforms
@@ -765,7 +766,7 @@ Available globally where Gemini is available.
 |----------|-----------|-------|
 | Windows | ✅ | Web-based |
 | macOS | ✅ | Web-based |
-| Linux | ❌ |  |
+| Linux | ✅ | Web-based |
 | iOS | ✅ | Gemini app |
 | Android | ✅ | Gemini app |
 | Chrome | ❌ |  |
@@ -775,11 +776,11 @@ Available globally where Gemini is available.
 
 ### Regional
 
-Available in supported regions where Gemini is available. Some features limited in EU.
+Available in supported regions where Gemini is available. Image-to-video (photo-to-video) is restricted in the EEA, UK, and Switzerland.
 
 ### Talking Point
 
-> "Veo is Google's video generation model. **Veo 3.1 generates 4K video up to 8 seconds with native audio**—including dialogue, sound effects, and ambient noise. Requires **AI Pro ($19.99/mo)**. Available in the Gemini app, Flow, and via API. Supports text-to-video and image-to-video with up to 3 reference images for character consistency."
+> "Veo is Google's video generation model. **Veo 3.1 generates 4K video up to 8 seconds with native audio**—including dialogue, sound effects, and ambient noise. Requires **AI Pro ($19.99/mo)** or **AI Ultra ($249.99/mo)** for the highest limits. Available in the Gemini app, Flow, and via API. Supports text-to-video and image-to-video with up to 3 reference images—though **image-to-video is blocked in the EEA, UK, and Switzerland**."
 
 ### Sources
 
@@ -792,6 +793,7 @@ Available in supported regions where Gemini is available. Some features limited 
 
 | Date | Change |
 |------|--------|
+| 2026-08-15T12:00Z | [Verified] Added missing AI Ultra row; Linux corrected ❌ → ✅ (web-based, matching Windows/macOS); regional note sharpened to name the EEA/UK/Switzerland image-to-video restriction; Free remains ❌ (Jul 30–Aug 4 2026 free-video promo has expired) |
 | 2026-01-13T12:00Z | Veo 3.1 4K resolution and vertical video support |
 | 2025-10-01T12:00Z | Veo 3.1 released in Gemini API |
 | 2025-05-01T12:00Z | Veo 3 released with native audio generation |

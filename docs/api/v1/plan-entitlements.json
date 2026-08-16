@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-08-13T01:34:13.834Z",
+    "generated": "2026-08-16T14:57:00.345Z",
     "version": "1.0"
   },
   "products": {
@@ -13,6 +13,7 @@
             "chatgpt-atlas-browser",
             "chatgpt-canvas",
             "chatgpt-search",
+            "chatgpt-codex-code-agent",
             "chatgpt-projects",
             "chatgpt-vision-image-understanding",
             "chatgpt-chat"
@@ -31,7 +32,7 @@
             "write-and-explain",
             "use-it-on-my-surfaces"
           ],
-          "implementation_count": 7,
+          "implementation_count": 8,
           "capability_count": 12
         },
         "Go": {
@@ -41,6 +42,7 @@
             "chatgpt-atlas-browser",
             "chatgpt-canvas",
             "chatgpt-search",
+            "chatgpt-codex-code-agent",
             "chatgpt-dall-e-image-generation",
             "chatgpt-memory",
             "chatgpt-projects",
@@ -63,7 +65,7 @@
             "write-and-explain",
             "use-it-on-my-surfaces"
           ],
-          "implementation_count": 9,
+          "implementation_count": 10,
           "capability_count": 14
         },
         "Plus": {
@@ -149,7 +151,7 @@
           "implementation_count": 15,
           "capability_count": 18
         },
-        "Team": {
+        "Business": {
           "price": "$25-30/user/mo",
           "implementations": [
             "chatgpt-advanced-voice-mode",
@@ -157,6 +159,7 @@
             "chatgpt-canvas",
             "chatgpt-search",
             "chatgpt-codex-code-agent",
+            "chatgpt-codex-security",
             "chatgpt-custom-gpts-actions",
             "chatgpt-deep-research",
             "chatgpt-memory",
@@ -182,7 +185,7 @@
             "write-and-explain",
             "use-it-on-my-surfaces"
           ],
-          "implementation_count": 11,
+          "implementation_count": 12,
           "capability_count": 16
         },
         "Enterprise": {
@@ -221,19 +224,6 @@
           ],
           "implementation_count": 12,
           "capability_count": 16
-        },
-        "Business": {
-          "price": null,
-          "implementations": [
-            "chatgpt-codex-security"
-          ],
-          "capabilities": [
-            "write-and-edit-code",
-            "take-actions-and-run-tools",
-            "connect-to-external-systems"
-          ],
-          "implementation_count": 1,
-          "capability_count": 3
         },
         "Edu": {
           "price": null,
@@ -582,17 +572,19 @@
           "price": null,
           "implementations": [
             "gemini-gemini-advanced",
-            "gemini-workspace"
+            "gemini-workspace",
+            "gemini-veo-video-generation"
           ],
           "capabilities": [
             "make-and-edit-documents",
             "read-text-and-documents",
             "connect-to-external-systems",
             "use-files-i-provide",
-            "use-it-on-my-surfaces"
+            "use-it-on-my-surfaces",
+            "generate-video"
           ],
-          "implementation_count": 2,
-          "capability_count": 5
+          "implementation_count": 3,
+          "capability_count": 6
         },
         "Workspace add-on": {
           "price": "$20/user/mo",
