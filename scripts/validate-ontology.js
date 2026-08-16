@@ -2,6 +2,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const { checkEvidence } = require('./sync-evidence.js');
 
 const ROOT = path.join(__dirname, '..');
 const DIRS = {
@@ -422,31 +423,13 @@ function validate() {
             fail(errors, `Evidence ${record.id || key} missing checked date`);
         }
 
-        const sourceFeature = record.source_heading
-            ? sourceFeatureLookup.get(`${record.source_file}::${record.source_heading}`)
-            : null;
-
-        if (sourceFeature) {
-            if (record.launched !== sourceFeature.launched) {
-                fail(errors, `Evidence ${record.id || key} launched date is out of sync with source feature`);
-            }
-            if (record.verified !== sourceFeature.verified) {
-                fail(errors, `Evidence ${record.id || key} verified date is out of sync with source feature`);
-            }
-            if (record.checked !== sourceFeature.checked) {
-                fail(errors, `Evidence ${record.id || key} checked date is out of sync with source feature`);
-            }
-        } else if (record.entity_type === 'product') {
-            const productRecord = productsById.get(record.entity_id);
-            const expectedVerified = productRecord?.frontmatter?.last_verified || '';
-            if (record.verified !== expectedVerified) {
-                fail(errors, `Evidence ${record.id || key} verified date is out of sync with product metadata`);
-            }
-            if (record.checked !== expectedVerified) {
-                fail(errors, `Evidence ${record.id || key} checked date is out of sync with product metadata`);
-            }
-        }
+        // Field-level freshness (launched/verified/checked and everything else
+        // derived from source) is asserted once, by checkEvidence() below.
+        // Reimplementing it here is what let the product-date expectation
+        // diverge from the rollup sync-evidence actually performs.
     });
+
+    checkEvidence().forEach(problem => fail(errors, problem));
 
     implementations.forEach(entry => {
         if (!evidenceKeys.has(evidenceKey('implementation', entry.id))) {

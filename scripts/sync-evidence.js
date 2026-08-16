@@ -342,7 +342,53 @@ function buildEvidenceRecords() {
     });
 }
 
-function main() {
+// The single expectation of what the committed evidence index should contain.
+// Validators import this rather than reimplementing the derivation — two
+// independent implementations of "what should this value be" drift apart
+// silently, which is exactly how the product-date divergence went unnoticed.
+function checkEvidence() {
+    const expected = buildEvidenceRecords();
+    const problems = [];
+
+    if (!fs.existsSync(DIRS.evidenceFile)) {
+        return ['data/evidence/index.json is missing — run node scripts/sync-evidence.js'];
+    }
+
+    let committed;
+    try {
+        committed = JSON.parse(fs.readFileSync(DIRS.evidenceFile, 'utf8'));
+    } catch (error) {
+        return [`data/evidence/index.json is not valid JSON: ${error.message}`];
+    }
+
+    const committedById = new Map(committed.map(record => [record.id, record]));
+    const expectedById = new Map(expected.map(record => [record.id, record]));
+
+    expected.forEach(record => {
+        const actual = committedById.get(record.id);
+        if (!actual) {
+            problems.push(`Evidence ${record.id} is missing from the index — run node scripts/sync-evidence.js`);
+            return;
+        }
+        Object.keys(record).forEach(field => {
+            const want = JSON.stringify(record[field]);
+            const got = JSON.stringify(actual[field]);
+            if (want !== got) {
+                problems.push(`Evidence ${record.id} ${field} drifted from its source (index has ${got}, source derives ${want}) — run node scripts/sync-evidence.js`);
+            }
+        });
+    });
+
+    committed.forEach(record => {
+        if (!expectedById.has(record.id)) {
+            problems.push(`Evidence ${record.id} is stale — no longer derivable from source, run node scripts/sync-evidence.js`);
+        }
+    });
+
+    return problems;
+}
+
+function write() {
     const records = buildEvidenceRecords();
     const outputDir = path.dirname(DIRS.evidenceFile);
     if (!fs.existsSync(outputDir)) {
@@ -353,4 +399,22 @@ function main() {
     console.log(`Synced ${records.length} evidence records to ${DIRS.evidenceFile}`);
 }
 
-main();
+function main() {
+    if (process.argv.slice(2).includes('--check')) {
+        const problems = checkEvidence();
+        if (problems.length) {
+            console.error('Evidence index drift:\n');
+            problems.forEach(problem => console.error(`- ${problem}`));
+            process.exit(1);
+        }
+        console.log('Evidence index is in sync with its sources.');
+        return;
+    }
+    write();
+}
+
+if (require.main === module) {
+    main();
+}
+
+module.exports = { buildEvidenceRecords, checkEvidence };

@@ -12,13 +12,12 @@ on:
     - cron: '0 1 * * 1,4'  # 6pm Pacific (Mon & Thu)
 
 jobs:
-  # Reports ontology integrity on every push, PR, and scheduled rebuild.
-  # Deliberately NOT a dependency of build/deploy yet: 13 known findings
-  # remain (product evidence dates — see below), and gating on them today
-  # would halt the Mon/Thu rebuilds and the Pages deploy.
+  # Gates build and deploy on ontology integrity.
   #
-  # To make this blocking once those clear: add `needs: validate` to the
-  # build job. That is the intended end state.
+  # Deliberately does NOT run sync-evidence first. The point is to validate
+  # the committed state; regenerating the evidence index before checking it
+  # would make the drift check self-fulfilling and mask exactly the class of
+  # error it exists to catch.
   validate:
     runs-on: ubuntu-latest
 
@@ -31,13 +30,11 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Sync evidence records
-        run: node scripts/sync-evidence.js
-
       - name: Validate ontology
         run: node scripts/validate-ontology.js
 
   build:
+    needs: validate
     runs-on: ubuntu-latest
 
     steps:
