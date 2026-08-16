@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-08-16T14:57:27.579Z",
+    "generated": "2026-08-16T15:04:16.868Z",
     "version": "1.0"
   },
   "description": "AI Tool Watch — Machine-readable API",
@@ -34,7 +34,7 @@
     "evidence": {
       "path": "evidence.json",
       "description": "Evidence records with sources and changelog",
-      "count": 90
+      "count": 92
     },
     "capability-matrix": {
       "path": "capability-matrix.json",

@@ -110,6 +110,7 @@
                         <option value="xai">xAI</option>
                         <option value="meta">Meta</option>
                         <option value="mistral">Mistral</option>
+                        <option value="deepseek">DeepSeek</option>
                         <option value="alibaba">Alibaba</option>
                         <option value="ollama">Ollama</option>
                         <option value="lm-studio">LM Studio</option>
@@ -2890,9 +2891,69 @@
                         </div>
                     </div>
                 </div>
+                <div class="feature-card" id="alibaba-open-models-qwen3-coder-next-alibaba" data-category="coding" data-prices="0" data-surfaces="windows_macos_linux_terminal_api">
+                    <div class="card-main">
+                        <div class="feature-header">
+                            <h3><a href="https://huggingface.co/Qwen/Qwen3-Coder-Next" target="_blank" class="feature-link">Qwen-Coder</a></h3>
+                            <span class="badges"><button class="permalink-btn" onclick="copyPermalink('alibaba-open-models-qwen3-coder-next-alibaba')" title="Copy link to this feature" aria-label="Copy permalink">🔗</button><span class="badge avail-ga">GA</span><span class="badge gate-free">Free</span></span>
+                        </div>
+                        <div class="avail-grid">
+                            
+                            <div class="avail-item">
+                                <span class="plan has-tooltip" tabindex="0">Self-hosted<span class="plan-tooltip">Your hardware • MoE: 80B total, 3B active — runs on consumer GPUs</span></span>
+                                <span class="status"><span class="avail yes" aria-label="Available" role="img">✓</span></span>
+                            </div>
+                        </div>
+                        <div class="talking-point" role="button" tabindex="0" aria-label="Click to copy talking point" onclick="copyTalkingPoint(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();copyTalkingPoint(this)}">Qwen3-Coder-Next is Alibaba's latest coding model — <strong>MoE architecture with 80B total params but only 3B active</strong>, so it runs on consumer hardware (RTX 5090, 64GB Mac). <strong>256K context</strong>, Apache 2.0 licensed, designed for agentic coding workflows. SWE-Bench Pro score of 44.3%.<span class="notes-tooltip" tabindex="0" aria-label="Additional notes" onclick="event.stopPropagation()"><span class="notes-icon">ℹ️</span><span class="notes-content">tuned for coding rather than broad multimodal use</span></span><span class="notes-text" hidden>tuned for coding rather than broad multimodal use</span></div>
+                        <div class="capability-tags"><span class="provider-toggle active">Ollama</span><span class="provider-toggle active">LM Studio</span></div>
+                    </div>
+                    <div class="surface-column">
+                        <span class="plat-icon yes" title="Windows">Windows</span><span class="plat-icon yes" title="macOS">macOS</span><span class="plat-icon yes" title="Linux">Linux</span><span class="plat-icon no" title="iOS">iOS</span><span class="plat-icon no" title="Android">Android</span><span class="plat-icon no" title="Chrome">Chrome</span><span class="plat-icon no" title="web">web</span><span class="plat-icon yes" title="terminal">terminal</span><span class="plat-icon yes" title="API">API</span>
+                        <div class="surface-dates">
+                            <span class="date-item launched clickable" title="Launched" onclick="showChangelog('alibaba-open-models-qwen3-coder-next-alibaba')"><span class="date-emoji">🚀</span><span class="date-value">2026-02-03</span></span><span class="date-item verified" title="Verified"><span class="date-emoji">✓</span><span class="date-value">2026-03-31</span></span><span class="date-item checked" title="Checked"><span class="date-emoji">👁</span><span class="date-value">2026-08-14</span></span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
+        <section class="platform-section" data-platform="deepseek-ontology" data-vendor="deepseek">
+            <div class="platform-header">
+                <h2><img src="https://deepseek.com/favicon.ico" alt="DeepSeek" class="platform-logo">DeepSeek</h2>
+                <div class="platform-meta">
+                    <span>1 model access record · Verified: 2026-03-21</span>
+                </div>
+            </div>
+            <div class="pricing-bar">
+                <span class="price-tag"><strong>Self-hosted</strong>: $0 plus your hardware</span>
+            </div>
+            <div class="features-grid">
+
+                <div class="feature-card" id="deepseek-open-models-deepseek-v3-2-unified-v3-r1" data-category="other" data-prices="0" data-surfaces="windows_macos_linux_terminal_api">
+                    <div class="card-main">
+                        <div class="feature-header">
+                            <h3><a href="https://github.com/deepseek-ai/DeepSeek-V3" target="_blank" class="feature-link">DeepSeek V3 / R1</a></h3>
+                            <span class="badges"><button class="permalink-btn" onclick="copyPermalink('deepseek-open-models-deepseek-v3-2-unified-v3-r1')" title="Copy link to this feature" aria-label="Copy permalink">🔗</button><span class="badge avail-ga">GA</span><span class="badge gate-free">Free</span></span>
+                        </div>
+                        <div class="avail-grid">
+                            
+                            <div class="avail-item">
+                                <span class="plan has-tooltip" tabindex="0">Self-hosted<span class="plan-tooltip">Your hardware • V3.2: unified chat + reasoning model (replaces V3 and R1)</span></span>
+                                <span class="status"><span class="avail yes" aria-label="Available" role="img">✓</span></span>
+                            </div>
+                        </div>
+                        <div class="talking-point" role="button" tabindex="0" aria-label="Click to copy talking point" onclick="copyTalkingPoint(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();copyTalkingPoint(this)}">DeepSeek-V3.2 is a unified open model that combines chat and reasoning in one engine, <strong>replacing the separate V3 and R1 models</strong>. Features DeepSeek Sparse Attention for long-context, thinking-with-tools capability, and performance rivaling GPT-5. <strong>Distilled versions (1.5B-70B) run locally</strong>; full model needs enterprise hardware.<span class="notes-tooltip" tabindex="0" aria-label="Additional notes" onclick="event.stopPropagation()"><span class="notes-icon">ℹ️</span><span class="notes-content">the full flagship models need serious hardware</span></span><span class="notes-text" hidden>the full flagship models need serious hardware</span></div>
+                        <div class="capability-tags"><span class="provider-toggle active">Ollama</span><span class="provider-toggle active">local inference stacks</span></div>
+                    </div>
+                    <div class="surface-column">
+                        <span class="plat-icon yes" title="Windows">Windows</span><span class="plat-icon yes" title="macOS">macOS</span><span class="plat-icon yes" title="Linux">Linux</span><span class="plat-icon no" title="iOS">iOS</span><span class="plat-icon no" title="Android">Android</span><span class="plat-icon no" title="Chrome">Chrome</span><span class="plat-icon no" title="web">web</span><span class="plat-icon yes" title="terminal">terminal</span><span class="plat-icon yes" title="API">API</span>
+                        <div class="surface-dates">
+                            <span class="date-item launched clickable" title="Launched" onclick="showChangelog('deepseek-open-models-deepseek-v3-2-unified-v3-r1')"><span class="date-emoji">🚀</span><span class="date-value">2024-12-27</span></span><span class="date-item verified" title="Verified"><span class="date-emoji">✓</span><span class="date-value">2026-03-21</span></span><span class="date-item checked" title="Checked"><span class="date-emoji">👁</span><span class="date-value">2026-08-14</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <section class="platform-section" data-platform="lm-studio-ontology" data-vendor="lm-studio">
             <div class="platform-header">

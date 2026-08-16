@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generated": "2026-08-16T14:57:27.579Z",
+    "generated": "2026-08-16T15:04:16.868Z",
     "version": "1.0",
-    "count": 90
+    "count": 92
   },
   "evidence": [
     {
@@ -2413,6 +2413,45 @@
       "notes": ""
     },
     {
+      "id": "model-access-deepseek-v3-r1",
+      "entity_type": "model_access",
+      "entity_id": "deepseek-v3-r1",
+      "source_file": "data/platforms/deepseek-open-models.md",
+      "source_heading": "DeepSeek-V3.2 (unified V3 + R1)",
+      "launched": "2024-12-27T12:00Z",
+      "verified": "2026-03-21",
+      "checked": "2026-08-14",
+      "sources": [
+        {
+          "title": "DeepSeek-V3",
+          "url": "https://github.com/deepseek-ai/DeepSeek-V3"
+        },
+        {
+          "title": "DeepSeek-R1",
+          "url": "https://github.com/deepseek-ai/DeepSeek-R1"
+        },
+        {
+          "title": "DeepSeek-V3.2 Release Notes",
+          "url": "https://api-docs.deepseek.com/news/news251201"
+        },
+        {
+          "title": "Ollama DeepSeek",
+          "url": "https://ollama.com/library/deepseek-r1"
+        }
+      ],
+      "changelog": [
+        {
+          "date": "2026-03-21T12:00Z",
+          "change": "[Verified] V3.2 unified model replaces separate V3 and R1; integrates thinking into tool-use; DeepSeek Sparse Attention for long-context"
+        },
+        {
+          "date": "2024-12-27T12:00Z",
+          "change": "Initial entry"
+        }
+      ],
+      "notes": ""
+    },
+    {
       "id": "model-access-leanstral",
       "entity_type": "model_access",
       "entity_id": "leanstral",
@@ -2648,6 +2687,29 @@
         {
           "date": "2025-04-28T12:00Z",
           "change": "Initial entry"
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "model-access-qwen-coder",
+      "entity_type": "model_access",
+      "entity_id": "qwen-coder",
+      "source_file": "data/platforms/alibaba-open-models.md",
+      "source_heading": "Qwen3-Coder-Next (Alibaba)",
+      "launched": "2026-02-03T12:00Z",
+      "verified": "2026-03-31",
+      "checked": "2026-08-14",
+      "sources": [
+        {
+          "title": "Qwen3-Coder-Next on HuggingFace",
+          "url": "https://huggingface.co/Qwen/Qwen3-Coder-Next"
+        }
+      ],
+      "changelog": [
+        {
+          "date": "2026-03-23T12:00Z",
+          "change": "Initial entry — new model tracked per issue #400 verification"
         }
       ],
       "notes": ""

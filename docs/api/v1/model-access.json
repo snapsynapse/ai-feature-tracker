@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-08-16T14:57:27.579Z",
+    "generated": "2026-08-16T15:04:16.868Z",
     "version": "1.0",
     "count": 11
   },
@@ -59,9 +59,9 @@
         "write-and-explain"
       ],
       "source_file": "data/platforms/deepseek-open-models.md",
-      "source_heading": "DeepSeek-V3 / DeepSeek-R1",
-      "evidence_id": null,
-      "evidence_verified": null
+      "source_heading": "DeepSeek-V3.2 (unified V3 + R1)",
+      "evidence_id": "model-access-deepseek-v3-r1",
+      "evidence_verified": "2026-03-21"
     },
     {
       "id": "leanstral",
@@ -336,9 +336,9 @@
         "write-and-edit-code"
       ],
       "source_file": "data/platforms/alibaba-open-models.md",
-      "source_heading": "Qwen-Coder",
-      "evidence_id": null,
-      "evidence_verified": null
+      "source_heading": "Qwen3-Coder-Next (Alibaba)",
+      "evidence_id": "model-access-qwen-coder",
+      "evidence_verified": "2026-03-31"
     }
   ]
 }

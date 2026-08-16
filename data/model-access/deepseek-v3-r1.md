@@ -3,7 +3,7 @@ id: deepseek-v3-r1
 name: DeepSeek V3 / R1
 provider: deepseek
 record_source: data/platforms/deepseek-open-models.md
-source_heading: DeepSeek-V3 / DeepSeek-R1
+source_heading: DeepSeek-V3.2 (unified V3 + R1)
 last_verified: 2026-02-22
 status: active
 ---
