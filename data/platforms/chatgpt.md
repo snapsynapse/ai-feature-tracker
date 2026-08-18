@@ -169,7 +169,7 @@ Available globally including EEA. Some Connector-based agent actions remain rest
 | URL | https://openai.com/index/introducing-chatgpt-atlas/ |
 | Launched | 2025-10-21T12:00Z |
 | Verified | 2026-03-27|
-| Checked | 2026-08-14|
+| Checked | 2026-08-18|
 
 ### Availability
 
@@ -533,7 +533,7 @@ Available globally where ChatGPT is available.
 | URL | https://openai.com/index/dall-e-3/ |
 | Launched | 2023-10-01T12:00Z |
 | Verified | 2026-04-08|
-| Checked | 2026-08-14|
+| Checked | 2026-08-18|
 
 ### Availability
 
