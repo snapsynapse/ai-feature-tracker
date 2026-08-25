@@ -327,7 +327,7 @@ Available globally.
 | URL | https://www.anthropic.com/news/model-context-protocol |
 | Launched | 2024-11-25T12:00Z |
 | Verified | 2026-03-22|
-| Checked | 2026-08-18|
+| Checked | 2026-08-25|
 
 ### Availability
 
@@ -385,7 +385,7 @@ Available globally where Claude is available.
 | URL | https://support.anthropic.com/en/articles/9517075-what-are-projects |
 | Launched | 2024-06-25T12:00Z |
 | Verified | 2026-03-23|
-| Checked | 2026-08-18|
+| Checked | 2026-08-25|
 
 ### Availability
 
@@ -444,7 +444,7 @@ Available globally.
 | URL | https://www.anthropic.com/news/skills |
 | Launched | 2025-10-16T12:00Z |
 | Verified | 2026-04-03|
-| Checked | 2026-08-18|
+| Checked | 2026-08-25|
 
 ### Availability
 
@@ -510,7 +510,7 @@ Available globally where Claude is available.
 | URL | https://docs.anthropic.com/en/docs/build-with-claude/vision |
 | Launched | 2024-03-04T12:00Z |
 | Verified | 2026-03-22|
-| Checked | 2026-08-18|
+| Checked | 2026-08-25|
 
 ### Availability
 
@@ -566,7 +566,7 @@ Available globally.
 | URL | https://support.anthropic.com/en/articles/10166267-how-does-memory-work |
 | Launched | 2025-10-01T12:00Z |
 | Verified | 2026-03-19|
-| Checked | 2026-08-18|
+| Checked | 2026-08-25|
 
 ### Availability
 
