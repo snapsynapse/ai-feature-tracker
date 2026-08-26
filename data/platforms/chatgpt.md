@@ -4,7 +4,7 @@ vendor: OpenAI
 logo: https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg
 status_page: https://status.openai.com
 pricing_page: https://chatgpt.com/pricing
-last_verified: 2026-08-15
+last_verified: 2026-08-25
 ---
 
 ## Pricing
@@ -343,11 +343,11 @@ Available globally where ChatGPT is available.
 |----------|-------|
 | Category | coding |
 | Status | ga |
-| Gating | paid |
+| Gating | free |
 | URL | https://openai.com/index/introducing-codex/ |
 | Launched | 2025-04-16T12:00Z |
-| Verified | 2026-08-15|
-| Checked | 2026-08-15|
+| Verified | 2026-08-25|
+| Checked | 2026-08-25|
 
 ### Availability
 
@@ -387,11 +387,13 @@ Available globally.
 - [ChatGPT Pricing](https://chatgpt.com/pricing)
 - [Codex CLI GitHub](https://github.com/openai/codex)
 - [Codex CLI Documentation](https://developers.openai.com/codex/cli/)
+- [Using Codex with your ChatGPT plan](https://help.openai.com/en/articles/11369540-using-codex-with-your-chatgpt-plan)
 
 ### Changelog
 
 | Date | Change |
 |------|--------|
+| 2026-08-25T12:00Z | [Verified] Gating paid → free — OpenAI documents Codex as included on all ChatGPT plans including Free and Go; corrects contradiction with the availability table |
 | 2026-08-15T12:00Z | [Verified] Free/Go access no longer framed as a temporary promotion — OpenAI documents Codex as a standard plan capability with per-tier quotas; rows ⚠️ → ✅ |
 | 2026-08-15T12:00Z | [Verified] Plan renamed Team → Business (OpenAI help-center rename FAQ, effective 2025-08-29) |
 | 2026-03-15T18:00Z | [Verified] Temporary Free/Go promotional access; paid plan rate limits doubled |

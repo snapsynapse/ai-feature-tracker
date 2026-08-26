@@ -5,8 +5,22 @@
     <link>https://aitool.watch/</link>
     <description>Recent AI feature launches and changes across ChatGPT, Claude, Gemini, Copilot, Grok, and Perplexity.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 17 Aug 2026 01:32:03 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 26 Aug 2026 01:58:14 GMT</lastBuildDate>
     <atom:link href="https://aitool.watch/index.xml" rel="self" type="application/rss+xml"/>
+    <item>
+        <title>ChatGPT — [Verified] Gating paid → free — OpenAI documents Codex as included on all ChatGPT plans including Free and Go; corrects contradiction with the availability table</title>
+        <link>https://aitool.watch/implementations.html#impl-chatgpt-codex-code-agent</link>
+        <guid isPermaLink="true">https://aitool.watch/implementations.html#impl-chatgpt-codex-code-agent?d=2026-08-25</guid>
+        <pubDate>Tue, 25 Aug 2026 12:00:00 GMT</pubDate>
+        <description>ChatGPT: [Verified] Gating paid → free — OpenAI documents Codex as included on all ChatGPT plans including Free and Go; corrects contradiction with the availability table</description>
+    </item>
+    <item>
+        <title>Grok — [Verified] Source swap — unofficial supergrok.online (CI link-check timeout) replaced with official xAI Imagine and video-generation docs</title>
+        <link>https://aitool.watch/implementations.html#impl-grok-grok-imagine-video-generation</link>
+        <guid isPermaLink="true">https://aitool.watch/implementations.html#impl-grok-grok-imagine-video-generation?d=2026-08-25</guid>
+        <pubDate>Tue, 25 Aug 2026 12:00:00 GMT</pubDate>
+        <description>Grok: [Verified] Source swap — unofficial supergrok.online (CI link-check timeout) replaced with official xAI Imagine and video-generation docs</description>
+    </item>
     <item>
         <title>ChatGPT — [Verified] Plan renamed Team → Business (OpenAI help-center rename FAQ, effective 2025-08-29)</title>
         <link>https://aitool.watch/implementations.html#impl-chatgpt-advanced-voice-mode</link>
@@ -342,20 +356,6 @@
         <guid isPermaLink="true">https://aitool.watch/implementations.html#impl-gemini-extensions?d=2026-03-14</guid>
         <pubDate>Sat, 14 Mar 2026 12:00:00 GMT</pubDate>
         <description>Gemini: [Verified] URL updated: support.google.com/gemini/answer/13695044 → gemini.google.com/extensions (old URL 404)</description>
-    </item>
-    <item>
-        <title>Gemini — [Verified] March 2026 beta rollout: Help me create (Docs), Fill with Gemini (Sheets), new slide creation (Slides), AI Overviews + Ask Gemini (Drive); AI Ultra tier added; Drive features US-only initially; English-only; full Slides deck gen coming soon</title>
-        <link>https://aitool.watch/implementations.html#impl-gemini-gemini-in-workspace-docs-sheets-etc</link>
-        <guid isPermaLink="true">https://aitool.watch/implementations.html#impl-gemini-gemini-in-workspace-docs-sheets-etc?d=2026-03-14</guid>
-        <pubDate>Sat, 14 Mar 2026 12:00:00 GMT</pubDate>
-        <description>Gemini: [Verified] March 2026 beta rollout: Help me create (Docs), Fill with Gemini (Sheets), new slide creation (Slides), AI Overviews + Ask Gemini (Drive); AI Ultra tier added; Drive features US-only initially; English-only; full Slides deck gen coming soon</description>
-    </item>
-    <item>
-        <title>Gemini — Expanded to Samsung Galaxy S26 series</title>
-        <link>https://aitool.watch/implementations.html#impl-gemini-agentic-app-actions-android</link>
-        <guid isPermaLink="true">https://aitool.watch/implementations.html#impl-gemini-agentic-app-actions-android?d=2026-03-12</guid>
-        <pubDate>Thu, 12 Mar 2026 12:00:00 GMT</pubDate>
-        <description>Gemini: Expanded to Samsung Galaxy S26 series</description>
     </item>
 </channel>
 </rss>

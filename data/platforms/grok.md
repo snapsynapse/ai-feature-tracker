@@ -4,7 +4,7 @@ vendor: xAI
 logo: https://x.ai/favicon.ico
 status_page: https://status.x.ai
 pricing_page: https://grok.com/
-last_verified: 2026-06-18
+last_verified: 2026-08-25
 ---
 
 ## Pricing
@@ -233,12 +233,14 @@ Available globally where X is available.
 ### Sources
 
 - [Grok Imagine - TechCrunch](https://techcrunch.com/2025/08/04/grok-imagine-xais-new-ai-image-and-video-generator-lets-you-make-nsfw-content/)
-- [Grok Imagine Text-to-Video](https://supergrok.online/grok-imagine-text-to-video-update/)
+- [Grok Imagine Video Generation — xAI Docs](https://docs.x.ai/developers/model-capabilities/video/generation)
+- [Grok Imagine Overview — xAI Docs](https://docs.x.ai/developers/model-capabilities/imagine)
 
 ### Changelog
 
 | Date | Change |
 |------|--------|
+| 2026-08-25T12:00Z | [Verified] Source swap — unofficial supergrok.online (CI link-check timeout) replaced with official xAI Imagine and video-generation docs |
 | 2026-02-28T12:00Z | [Verified] Free tier access confirmed (very limited, ~3/day at 480p); paid tier daily limits updated |
 | 2025-11-01T12:00Z | Text-to-video generation added |
 | 2025-10-06T12:00Z | Major update announced by Elon Musk |

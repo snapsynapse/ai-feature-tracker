@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-08-17T01:32:03.248Z",
+    "generated": "2026-08-26T01:58:14.420Z",
     "version": "1.0",
     "count": 72
   },
@@ -575,7 +575,7 @@
         "take-actions-and-run-tools"
       ],
       "category": "coding",
-      "gating": "paid",
+      "gating": "free",
       "status": "ga",
       "plans": [
         {
@@ -673,9 +673,9 @@
       ],
       "talking_point": "Codex is ChatGPT's coding agent that can write, run, and debug code autonomously. **Available on every plan including Free**, but usage is quota-gated—Free and Go get limited runs, while **Plus ($20/mo) and above** get the usable allowances. Available via **web, desktop apps, and CLI** (`npm i -g @openai/codex`) on macOS, Linux, and Windows (WSL).",
       "launched": "2025-04-16T12:00Z",
-      "verified": "2026-08-15",
+      "verified": "2026-08-25",
       "evidence_id": "implementation-chatgpt-codex-code-agent",
-      "evidence_verified": "2026-08-15"
+      "evidence_verified": "2026-08-25"
     },
     {
       "id": "chatgpt-codex-security",
