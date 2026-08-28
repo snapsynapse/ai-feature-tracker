@@ -1,6 +1,6 @@
 # Project Status
 
-Last updated: 2026-03-15
+Last updated: 2026-08-28
 
 ## What's built
 
@@ -12,6 +12,8 @@ The original five-phase roadmap is complete. The project now has:
 - **SEO bridge pages** — 125 programmatic pages (`/can/`, `/compare/`, `/capability/`, `/best-for/`) with schema.org structured data
 - **MCP read layer** — 15 read-only tools via `scripts/mcp-server.js` (zero dependencies, stdio transport)
 - **Verification cascade** — weekly multi-model cross-check with human review gate
+- **Structured data validation** — `scripts/validate-structured-data.js` parses every JSON-LD block in generated `docs/**/*.html`, blocking the build on invalid JSON or a missing required property for its `@type` (Organization, WebSite, WebPage/AboutPage, FAQPage/Question/Answer, ItemList/ListItem, DefinedTerm/DefinedTermSet, SoftwareApplication), plus ItemList position gaps/duplicates. Runs in `build.yml`'s `build` job after `scripts/build.js`.
+- **Talking-point claim validation** — `scripts/validate-claims.js` cross-checks each feature's hand-written talking point against its own availability table, Gating, and Status fields, and flags time-bound wording ("temporary", "promotional") whose Verified date has aged past 60 days. Runs in `build.yml`'s `validate` job, non-blocking for its first cycle — drop `continue-on-error` once it has run clean on a scheduled rebuild.
 
 ## Outstanding work
 
@@ -34,10 +36,6 @@ The `Category` field on implementation records (especially the `other` bucket) i
 ### Evidence consolidation
 
 Evidence currently lives in two places: inline in `data/platforms/` feature records and in `data/evidence/index.json` (synced by `scripts/sync-evidence.js`). The goal is to make evidence fully ontology-native so it no longer depends on parsing platform markdown.
-
-### Structured data validation — done
-
-`scripts/validate-structured-data.js` (with `scripts/lib/structured-data.js`) parses every `<script type="application/ld+json">` block in generated `docs/**/*.html`, fails the build on invalid JSON, and checks required properties per `@type` (Organization, WebSite, WebPage/AboutPage, FAQPage/Question/Answer, ItemList/ListItem, DefinedTerm/DefinedTermSet, SoftwareApplication, Thing) plus ItemList position gaps/duplicates. Wired into `.github/workflows/build.yml`'s `build` job, after `scripts/build.js` and blocking. First run: 148 files, 143 blocks, 0 errors.
 
 ### Bridge page measurement
 
