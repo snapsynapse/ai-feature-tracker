@@ -117,6 +117,9 @@ node scripts/sync-evidence.js
 # Validate ontology integrity
 node scripts/validate-ontology.js
 
+# Cross-check talking-point prose against structured fields
+node scripts/validate-claims.js
+
 # Build the site
 node scripts/build.js
 

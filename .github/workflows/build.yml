@@ -33,6 +33,12 @@ jobs:
       - name: Validate ontology
         run: node scripts/validate-ontology.js
 
+      # Non-blocking for its first cycle (handoff 2026-08-16); drop
+      # continue-on-error once it has run clean on a scheduled rebuild.
+      - name: Validate talking-point claims
+        run: node scripts/validate-claims.js
+        continue-on-error: true
+
   build:
     needs: validate
     runs-on: ubuntu-latest
