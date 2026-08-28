@@ -123,6 +123,9 @@ node scripts/validate-claims.js
 # Build the site
 node scripts/build.js
 
+# Parse and shape-check the generated JSON-LD
+node scripts/validate-structured-data.js
+
 # Check the result
 open docs/index.html
 ```

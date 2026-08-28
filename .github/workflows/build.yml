@@ -60,6 +60,9 @@ jobs:
       - name: Build dashboard
         run: node scripts/build.js
 
+      - name: Validate structured data
+        run: node scripts/validate-structured-data.js
+
       - name: Check for changes
         id: changes
         run: |

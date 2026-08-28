@@ -17,7 +17,7 @@ A plain-English, verified reference for AI tool capabilities, plan gates, and co
 
 - `data/` — canonical source of truth. `platforms/` (editorial source per product), `capabilities/`, `providers/`, `products/`, `model-access/`, `implementations/index.yml`, `evidence/index.json` (generated, do not hand-edit), `watchlist/`, `archive/`. Format documented in `data/_schema.md` (legacy/transitional) and `design/SCHEMA_PROPOSAL.md` (target ontology).
 - `docs/` — **generated output, not source.** Every `.html`, `docs/api/v1/*.json`, `docs/agents.json`, `docs/llms.txt`, `docs/sitemap.xml`, `docs/robots.txt`, `docs/index.xml` are produced by `scripts/build.js`. Direct edits are overwritten on next build.
-- `scripts/` — zero-dependency Node tooling: `build.js` (site generator), `sync-evidence.js`, `validate-ontology.js`, `validate-claims.js` (talking-point prose vs structured fields), `verify-features.js` (multi-model cascade), `check-links.js` / `check-links-browser.js`, `scan-secrets.js`, `mcp-server.js` (read-only MCP server over generated JSON, config in `mcp.json`), `generate-framing.js`, `build-skill-bundles.js`, `lib/` (shared modules: `cascade.js`, `link-engine.js`, `parser.js`, `consistency.js`, etc.).
+- `scripts/` — zero-dependency Node tooling: `build.js` (site generator), `sync-evidence.js`, `validate-ontology.js`, `validate-claims.js` (talking-point prose vs structured fields), `validate-structured-data.js` (JSON-LD parse + shape check on generated `docs/`), `verify-features.js` (multi-model cascade), `check-links.js` / `check-links-browser.js`, `scan-secrets.js`, `mcp-server.js` (read-only MCP server over generated JSON, config in `mcp.json`), `generate-framing.js`, `build-skill-bundles.js`, `lib/` (shared modules: `cascade.js`, `link-engine.js`, `parser.js`, `consistency.js`, etc.).
 - `skills/` — canonical skill sources (`skills/<name>/src/`). Platform-local install folders (`.claude/skills/`, `.perplexity/skills/`) are never canonical and should not be committed. See `skills/README.md`.
 - `design/` — architecture rationale, ontology docs, roadmap/status (`design/ROADMAP.md`), scope criteria (`design/SCOPE.md`), watchlist (`design/WATCHLIST.md`).
 - `tests/` — Node test files (`*.test.js`) plus `fixtures/`; see `tests/README.md`.
@@ -38,6 +38,7 @@ node scripts/build.js               # Build the site into docs/
 node scripts/sync-evidence.js       # Sync evidence records
 node scripts/validate-ontology.js   # Validate cross-record integrity
 node scripts/validate-claims.js     # Cross-check talking-point prose vs structured fields
+node scripts/validate-structured-data.js  # Parse/shape-check JSON-LD in docs/ (run after build.js)
 node scripts/verify-features.js     # Multi-model verification cascade (see VERIFICATION.md)
 node scripts/check-links.js         # Link integrity check
 node scripts/scan-secrets.js        # Secret scan

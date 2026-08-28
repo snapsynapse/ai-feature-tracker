@@ -35,9 +35,9 @@ The `Category` field on implementation records (especially the `other` bucket) i
 
 Evidence currently lives in two places: inline in `data/platforms/` feature records and in `data/evidence/index.json` (synced by `scripts/sync-evidence.js`). The goal is to make evidence fully ontology-native so it no longer depends on parsing platform markdown.
 
-### Structured data validation
+### Structured data validation — done
 
-125 bridge pages embed JSON-LD structured data with no build-time validation. Add a CI check that parses every `<script type="application/ld+json">` block to catch regressions before Google Search Console does.
+`scripts/validate-structured-data.js` (with `scripts/lib/structured-data.js`) parses every `<script type="application/ld+json">` block in generated `docs/**/*.html`, fails the build on invalid JSON, and checks required properties per `@type` (Organization, WebSite, WebPage/AboutPage, FAQPage/Question/Answer, ItemList/ListItem, DefinedTerm/DefinedTermSet, SoftwareApplication, Thing) plus ItemList position gaps/duplicates. Wired into `.github/workflows/build.yml`'s `build` job, after `scripts/build.js` and blocking. First run: 148 files, 143 blocks, 0 errors.
 
 ### Bridge page measurement
 
