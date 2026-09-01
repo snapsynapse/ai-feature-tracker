@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-08-31T01:27:32.889Z",
+    "generated": "2026-09-06T03:30:09.119Z",
     "version": "1.0",
     "count": 72
   },
@@ -5148,7 +5148,7 @@
           "plan": "Free",
           "available": true,
           "limits": "Standard",
-          "notes": "Gemini 3 Flash; rate-limited"
+          "notes": "Gemini 3.6 Flash (since Jul 2026); rate-limited"
         },
         {
           "plan": "Google AI Plus",
@@ -5185,8 +5185,8 @@
         {
           "surface": "macos",
           "name": "macOS",
-          "available": false,
-          "notes": "No native desktop app; use web"
+          "available": true,
+          "notes": "Native Gemini for Mac app (macOS 15+), launched Apr 2026; gemini.google/mac"
         },
         {
           "surface": "linux",
@@ -5231,11 +5231,11 @@
           "notes": "Google AI Studio / Gemini API"
         }
       ],
-      "talking_point": "Gemini's core text Q&A is **available for free** at gemini.google.com to anyone with a Google account, in 230+ countries on web and 150+ countries on mobile. Free tier uses **Gemini 3 Flash**; AI Pro and Ultra unlock **Gemini 3.1 Pro** with higher limits. **Gemini side panel now available in Chrome** (Jan 2026) with Auto Browse for AI Pro/Ultra subscribers.",
+      "talking_point": "Gemini's core text Q&A is **available for free** at gemini.google.com to anyone with a Google account, in 230+ countries on web and 150+ countries on mobile. Free tier uses **Gemini 3.6 Flash**; AI Pro and Ultra unlock **Gemini 3.1 Pro** with higher limits. **Gemini side panel now available in Chrome** (Jan 2026) with Auto Browse for AI Pro/Ultra subscribers. A **native Gemini app for Mac** launched April 2026 (gemini.google/mac).",
       "launched": "2024-02-08T12:00Z",
-      "verified": "2026-03-21",
+      "verified": "2026-08-31",
       "evidence_id": "implementation-gemini-chat",
-      "evidence_verified": "2026-03-21"
+      "evidence_verified": "2026-08-31"
     },
     {
       "id": "grok-deepsearch",

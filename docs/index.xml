@@ -5,8 +5,22 @@
     <link>https://aitool.watch/</link>
     <description>Recent AI feature launches and changes across ChatGPT, Claude, Gemini, Copilot, Grok, and Perplexity.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 31 Aug 2026 01:27:32 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 06 Sep 2026 03:30:09 GMT</lastBuildDate>
     <atom:link href="https://aitool.watch/index.xml" rel="self" type="application/rss+xml"/>
+    <item>
+        <title>ChatGPT — [Verified] platform: no longer available on Windows</title>
+        <link>https://aitool.watch/implementations.html#impl-chatgpt-sora-video-generation</link>
+        <guid isPermaLink="true">https://aitool.watch/implementations.html#impl-chatgpt-sora-video-generation?d=2026-09-04</guid>
+        <pubDate>Fri, 04 Sep 2026 12:00:00 GMT</pubDate>
+        <description>ChatGPT: [Verified] platform: no longer available on Windows</description>
+    </item>
+    <item>
+        <title>Gemini — [Verified] Native Gemini for Mac app added (macOS ❌ → ✅, launched Apr 2026); free-tier model updated to Gemini 3.6 Flash (rolled out Jul 2026)</title>
+        <link>https://aitool.watch/implementations.html#impl-gemini-chat</link>
+        <guid isPermaLink="true">https://aitool.watch/implementations.html#impl-gemini-chat?d=2026-08-31</guid>
+        <pubDate>Mon, 31 Aug 2026 12:00:00 GMT</pubDate>
+        <description>Gemini: [Verified] Native Gemini for Mac app added (macOS ❌ → ✅, launched Apr 2026); free-tier model updated to Gemini 3.6 Flash (rolled out Jul 2026)</description>
+    </item>
     <item>
         <title>ChatGPT — [Verified] Gating paid → free — OpenAI documents Codex as included on all ChatGPT plans including Free and Go; corrects contradiction with the availability table</title>
         <link>https://aitool.watch/implementations.html#impl-chatgpt-codex-code-agent</link>
@@ -342,20 +356,6 @@
         <guid isPermaLink="true">https://aitool.watch/implementations.html#impl-chatgpt-codex-security?d=2026-03-14</guid>
         <pubDate>Sat, 14 Mar 2026 12:00:00 GMT</pubDate>
         <description>ChatGPT: Initial entry</description>
-    </item>
-    <item>
-        <title>ChatGPT — [Verified] GPT-5.4 family released: Plus gets GPT-5.4 Thinking, Pro gets GPT-5.4 Pro; GPT-5.2 Thinking moved to Legacy Models (90-day retirement); 1M context in API; native computer use tool</title>
-        <link>https://aitool.watch/implementations.html#impl-chatgpt-chat</link>
-        <guid isPermaLink="true">https://aitool.watch/implementations.html#impl-chatgpt-chat?d=2026-03-14</guid>
-        <pubDate>Sat, 14 Mar 2026 12:00:00 GMT</pubDate>
-        <description>ChatGPT: [Verified] GPT-5.4 family released: Plus gets GPT-5.4 Thinking, Pro gets GPT-5.4 Pro; GPT-5.2 Thinking moved to Legacy Models (90-day retirement); 1M context in API; native computer use tool</description>
-    </item>
-    <item>
-        <title>Gemini — [Verified] URL updated: support.google.com/gemini/answer/13695044 → gemini.google.com/extensions (old URL 404)</title>
-        <link>https://aitool.watch/implementations.html#impl-gemini-extensions</link>
-        <guid isPermaLink="true">https://aitool.watch/implementations.html#impl-gemini-extensions?d=2026-03-14</guid>
-        <pubDate>Sat, 14 Mar 2026 12:00:00 GMT</pubDate>
-        <description>Gemini: [Verified] URL updated: support.google.com/gemini/answer/13695044 → gemini.google.com/extensions (old URL 404)</description>
     </item>
 </channel>
 </rss>

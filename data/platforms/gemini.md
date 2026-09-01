@@ -4,7 +4,7 @@ vendor: Google
 logo: https://cdn.simpleicons.org/googlegemini
 status_page: https://status.cloud.google.com
 pricing_page: https://one.google.com/intl/en/about/google-ai-plans/
-last_verified: 2026-08-15
+last_verified: 2026-08-31
 ---
 
 ## Pricing
@@ -923,14 +923,14 @@ Available where Gemini Apps are available (230+ countries on web, 150+ on mobile
 | Gating   | free |
 | URL      | https://gemini.google.com |
 | Launched | 2024-02-08T12:00Z |
-| Verified | 2026-03-21 |
+| Verified | 2026-08-31 |
 | Checked  | 2026-09-01 |
 
 ### Availability
 
 | Plan | Available | Limits | Notes |
 |------|-----------|--------|-------|
-| Free | ✅ | Standard | Gemini 3 Flash; rate-limited |
+| Free | ✅ | Standard | Gemini 3.6 Flash (since Jul 2026); rate-limited |
 | Google AI Plus | ✅ | Higher | Access to advanced models |
 | Google AI Pro | ✅ | Full | Gemini 3.1 Pro, highest limits |
 | Google AI Ultra | ✅ | Highest | Maximum limits, extended context |
@@ -941,7 +941,7 @@ Available where Gemini Apps are available (230+ countries on web, 150+ on mobile
 | Platform | Available | Notes |
 |----------|-----------|-------|
 | Windows  | ❌ | No native desktop app; use web |
-| macOS    | ❌ | No native desktop app; use web |
+| macOS    | ✅ | Native Gemini for Mac app (macOS 15+), launched Apr 2026; gemini.google/mac |
 | Linux    | ❌ | No native desktop app; use web |
 | iOS      | ✅ | Gemini iOS app |
 | Android  | ✅ | Gemini Android app (default assistant) |
@@ -956,18 +956,20 @@ Available in 230+ countries and territories on web; 150+ countries on mobile. Ag
 
 ### Talking Point
 
-> "Gemini's core text Q&A is **available for free** at gemini.google.com to anyone with a Google account, in 230+ countries on web and 150+ countries on mobile. Free tier uses **Gemini 3 Flash**; AI Pro and Ultra unlock **Gemini 3.1 Pro** with higher limits. **Gemini side panel now available in Chrome** (Jan 2026) with Auto Browse for AI Pro/Ultra subscribers."
+> "Gemini's core text Q&A is **available for free** at gemini.google.com to anyone with a Google account, in 230+ countries on web and 150+ countries on mobile. Free tier uses **Gemini 3.6 Flash**; AI Pro and Ultra unlock **Gemini 3.1 Pro** with higher limits. **Gemini side panel now available in Chrome** (Jan 2026) with Auto Browse for AI Pro/Ultra subscribers. A **native Gemini app for Mac** launched April 2026 (gemini.google/mac)."
 
 ### Sources
 
 - [Gemini](https://gemini.google.com)
 - [Google AI Plans](https://one.google.com/intl/en/about/google-ai-plans/)
 - [Gemini in Chrome](https://blog.google/products-and-platforms/products/chrome/gemini-3-auto-browse/)
+- [Gemini for Mac](https://gemini.google/mac)
 
 ### Changelog
 
 | Date | Change |
 |------|--------|
+| 2026-08-31T12:00Z | [Verified] Native Gemini for Mac app added (macOS ❌ → ✅, launched Apr 2026); free-tier model updated to Gemini 3.6 Flash (rolled out Jul 2026) |
 | 2026-03-21T12:00Z | [Verified] Chrome side panel added (Jan 2026); model names updated to Gemini 3 Flash (free) and Gemini 3.1 Pro (paid) |
 | 2026-03-07T12:00Z | Initial entry |
 | 2024-02-08T12:00Z | Gemini launched (rebranded from Bard) |
