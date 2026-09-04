@@ -30,7 +30,7 @@ last_verified: 2026-08-25
 | URL | https://help.openai.com/en/articles/8400625-voice-mode |
 | Launched | 2024-09-24T12:00Z |
 | Verified | 2026-08-15|
-| Checked | 2026-09-01|
+| Checked | 2026-09-04|
 
 ### Availability
 
@@ -108,7 +108,7 @@ Free-tier users still have no desktop voice access and must use chatgpt.com or t
 | URL | https://openai.com/index/introducing-chatgpt-agent/ |
 | Launched | 2025-07-17T12:00Z |
 | Verified | 2026-08-15|
-| Checked | 2026-09-01|
+| Checked | 2026-09-04|
 
 ### Availability
 
@@ -169,7 +169,7 @@ Available globally including EEA. Some Connector-based agent actions remain rest
 | URL | https://openai.com/index/introducing-chatgpt-atlas/ |
 | Launched | 2025-10-21T12:00Z |
 | Verified | 2026-03-27|
-| Checked | 2026-09-01|
+| Checked | 2026-09-04|
 
 ### Availability
 
@@ -226,7 +226,7 @@ Available where ChatGPT is available. Same regional restrictions apply.
 | URL | https://openai.com/index/introducing-canvas/ |
 | Launched | 2024-10-03T12:00Z |
 | Verified | 2026-08-15|
-| Checked | 2026-09-01|
+| Checked | 2026-09-04|
 
 ### Availability
 
@@ -286,7 +286,7 @@ Available globally where ChatGPT is available.
 | URL | https://openai.com/index/introducing-chatgpt-search/ |
 | Launched | 2024-10-31T12:00Z |
 | Verified | 2026-08-15|
-| Checked | 2026-09-01|
+| Checked | 2026-09-04|
 
 ### Availability
 
@@ -347,7 +347,7 @@ Available globally where ChatGPT is available.
 | URL | https://openai.com/index/introducing-codex/ |
 | Launched | 2025-04-16T12:00Z |
 | Verified | 2026-08-25|
-| Checked | 2026-09-01|
+| Checked | 2026-09-04|
 
 ### Availability
 
@@ -412,7 +412,7 @@ Available globally.
 | URL | https://openai.com/index/codex-security-now-in-research-preview/ |
 | Launched | 2026-03-06T12:00Z |
 | Verified | 2026-08-15|
-| Checked | 2026-09-01|
+| Checked | 2026-09-04|
 
 ### Availability
 
@@ -474,7 +474,7 @@ Available globally.
 | URL | https://chatgpt.com/gpts |
 | Launched | 2023-11-06T12:00Z |
 | Verified | 2026-08-15|
-| Checked | 2026-08-28|
+| Checked | 2026-09-04|
 
 ### Availability
 
@@ -535,7 +535,7 @@ Available globally where ChatGPT is available.
 | URL | https://openai.com/index/dall-e-3/ |
 | Launched | 2023-10-01T12:00Z |
 | Verified | 2026-04-08|
-| Checked | 2026-08-28|
+| Checked | 2026-09-04|
 
 ### Availability
 
@@ -592,7 +592,7 @@ Available globally.
 | URL | https://help.openai.com/en/articles/11011518-chatgpt-deep-research |
 | Launched | 2025-02-03T12:00Z |
 | Verified | 2026-08-15|
-| Checked | 2026-08-28|
+| Checked | 2026-09-04|
 
 ### Availability
 
@@ -651,7 +651,7 @@ Available globally.
 | URL | https://openai.com/index/memory-and-new-controls-for-chatgpt/ |
 | Launched | 2024-09-05T12:00Z |
 | Verified | 2026-08-15|
-| Checked | 2026-08-28|
+| Checked | 2026-09-04|
 
 ### Availability
 
@@ -712,7 +712,7 @@ Available globally; off by default in EEA/UK/Switzerland (must enable manually).
 | URL | https://help.openai.com/en/articles/10169521-using-projects-in-chatgpt |
 | Launched | 2024-12-13T12:00Z |
 | Verified | 2026-08-15|
-| Checked | 2026-08-28|
+| Checked | 2026-09-04|
 
 ### Availability
 
@@ -770,7 +770,7 @@ Available globally where ChatGPT is available.
 | URL | https://openai.com/index/sora-is-here/ |
 | Launched | 2024-12-09T12:00Z |
 | Verified | 2026-08-15|
-| Checked | 2026-08-28|
+| Checked | 2026-09-04|
 
 ### Availability
 
@@ -814,6 +814,7 @@ Available in US, Canada, Japan, Korea, Thailand, Vietnam, Taiwan. Not available 
 
 | Date | Change |
 |------|--------|
+| 2026-09-04T06:00Z | [Verified] platform: no longer available on Windows |
 | 2026-08-15T12:00Z | [Verified] Plan renamed Team → Business (OpenAI help-center rename FAQ, effective 2025-08-29) |
 | 2026-01-10T12:00Z | Free tier access discontinued |
 | 2025-10-01T12:00Z | API access launched |
@@ -831,7 +832,7 @@ Available in US, Canada, Japan, Korea, Thailand, Vietnam, Taiwan. Not available 
 | URL | https://openai.com/index/hello-gpt-4o/ |
 | Launched | 2024-05-13T12:00Z |
 | Verified | 2026-08-15|
-| Checked | 2026-08-28|
+| Checked | 2026-09-04|
 
 ### Availability
 
@@ -891,7 +892,7 @@ Available globally where ChatGPT is available.
 | URL      | https://chatgpt.com |
 | Launched | 2022-11-30T12:00Z |
 | Verified | 2026-08-15|
-| Checked | 2026-08-28|
+| Checked | 2026-09-04|
 
 ### Availability
 
