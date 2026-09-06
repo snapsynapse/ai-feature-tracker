@@ -303,7 +303,7 @@ Having access to a stronger model is not automatically a separate capability.
 
 Examples:
 
-- GPT-4 Access
+- Copilot Model Access
 - Gemini Advanced
 - Claude Extended Thinking
 - Grok Think Mode

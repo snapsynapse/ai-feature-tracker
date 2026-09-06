@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-09-06T03:46:46.567Z",
+    "generated": "2026-09-06T05:15:44.621Z",
     "version": "1.0",
     "count": 92
   },
@@ -1089,37 +1089,6 @@
       "notes": ""
     },
     {
-      "id": "implementation-copilot-gpt-4-access",
-      "entity_type": "implementation",
-      "entity_id": "copilot-gpt-4-access",
-      "source_file": "data/platforms/copilot.md",
-      "source_heading": "GPT-4 Access",
-      "launched": "2023-02-07T12:00Z",
-      "verified": "2026-09-05",
-      "checked": "2026-09-05",
-      "sources": [
-        {
-          "title": "Microsoft Copilot free vs Copilot in Microsoft 365",
-          "url": "https://support.microsoft.com/en-us/microsoft-365-copilot/what-s-the-difference-between-microsoft-copilot-free-and-copilot-in-microsoft-365"
-        },
-        {
-          "title": "AI credits and limits for Microsoft 365 subscriptions",
-          "url": "https://support.microsoft.com/en-us/office/ai-credits-and-limits-for-microsoft-365-personal-family-and-premium-68530f1a-4459-4d02-9818-8233c1f673b8"
-        }
-      ],
-      "changelog": [
-        {
-          "date": "2026-09-05",
-          "change": "[Verified] The GPT-4 framing is obsolete: Microsoft's plan documentation no longer sells a named model tier, and publishes no free-versus-paid model split. Gating changed from paid to mixed, since the paid differentiator is usage limits and advanced features rather than model access. Copilot Pro rows replaced with the Microsoft 365 consumer plans. Dead Copilot Pro store source replaced with Microsoft support pages. Multi-model routing across OpenAI and Microsoft MAI models is secondary reporting, not first-party confirmed. Record is a candidate for renaming away from \"GPT-4 Access\"."
-        },
-        {
-          "date": "2023-02-07T12:00Z",
-          "change": "Initial entry"
-        }
-      ],
-      "notes": ""
-    },
-    {
       "id": "implementation-copilot-image-generation-designer",
       "entity_type": "implementation",
       "entity_id": "copilot-image-generation-designer",
@@ -1153,6 +1122,41 @@
         },
         {
           "date": "2023-03-21T12:00Z",
+          "change": "Initial entry"
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "implementation-copilot-model-access",
+      "entity_type": "implementation",
+      "entity_id": "copilot-model-access",
+      "source_file": "data/platforms/copilot.md",
+      "source_heading": "Model Access",
+      "launched": "2023-02-07T12:00Z",
+      "verified": "2026-09-05",
+      "checked": "2026-09-05",
+      "sources": [
+        {
+          "title": "Microsoft Copilot free vs Copilot in Microsoft 365",
+          "url": "https://support.microsoft.com/en-us/microsoft-365-copilot/what-s-the-difference-between-microsoft-copilot-free-and-copilot-in-microsoft-365"
+        },
+        {
+          "title": "AI credits and limits for Microsoft 365 subscriptions",
+          "url": "https://support.microsoft.com/en-us/office/ai-credits-and-limits-for-microsoft-365-personal-family-and-premium-68530f1a-4459-4d02-9818-8233c1f673b8"
+        }
+      ],
+      "changelog": [
+        {
+          "date": "2026-09-05",
+          "change": "Renamed from \"GPT-4 Access\" to \"Model Access\". Microsoft no longer sells a named model tier, so the old name described a product that stopped existing; the record covers model access and the entitlements attached to it. Implementation id changed from copilot-gpt-4-access to copilot-model-access, which changes the record's permalink anchor."
+        },
+        {
+          "date": "2026-09-05",
+          "change": "[Verified] The GPT-4 framing is obsolete: Microsoft's plan documentation no longer sells a named model tier, and publishes no free-versus-paid model split. Gating changed from paid to mixed, since the paid differentiator is usage limits and advanced features rather than model access. Copilot Pro rows replaced with the Microsoft 365 consumer plans. Dead Copilot Pro store source replaced with Microsoft support pages. Multi-model routing across OpenAI and Microsoft MAI models is secondary reporting, not first-party confirmed. Record is a candidate for renaming away from \"GPT-4 Access\"."
+        },
+        {
+          "date": "2023-02-07T12:00Z",
           "change": "Initial entry"
         }
       ],

@@ -241,11 +241,11 @@
   capabilities:
     - hear-audio-and-speech
     - speak-back-in-real-time
-- id: copilot-gpt-4-access
+- id: copilot-model-access
   product: copilot
   provider: microsoft
   source_file: data/platforms/copilot.md
-  source_heading: GPT-4 Access
+  source_heading: Model Access
   capabilities: []
   notes: |
     Transitional model-access entitlement record. No stable primary capability mapping yet.

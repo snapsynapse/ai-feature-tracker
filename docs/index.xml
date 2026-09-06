@@ -5,7 +5,7 @@
     <link>https://aitool.watch/</link>
     <description>Recent AI feature launches and changes across ChatGPT, Claude, Gemini, Copilot, Grok, and Perplexity.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 06 Sep 2026 03:46:46 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 06 Sep 2026 05:15:44 GMT</lastBuildDate>
     <atom:link href="https://aitool.watch/index.xml" rel="self" type="application/rss+xml"/>
     <item>
         <title>Microsoft Copilot — [Verified] Copilot Pro row replaced by the Microsoft 365 consumer plans, all marked unavailable: agent authoring remains a commercial Copilot capability. Recorded that Microsoft 365 Premium ships prebuilt Analyst and Researcher agents, which is agent consumption rather than authoring.</title>
@@ -43,9 +43,16 @@
         <description>Microsoft Copilot: [Verified] Copilot Pro retired (off sale October 2025, support ended 2026-08-01) and replaced by Microsoft 365 Premium; availability rows re-cut to Free / M365 Personal / Family / Premium. Free tier corrected from &quot;Standard&quot; limits to free-subject-to-capacity, sign-in required. Added Microsoft&apos;s published daily voice allowances (30 min/day Personal and Family, 60 min/day Premium). Added language and government-cloud caveats to regional note. Status remains ga; platform flags unchanged.</description>
     </item>
     <item>
+        <title>Microsoft Copilot — Renamed from &quot;GPT-4 Access&quot; to &quot;Model Access&quot;. Microsoft no longer sells a named model tier, so the old name described a product that stopped existing; the record covers model access and the entitlements attached to it. Implementation id changed from copilot-gpt-4-access to copilot-model-access, which changes the record&apos;s permalink anchor.</title>
+        <link>https://aitool.watch/implementations.html#impl-microsoft-copilot-model-access</link>
+        <guid isPermaLink="true">https://aitool.watch/implementations.html#impl-microsoft-copilot-model-access?d=2026-09-05</guid>
+        <pubDate>Sat, 05 Sep 2026 12:00:00 GMT</pubDate>
+        <description>Microsoft Copilot: Renamed from &quot;GPT-4 Access&quot; to &quot;Model Access&quot;. Microsoft no longer sells a named model tier, so the old name described a product that stopped existing; the record covers model access and the entitlements attached to it. Implementation id changed from copilot-gpt-4-access to copilot-model-access, which changes the record&apos;s permalink anchor.</description>
+    </item>
+    <item>
         <title>Microsoft Copilot — [Verified] The GPT-4 framing is obsolete: Microsoft&apos;s plan documentation no longer sells a named model tier, and publishes no free-versus-paid model split. Gating changed from paid to mixed, since the paid differentiator is usage limits and advanced features rather than model access. Copilot Pro rows replaced with the Microsoft 365 consumer plans. Dead Copilot Pro store source replaced with Microsoft support pages. Multi-model routing across OpenAI and Microsoft MAI models is secondary reporting, not first-party confirmed. Record is a candidate for renaming away from &quot;GPT-4 Access&quot;.</title>
-        <link>https://aitool.watch/implementations.html#impl-microsoft-copilot-gpt-4-access</link>
-        <guid isPermaLink="true">https://aitool.watch/implementations.html#impl-microsoft-copilot-gpt-4-access?d=2026-09-05</guid>
+        <link>https://aitool.watch/implementations.html#impl-microsoft-copilot-model-access</link>
+        <guid isPermaLink="true">https://aitool.watch/implementations.html#impl-microsoft-copilot-model-access?d=2026-09-05</guid>
         <pubDate>Sat, 05 Sep 2026 12:00:00 GMT</pubDate>
         <description>Microsoft Copilot: [Verified] The GPT-4 framing is obsolete: Microsoft&apos;s plan documentation no longer sells a named model tier, and publishes no free-versus-paid model split. Gating changed from paid to mixed, since the paid differentiator is usage limits and advanced features rather than model access. Copilot Pro rows replaced with the Microsoft 365 consumer plans. Dead Copilot Pro store source replaced with Microsoft support pages. Multi-model routing across OpenAI and Microsoft MAI models is secondary reporting, not first-party confirmed. Record is a candidate for renaming away from &quot;GPT-4 Access&quot;.</description>
     </item>
@@ -349,13 +356,6 @@
         <guid isPermaLink="true">https://aitool.watch/implementations.html#impl-gemini-agentic-app-actions-android?d=2026-03-21</guid>
         <pubDate>Sat, 21 Mar 2026 12:00:00 GMT</pubDate>
         <description>Gemini: [Verified] Device support corrected to Pixel 10 series and Samsung Galaxy S26 series; regional availability updated to US and South Korea; supported apps listed</description>
-    </item>
-    <item>
-        <title>Gemini — [Verified] Chrome side panel added (Jan 2026); model names updated to Gemini 3 Flash (free) and Gemini 3.1 Pro (paid)</title>
-        <link>https://aitool.watch/implementations.html#impl-gemini-chat</link>
-        <guid isPermaLink="true">https://aitool.watch/implementations.html#impl-gemini-chat?d=2026-03-21</guid>
-        <pubDate>Sat, 21 Mar 2026 12:00:00 GMT</pubDate>
-        <description>Gemini: [Verified] Chrome side panel added (Jan 2026); model names updated to Gemini 3 Flash (free) and Gemini 3.1 Pro (paid)</description>
     </item>
 </channel>
 </rss>

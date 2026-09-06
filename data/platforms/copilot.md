@@ -322,7 +322,7 @@ Available globally, with spoken support limited to a subset of languages. Govern
 
 ---
 
-## GPT-4 Access
+## Model Access
 
 | Property | Value |
 |----------|-------|
@@ -363,7 +363,7 @@ Available globally.
 
 ### Talking Point
 
-> "Copilot no longer sells access to a named GPT-4 tier, and Microsoft's own plan documentation never mentions one. What a **Microsoft 365 subscription buys is usage, not a better model**: higher limits, priority access when capacity is tight, and on **Premium** the advanced AI features and the Analyst and Researcher agents. Reporting through 2026 describes Copilot routing across newer OpenAI models alongside Microsoft's own MAI models, with a model picker on some surfaces. Any guide still framing this as free-versus-Pro GPT-4 access is out of date."
+> "Copilot no longer sells access to a named model tier, and Microsoft's own plan documentation never mentions one. What a **Microsoft 365 subscription buys is usage, not a better model**: higher limits, priority access when capacity is tight, and on **Premium** the advanced AI features and the Analyst and Researcher agents. Reporting through 2026 describes Copilot routing across newer OpenAI models alongside Microsoft's own MAI models, with a model picker on some surfaces. Any guide still framing this as free-versus-Pro GPT-4 access is out of date."
 
 ### Sources
 
@@ -374,6 +374,7 @@ Available globally.
 
 | Date | Change |
 |------|--------|
+| 2026-09-05 | Renamed from "GPT-4 Access" to "Model Access". Microsoft no longer sells a named model tier, so the old name described a product that stopped existing; the record covers model access and the entitlements attached to it. Implementation id changed from copilot-gpt-4-access to copilot-model-access, which changes the record's permalink anchor. |
 | 2026-09-05 | [Verified] The GPT-4 framing is obsolete: Microsoft's plan documentation no longer sells a named model tier, and publishes no free-versus-paid model split. Gating changed from paid to mixed, since the paid differentiator is usage limits and advanced features rather than model access. Copilot Pro rows replaced with the Microsoft 365 consumer plans. Dead Copilot Pro store source replaced with Microsoft support pages. Multi-model routing across OpenAI and Microsoft MAI models is secondary reporting, not first-party confirmed. Record is a candidate for renaming away from "GPT-4 Access". |
 | 2023-02-07T12:00Z | Initial entry |
 

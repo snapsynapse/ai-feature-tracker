@@ -113,7 +113,7 @@ These are not blockers, but they are the places where schema pressure is most li
 
 Features that fit awkwardly into a capability taxonomy:
 
-- GPT-4 Access
+- Copilot Model Access
 - Gemini Advanced
 - Grok Chat
 - Model Selection

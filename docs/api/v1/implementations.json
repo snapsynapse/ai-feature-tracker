@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-09-06T03:46:46.567Z",
+    "generated": "2026-09-06T05:15:44.621Z",
     "version": "1.0",
     "count": 72
   },
@@ -3454,12 +3454,12 @@
       "evidence_verified": "2026-09-05"
     },
     {
-      "id": "copilot-gpt-4-access",
-      "name": "GPT-4 Access",
+      "id": "copilot-model-access",
+      "name": "Model Access",
       "product": "copilot",
       "provider": "microsoft",
       "source_file": "data/platforms/copilot.md",
-      "source_heading": "GPT-4 Access",
+      "source_heading": "Model Access",
       "capabilities": [],
       "category": "other",
       "gating": "mixed",
@@ -3546,10 +3546,10 @@
           "notes": "No consumer API"
         }
       ],
-      "talking_point": "Copilot no longer sells access to a named GPT-4 tier, and Microsoft's own plan documentation never mentions one. What a **Microsoft 365 subscription buys is usage, not a better model**: higher limits, priority access when capacity is tight, and on **Premium** the advanced AI features and the Analyst and Researcher agents. Reporting through 2026 describes Copilot routing across newer OpenAI models alongside Microsoft's own MAI models, with a model picker on some surfaces. Any guide still framing this as free-versus-Pro GPT-4 access is out of date.",
+      "talking_point": "Copilot no longer sells access to a named model tier, and Microsoft's own plan documentation never mentions one. What a **Microsoft 365 subscription buys is usage, not a better model**: higher limits, priority access when capacity is tight, and on **Premium** the advanced AI features and the Analyst and Researcher agents. Reporting through 2026 describes Copilot routing across newer OpenAI models alongside Microsoft's own MAI models, with a model picker on some surfaces. Any guide still framing this as free-versus-Pro GPT-4 access is out of date.",
       "launched": "2023-02-07T12:00Z",
       "verified": "2026-09-05",
-      "evidence_id": "implementation-copilot-gpt-4-access",
+      "evidence_id": "implementation-copilot-model-access",
       "evidence_verified": "2026-09-05"
     },
     {

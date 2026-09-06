@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-09-06T03:46:46.567Z",
+    "generated": "2026-09-06T05:15:44.621Z",
     "version": "1.0",
     "count": 9
   },
@@ -88,7 +88,7 @@
         "copilot-office-apps",
         "copilot-vision",
         "copilot-voice",
-        "copilot-gpt-4-access",
+        "copilot-model-access",
         "copilot-image-generation-designer",
         "copilot-chat"
       ],

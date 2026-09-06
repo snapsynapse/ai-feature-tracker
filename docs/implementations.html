@@ -1046,11 +1046,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="feature-card" id="microsoft-copilot-gpt-4-access" data-category="other" data-prices="0_20" data-surfaces="windows_macos_ios_android_web">
+                <div class="feature-card" id="microsoft-copilot-model-access" data-category="other" data-prices="0_20" data-surfaces="windows_macos_ios_android_web">
                     <div class="card-main">
                         <div class="feature-header">
-                            <h3><a href="https://copilot.microsoft.com/" target="_blank" class="feature-link">GPT-4 Access</a></h3>
-                            <span class="badges"><button class="permalink-btn" onclick="copyPermalink('microsoft-copilot-gpt-4-access')" title="Copy link to this feature" aria-label="Copy permalink">🔗</button><span class="badge avail-ga">GA</span><span class="badge gate-paid">mixed</span></span>
+                            <h3><a href="https://copilot.microsoft.com/" target="_blank" class="feature-link">Model Access</a></h3>
+                            <span class="badges"><button class="permalink-btn" onclick="copyPermalink('microsoft-copilot-model-access')" title="Copy link to this feature" aria-label="Copy permalink">🔗</button><span class="badge avail-ga">GA</span><span class="badge gate-paid">mixed</span></span>
                         </div>
                         <div class="avail-grid">
                             
@@ -1071,13 +1071,13 @@
                                 <span class="status"><span class="avail no" aria-label="Not available" role="img">✗</span></span>
                             </div>
                         </div>
-                        <div class="talking-point" role="button" tabindex="0" aria-label="Click to copy talking point" onclick="copyTalkingPoint(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();copyTalkingPoint(this)}">Copilot no longer sells access to a named GPT-4 tier, and Microsoft's own plan documentation never mentions one. What a <strong>Microsoft 365 subscription buys is usage, not a better model</strong>: higher limits, priority access when capacity is tight, and on <strong>Premium</strong> the advanced AI features and the Analyst and Researcher agents. Reporting through 2026 describes Copilot routing across newer OpenAI models alongside Microsoft's own MAI models, with a model picker on some surfaces. Any guide still framing this as free-versus-Pro GPT-4 access is out of date.</div>
+                        <div class="talking-point" role="button" tabindex="0" aria-label="Click to copy talking point" onclick="copyTalkingPoint(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();copyTalkingPoint(this)}">Copilot no longer sells access to a named model tier, and Microsoft's own plan documentation never mentions one. What a <strong>Microsoft 365 subscription buys is usage, not a better model</strong>: higher limits, priority access when capacity is tight, and on <strong>Premium</strong> the advanced AI features and the Analyst and Researcher agents. Reporting through 2026 describes Copilot routing across newer OpenAI models alongside Microsoft's own MAI models, with a model picker on some surfaces. Any guide still framing this as free-versus-Pro GPT-4 access is out of date.</div>
                         
                     </div>
                     <div class="surface-column">
                         <span class="plat-icon yes" title="Windows">Windows</span><span class="plat-icon yes" title="macOS">macOS</span><span class="plat-icon no" title="Linux">Linux</span><span class="plat-icon yes" title="iOS">iOS</span><span class="plat-icon yes" title="Android">Android</span><span class="plat-icon no" title="Chrome">Chrome</span><span class="plat-icon yes" title="web">web</span><span class="plat-icon no" title="terminal">terminal</span><span class="plat-icon no" title="API">API</span>
                         <div class="surface-dates">
-                            <span class="date-item launched clickable" title="Launched" onclick="showChangelog('microsoft-copilot-gpt-4-access')"><span class="date-emoji">🚀</span><span class="date-value">2023-02-07</span></span><span class="date-item verified" title="Verified"><span class="date-emoji">✓</span><span class="date-value">2026-09-05</span></span><span class="date-item checked" title="Checked"><span class="date-emoji">👁</span><span class="date-value">2026-09-05</span></span>
+                            <span class="date-item launched clickable" title="Launched" onclick="showChangelog('microsoft-copilot-model-access')"><span class="date-emoji">🚀</span><span class="date-value">2023-02-07</span></span><span class="date-item verified" title="Verified"><span class="date-emoji">✓</span><span class="date-value">2026-09-05</span></span><span class="date-item checked" title="Checked"><span class="date-emoji">👁</span><span class="date-value">2026-09-05</span></span>
                         </div>
                     </div>
                 </div>
@@ -3714,13 +3714,14 @@
                 changes: [{ date: "2026-09-05", change: "[Verified] Copilot Pro retired (off sale October 2025, support ended 2026-08-01) and replaced by Microsoft 365 Premium; availability rows re-cut to Free / M365 Personal / Family / Premium. Free tier corrected from \"Standard\" limits to free-subject-to-capacity, sign-in required. Added Microsoft's published daily voice allowances (30 min/day Personal and Family, 60 min/day Premium). Added language and government-cloud caveats to regional note. Status remains ga; platform flags unchanged." },
                 { date: "2024-10-01T12:00Z", change: "Initial entry" }]
             },
-            "microsoft-copilot-gpt-4-access": {
-                name: "GPT-4 Access",
+            "microsoft-copilot-model-access": {
+                name: "Model Access",
                 platform: "Microsoft Copilot",
                 launched: "2023-02-07T12:00Z",
                 verified: "2026-09-05",
                 checked: "2026-09-05",
-                changes: [{ date: "2026-09-05", change: "[Verified] The GPT-4 framing is obsolete: Microsoft's plan documentation no longer sells a named model tier, and publishes no free-versus-paid model split. Gating changed from paid to mixed, since the paid differentiator is usage limits and advanced features rather than model access. Copilot Pro rows replaced with the Microsoft 365 consumer plans. Dead Copilot Pro store source replaced with Microsoft support pages. Multi-model routing across OpenAI and Microsoft MAI models is secondary reporting, not first-party confirmed. Record is a candidate for renaming away from \"GPT-4 Access\"." },
+                changes: [{ date: "2026-09-05", change: "Renamed from \"GPT-4 Access\" to \"Model Access\". Microsoft no longer sells a named model tier, so the old name described a product that stopped existing; the record covers model access and the entitlements attached to it. Implementation id changed from copilot-gpt-4-access to copilot-model-access, which changes the record's permalink anchor." },
+                { date: "2026-09-05", change: "[Verified] The GPT-4 framing is obsolete: Microsoft's plan documentation no longer sells a named model tier, and publishes no free-versus-paid model split. Gating changed from paid to mixed, since the paid differentiator is usage limits and advanced features rather than model access. Copilot Pro rows replaced with the Microsoft 365 consumer plans. Dead Copilot Pro store source replaced with Microsoft support pages. Multi-model routing across OpenAI and Microsoft MAI models is secondary reporting, not first-party confirmed. Record is a candidate for renaming away from \"GPT-4 Access\"." },
                 { date: "2023-02-07T12:00Z", change: "Initial entry" }]
             },
             "microsoft-copilot-image-generation-designer": {
