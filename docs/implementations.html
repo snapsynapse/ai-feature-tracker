@@ -833,7 +833,7 @@
                 <div class="platform-meta">
                     <a href="https://www.microsoft.com/en-us/microsoft-copilot" target="_blank">Pricing</a>
                     <span>·</span>
-                    <span>Verified: 2026-04-14</span>
+                    <span>Verified: 2026-09-05</span>
                 </div>
             </div>
             <div class="pricing-bar">
@@ -967,7 +967,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="feature-card" id="microsoft-copilot-copilot-voice" data-category="voice" data-prices="0_20" data-surfaces="windows_macos_ios_android_web">
+                <div class="feature-card" id="microsoft-copilot-copilot-voice" data-category="voice" data-prices="0" data-surfaces="windows_macos_ios_android_web">
                     <div class="card-main">
                         <div class="feature-header">
                             <h3><a href="https://www.microsoft.com/en-us/microsoft-copilot" target="_blank" class="feature-link">Copilot Voice</a></h3>
@@ -976,21 +976,29 @@
                         <div class="avail-grid">
                             
                             <div class="avail-item">
-                                <span class="plan has-tooltip" tabindex="0">Free<span class="plan-tooltip">Standard • Voice input and output</span></span>
+                                <span class="plan has-tooltip" tabindex="0">Free<span class="plan-tooltip">Subject to capacity • Voice input and output; no priority when capacity is constrained</span></span>
                                 <span class="status"><span class="avail yes" aria-label="Available" role="img">✓</span></span>
                             </div>
                             <div class="avail-item">
-                                <span class="plan has-tooltip" tabindex="0">Copilot Pro<span class="plan-tooltip">Priority • Enhanced voice features</span></span>
+                                <span class="plan has-tooltip" tabindex="0">Microsoft 365 Personal / Family<span class="plan-tooltip">Priority access • Priority when capacity is limited</span></span>
                                 <span class="status"><span class="avail yes" aria-label="Available" role="img">✓</span></span>
                             </div>
+                            <div class="avail-item">
+                                <span class="plan has-tooltip" tabindex="0">Microsoft 365 Premium<span class="plan-tooltip">Priority access • Top consumer tier; replaced Copilot Pro</span></span>
+                                <span class="status"><span class="avail yes" aria-label="Available" role="img">✓</span></span>
+                            </div>
+                            <div class="avail-item">
+                                <span class="plan has-tooltip" tabindex="0">Copilot Pro<span class="plan-tooltip">— • Retired: off sale October 2025, support ended 2026-08-01</span></span>
+                                <span class="status"><span class="avail no" aria-label="Not available" role="img">✗</span></span>
+                            </div>
                         </div>
-                        <div class="talking-point" role="button" tabindex="0" aria-label="Click to copy talking point" onclick="copyTalkingPoint(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();copyTalkingPoint(this)}">Copilot Voice is <strong>available on all tiers including free</strong>. You can speak to Copilot on desktop, mobile, and web.</div>
+                        <div class="talking-point" role="button" tabindex="0" aria-label="Click to copy talking point" onclick="copyTalkingPoint(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();copyTalkingPoint(this)}">Copilot Voice is <strong>free for everyone</strong>, subject to capacity, with <strong>Microsoft 365 Personal, Family, and Premium subscribers getting priority access</strong> when capacity is constrained. <strong>Copilot Pro no longer exists</strong>: it went off sale in October 2025 and support ended 1 August 2026, replaced by Microsoft 365 Premium. Speak to Copilot on Windows, Mac, mobile, and the web.</div>
                         
                     </div>
                     <div class="surface-column">
                         <span class="plat-icon yes" title="Windows">Windows</span><span class="plat-icon yes" title="macOS">macOS</span><span class="plat-icon no" title="Linux">Linux</span><span class="plat-icon yes" title="iOS">iOS</span><span class="plat-icon yes" title="Android">Android</span><span class="plat-icon no" title="Chrome">Chrome</span><span class="plat-icon yes" title="web">web</span><span class="plat-icon no" title="terminal">terminal</span><span class="plat-icon no" title="API">API</span>
                         <div class="surface-dates">
-                            <span class="date-item launched clickable" title="Launched" onclick="showChangelog('microsoft-copilot-copilot-voice')"><span class="date-emoji">🚀</span><span class="date-value">2024-10-01</span></span><span class="date-item verified" title="Verified"><span class="date-emoji">✓</span><span class="date-value">2026-03-22</span></span><span class="date-item checked" title="Checked"><span class="date-emoji">👁</span><span class="date-value">2026-09-04</span></span>
+                            <span class="date-item launched clickable" title="Launched" onclick="showChangelog('microsoft-copilot-copilot-voice')"><span class="date-emoji">🚀</span><span class="date-value">2024-10-01</span></span><span class="date-item verified" title="Verified"><span class="date-emoji">✓</span><span class="date-value">2026-09-05</span></span><span class="date-item checked" title="Checked"><span class="date-emoji">👁</span><span class="date-value">2026-09-05</span></span>
                         </div>
                     </div>
                 </div>
@@ -3625,9 +3633,10 @@
                 name: "Copilot Voice",
                 platform: "Microsoft Copilot",
                 launched: "2024-10-01T12:00Z",
-                verified: "2026-03-22",
-                checked: "2026-09-04",
-                changes: [{ date: "2024-10-01T12:00Z", change: "Initial entry" }]
+                verified: "2026-09-05",
+                checked: "2026-09-05",
+                changes: [{ date: "2026-09-05", change: "[Verified] Copilot Pro retired (off sale October 2025, support ended 2026-08-01) and replaced by Microsoft 365 Premium; availability rows re-cut to Free / M365 Personal-Family / M365 Premium. Free tier corrected from \"Standard\" limits to free-subject-to-capacity with priority reserved for M365 subscribers. Added language and government-cloud caveats to regional note. Status remains ga; platform flags unchanged." },
+                { date: "2024-10-01T12:00Z", change: "Initial entry" }]
             },
             "microsoft-copilot-gpt-4-access": {
                 name: "GPT-4 Access",

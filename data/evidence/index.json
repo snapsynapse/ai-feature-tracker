@@ -1197,15 +1197,27 @@
     "source_file": "data/platforms/copilot.md",
     "source_heading": "Copilot Voice",
     "launched": "2024-10-01T12:00Z",
-    "verified": "2026-03-22",
-    "checked": "2026-09-04",
+    "verified": "2026-09-05",
+    "checked": "2026-09-05",
     "sources": [
       {
         "title": "Microsoft Copilot",
         "url": "https://www.microsoft.com/en-us/microsoft-copilot"
+      },
+      {
+        "title": "Changes to the Microsoft Copilot app",
+        "url": "https://support.microsoft.com/en-us/microsoft-365-copilot/learning/changes-microsoft-copilot-app"
+      },
+      {
+        "title": "Microsoft 365 Premium",
+        "url": "https://www.microsoft.com/en-us/microsoft-365/p/microsoft-365-premium/cfq7ttc11z3q"
       }
     ],
     "changelog": [
+      {
+        "date": "2026-09-05",
+        "change": "[Verified] Copilot Pro retired (off sale October 2025, support ended 2026-08-01) and replaced by Microsoft 365 Premium; availability rows re-cut to Free / M365 Personal-Family / M365 Premium. Free tier corrected from \"Standard\" limits to free-subject-to-capacity with priority reserved for M365 subscribers. Added language and government-cloud caveats to regional note. Status remains ga; platform flags unchanged."
+      },
       {
         "date": "2024-10-01T12:00Z",
         "change": "Initial entry"

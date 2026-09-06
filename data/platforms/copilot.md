@@ -4,7 +4,7 @@ vendor: Microsoft
 logo: https://copilot.microsoft.com/favicon.ico
 status_page: https://status.office.com
 pricing_page: https://www.microsoft.com/en-us/microsoft-copilot
-last_verified: 2026-04-14
+last_verified: 2026-09-05
 ---
 
 ## Pricing
@@ -253,46 +253,51 @@ Available in the United States. Broader rollout planned.
 | Gating | free |
 | URL | https://www.microsoft.com/en-us/microsoft-copilot |
 | Launched | 2024-10-01T12:00Z |
-| Verified | 2026-03-22|
-| Checked | 2026-09-04|
+| Verified | 2026-09-05|
+| Checked | 2026-09-05|
 
 ### Availability
 
 | Plan | Available | Limits | Notes |
 |------|-----------|--------|-------|
-| Free | ✅ | Standard | Voice input and output |
-| Copilot Pro | ✅ | Priority | Enhanced voice features |
+| Free | ✅ | Subject to capacity | Voice input and output; no priority when capacity is constrained |
+| Microsoft 365 Personal / Family | ✅ | Priority access | Priority when capacity is limited |
+| Microsoft 365 Premium | ✅ | Priority access | Top consumer tier; replaced Copilot Pro |
+| Copilot Pro | ❌ | — | Retired: off sale October 2025, support ended 2026-08-01 |
 
 ### Platforms
 
 | Platform | Available | Notes |
 |----------|-----------|-------|
 | Windows | ✅ | Native integration |
-| macOS | ✅ |  |
-| Linux | ❌ |  |
+| macOS | ✅ | Copilot app |
+| Linux | ❌ | No native client; web only |
 | iOS | ✅ | Copilot app |
 | Android | ✅ | Copilot app |
 | Chrome | ❌ |  |
 | web | ✅ | Browser with microphone |
 | terminal | ❌ |  |
-| API | ❌ | No consumer API |
+| API | ❌ | No public consumer voice API |
 
 ### Regional
 
-Available globally.
+Available globally, with spoken support limited to a subset of languages. Government cloud tenants (GCC, GCC High, DoD) receive Copilot features on a staggered schedule.
 
 ### Talking Point
 
-> "Copilot Voice is **available on all tiers including free**. You can speak to Copilot on desktop, mobile, and web."
+> "Copilot Voice is **free for everyone**, subject to capacity, with **Microsoft 365 Personal, Family, and Premium subscribers getting priority access** when capacity is constrained. **Copilot Pro no longer exists**: it went off sale in October 2025 and support ended 1 August 2026, replaced by Microsoft 365 Premium. Speak to Copilot on Windows, Mac, mobile, and the web."
 
 ### Sources
 
 - [Microsoft Copilot](https://www.microsoft.com/en-us/microsoft-copilot)
+- [Changes to the Microsoft Copilot app](https://support.microsoft.com/en-us/microsoft-365-copilot/learning/changes-microsoft-copilot-app)
+- [Microsoft 365 Premium](https://www.microsoft.com/en-us/microsoft-365/p/microsoft-365-premium/cfq7ttc11z3q)
 
 ### Changelog
 
 | Date | Change |
 |------|--------|
+| 2026-09-05 | [Verified] Copilot Pro retired (off sale October 2025, support ended 2026-08-01) and replaced by Microsoft 365 Premium; availability rows re-cut to Free / M365 Personal-Family / M365 Premium. Free tier corrected from "Standard" limits to free-subject-to-capacity with priority reserved for M365 subscribers. Added language and government-cloud caveats to regional note. Status remains ga; platform flags unchanged. |
 | 2024-10-01T12:00Z | Initial entry |
 
 ---

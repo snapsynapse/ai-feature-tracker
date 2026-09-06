@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-09-06T03:30:09.119Z",
+    "generated": "2026-09-06T03:30:19.220Z",
     "version": "1.0",
     "count": 72
   },
@@ -3309,14 +3309,26 @@
         {
           "plan": "Free",
           "available": true,
-          "limits": "Standard",
-          "notes": "Voice input and output"
+          "limits": "Subject to capacity",
+          "notes": "Voice input and output; no priority when capacity is constrained"
+        },
+        {
+          "plan": "Microsoft 365 Personal / Family",
+          "available": true,
+          "limits": "Priority access",
+          "notes": "Priority when capacity is limited"
+        },
+        {
+          "plan": "Microsoft 365 Premium",
+          "available": true,
+          "limits": "Priority access",
+          "notes": "Top consumer tier; replaced Copilot Pro"
         },
         {
           "plan": "Copilot Pro",
-          "available": true,
-          "limits": "Priority",
-          "notes": "Enhanced voice features"
+          "available": false,
+          "limits": "—",
+          "notes": "Retired: off sale October 2025, support ended 2026-08-01"
         }
       ],
       "surfaces": [
@@ -3330,13 +3342,13 @@
           "surface": "macos",
           "name": "macOS",
           "available": true,
-          "notes": ""
+          "notes": "Copilot app"
         },
         {
           "surface": "linux",
           "name": "Linux",
           "available": false,
-          "notes": ""
+          "notes": "No native client; web only"
         },
         {
           "surface": "ios",
@@ -3372,14 +3384,14 @@
           "surface": "api",
           "name": "API",
           "available": false,
-          "notes": "No consumer API"
+          "notes": "No public consumer voice API"
         }
       ],
-      "talking_point": "Copilot Voice is **available on all tiers including free**. You can speak to Copilot on desktop, mobile, and web.",
+      "talking_point": "Copilot Voice is **free for everyone**, subject to capacity, with **Microsoft 365 Personal, Family, and Premium subscribers getting priority access** when capacity is constrained. **Copilot Pro no longer exists**: it went off sale in October 2025 and support ended 1 August 2026, replaced by Microsoft 365 Premium. Speak to Copilot on Windows, Mac, mobile, and the web.",
       "launched": "2024-10-01T12:00Z",
-      "verified": "2026-03-22",
+      "verified": "2026-09-05",
       "evidence_id": "implementation-copilot-voice",
-      "evidence_verified": "2026-03-22"
+      "evidence_verified": "2026-09-05"
     },
     {
       "id": "copilot-gpt-4-access",

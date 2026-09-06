@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-09-06T03:30:09.119Z",
+    "generated": "2026-09-06T03:30:19.220Z",
     "version": "1.0"
   },
   "products": {
@@ -450,7 +450,6 @@
           "implementations": [
             "copilot-office-apps",
             "copilot-vision",
-            "copilot-voice",
             "copilot-gpt-4-access",
             "copilot-image-generation-designer",
             "copilot-chat"
@@ -461,13 +460,11 @@
             "connect-to-external-systems",
             "use-it-on-my-surfaces",
             "see-images-and-screens",
-            "hear-audio-and-speech",
-            "speak-back-in-real-time",
             "generate-images",
             "write-and-explain"
           ],
-          "implementation_count": 6,
-          "capability_count": 9
+          "implementation_count": 5,
+          "capability_count": 7
         },
         "Free": {
           "price": "$0",
@@ -487,6 +484,30 @@
           ],
           "implementation_count": 4,
           "capability_count": 6
+        },
+        "Microsoft 365 Personal / Family": {
+          "price": null,
+          "implementations": [
+            "copilot-voice"
+          ],
+          "capabilities": [
+            "hear-audio-and-speech",
+            "speak-back-in-real-time"
+          ],
+          "implementation_count": 1,
+          "capability_count": 2
+        },
+        "Microsoft 365 Premium": {
+          "price": null,
+          "implementations": [
+            "copilot-voice"
+          ],
+          "capabilities": [
+            "hear-audio-and-speech",
+            "speak-back-in-real-time"
+          ],
+          "implementation_count": 1,
+          "capability_count": 2
         }
       }
     },
