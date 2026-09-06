@@ -11,9 +11,13 @@ last_verified: 2026-09-05
 
 | Plan | Price | Notes |
 |------|-------|-------|
-| Free | $0 | Basic Copilot access |
-| Copilot Pro | $20/mo | Priority access, Office integration |
-| Copilot for Microsoft 365 | $30/user/mo | Full Copilot in M365 apps (requires M365 license) |
+| Free | $0 | Web and app chat; sign in for history, longer conversations, image creation, voice |
+| Microsoft 365 Personal | $9.99/mo | Copilot in the desktop Office apps; AI credits and per-feature limits apply |
+| Microsoft 365 Family | $12.99/mo | Same AI benefits as Personal, available to the subscription owner only |
+| Microsoft 365 Premium | $19.99/mo | Top consumer tier; replaced Copilot Pro. Adds Analyst and Researcher agents and extended limits |
+| Microsoft 365 Copilot | $30/user/mo | Commercial license; full Copilot in M365 apps (requires an M365 business license) |
+
+Copilot Pro is retired. Microsoft stopped selling it in October 2025 and support for remaining subscribers ended 2026-08-01; its consumer features moved to Microsoft 365 Premium.
 
 ---
 
@@ -26,15 +30,16 @@ last_verified: 2026-09-05
 | Gating | paid |
 | URL | https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/agent-builder |
 | Launched | 2025-02-24T12:00Z |
-| Verified | 2026-03-22|
-| Checked | 2026-09-04|
+| Verified | 2026-09-05|
+| Checked | 2026-09-05|
 
 ### Availability
 
 | Plan | Available | Limits | Notes |
 |------|-----------|--------|-------|
 | Free | ❌ | — | Not available |
-| Copilot Pro | ❌ | — | Not available |
+| Microsoft 365 Personal / Family | ❌ | — | Consumer plans do not include agent authoring |
+| Microsoft 365 Premium | ❌ | — | Consumer plan; includes prebuilt Analyst and Researcher agents, not agent authoring |
 | M365 Copilot | ✅ | Included | No-code agent creation + multi-agent coordination |
 | Copilot Chat (M365 commercial) | ⚠️ | Limited | Free for basic agents |
 
@@ -69,6 +74,7 @@ Available in 17 regions including US, Europe, Asia Pacific.
 
 | Date | Change |
 |------|--------|
+| 2026-09-05 | [Verified] Copilot Pro row replaced by the Microsoft 365 consumer plans, all marked unavailable: agent authoring remains a commercial Copilot capability. Recorded that Microsoft 365 Premium ships prebuilt Analyst and Researcher agents, which is agent consumption rather than authoring. |
 | 2026-03-07T12:00Z | [Verified] Multi-agent coordination added (agents can call other agents as tools); new agent surfaces: Outlook, OneDrive, Teams communities; PowerPoint agentic mode |
 | 2025-11-18T12:00Z | Rebranding to Copilot Studio Lite announced |
 | 2025-02-24T12:00Z | Initial entry |
@@ -84,15 +90,16 @@ Available in 17 regions including US, Europe, Asia Pacific.
 | Gating | paid |
 | URL | https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/overview-copilot-connector |
 | Launched | 2023-11-01T12:00Z |
-| Verified | 2026-03-22|
-| Checked | 2026-09-04|
+| Verified | 2026-09-05|
+| Checked | 2026-09-05|
 
 ### Availability
 
 | Plan | Available | Limits | Notes |
 |------|-----------|--------|-------|
 | Free | ❌ | — | Not available |
-| Copilot Pro | ❌ | — | Not available |
+| Microsoft 365 Personal / Family | ❌ | — | Consumer plans do not include connectors |
+| Microsoft 365 Premium | ❌ | — | Consumer plan; commercial Copilot license required |
 | M365 Copilot | ✅ | Full | 100+ connectors + federated connectors |
 
 ### Platforms
@@ -115,7 +122,7 @@ Available globally where M365 Copilot is available.
 
 ### Talking Point
 
-> "Copilot Connectors let M365 Copilot access external data from services like Salesforce, ServiceNow, Box, and more. **Requires M365 Copilot ($30/user/mo)**—not available on free or Pro plans. As of March 2026, **federated connectors add live data from Notion, HubSpot, Linear, Intercom, Google Contacts, and Google Calendar**."
+> "Copilot Connectors let M365 Copilot access external data from services like Salesforce, ServiceNow, Box, and more. **Requires M365 Copilot ($30/user/mo)**, and is not available on the free tier or any Microsoft 365 consumer plan. As of March 2026, **federated connectors add live data from Notion, HubSpot, Linear, Intercom, Google Contacts, and Google Calendar**."
 
 ### Sources
 
@@ -126,6 +133,7 @@ Available globally where M365 Copilot is available.
 
 | Date | Change |
 |------|--------|
+| 2026-09-05 | [Verified] Copilot Pro row replaced by the Microsoft 365 consumer plans, all marked unavailable: connectors remain a commercial Copilot capability requiring a Microsoft 365 Copilot license. |
 | 2026-03-07T12:00Z | [Verified] Federated connectors added: Notion, HubSpot, Linear, Intercom, Google Contacts, Google Calendar (live data via Researcher tool) |
 | 2025-11-01T12:00Z | MCP integration added |
 | 2023-11-01T12:00Z | Initial entry |
@@ -141,16 +149,19 @@ Available globally where M365 Copilot is available.
 | Gating | paid |
 | URL | https://www.microsoft.com/en-us/microsoft-365/copilot |
 | Launched | 2023-11-01T12:00Z |
-| Verified | 2026-03-22|
-| Checked | 2026-09-04|
+| Verified | 2026-09-05|
+| Checked | 2026-09-05|
 
 ### Availability
 
 | Plan | Available | Limits | Notes |
 |------|-----------|--------|-------|
-| Free | ❌ | — | Not available |
-| Copilot Pro | ✅ | Priority | Word, Excel, PowerPoint, Outlook |
-| M365 Copilot | ✅ | Full | Enterprise features |
+| Free | ❌ | — | Web and app chat only; no Office app integration |
+| Microsoft 365 Personal | ✅ | AI credits + per-feature limits | Word, Excel, PowerPoint, Outlook, OneNote; subscription owner only |
+| Microsoft 365 Family | ✅ | AI credits + per-feature limits | Same as Personal; AI benefits limited to the subscription owner |
+| Microsoft 365 Premium | ✅ | Extended | Adds advanced AI features and Analyst / Researcher agents |
+| Copilot Pro | ❌ | — | Retired: off sale October 2025, support ended 2026-08-01 |
+| M365 Copilot | ✅ | Full | Commercial license; enterprise features |
 
 ### Platforms
 
@@ -172,16 +183,18 @@ Available globally.
 
 ### Talking Point
 
-> "Copilot in Word, Excel, PowerPoint requires **Copilot Pro ($20/mo) or M365 Copilot ($30/user/mo)**. Free Copilot doesn't include Office integration."
+> "Copilot in Word, Excel, PowerPoint and Outlook now comes with **any paid Microsoft 365 consumer plan, starting at $9.99/mo for Personal**, or with a **Microsoft 365 Copilot commercial license ($30/user/mo)**. Free Copilot still doesn't include Office integration. Two catches: the AI benefits go to the **subscription owner only**, even on Family, and usage draws on monthly AI credits. **Copilot Pro no longer exists**, so ignore any guide that still names it."
 
 ### Sources
 
-- [Copilot Pro](https://www.microsoft.com/en-us/store/b/copilotpro)
+- [Microsoft Copilot free vs Copilot in Microsoft 365](https://support.microsoft.com/en-us/microsoft-365-copilot/what-s-the-difference-between-microsoft-copilot-free-and-copilot-in-microsoft-365)
+- [AI credits and limits for Microsoft 365 subscriptions](https://support.microsoft.com/en-us/office/ai-credits-and-limits-for-microsoft-365-personal-family-and-premium-68530f1a-4459-4d02-9818-8233c1f673b8)
 
 ### Changelog
 
 | Date | Change |
 |------|--------|
+| 2026-09-05 | [Verified] Copilot Pro retired and replaced by Microsoft 365 Premium; Office app integration confirmed as included in Microsoft 365 Personal, Family and Premium, limited to the subscription owner and metered by AI credits. Replaced the dead Copilot Pro store source with Microsoft's free-vs-subscription and AI credits support pages. |
 | 2023-11-01T12:00Z | Initial entry |
 
 ---
@@ -191,41 +204,45 @@ Available globally.
 | Property | Value |
 |----------|-------|
 | Category | browser |
-| Status | preview |
-| Gating | free |
+| Status | ga |
+| Gating | paid |
 | URL | https://support.microsoft.com/en-us/topic/using-copilot-vision-with-microsoft-copilot-3c67686f-fa97-40f6-8a3e-0e45265d425f |
 | Launched | 2024-10-01T12:00Z |
-| Verified | 2026-03-15|
-| Checked | 2026-09-04|
+| Verified | 2026-09-05|
+| Checked | 2026-09-05|
 
 ### Availability
 
 | Plan | Available | Limits | Notes |
 |------|-----------|--------|-------|
-| Free | ✅ | Preview | Free in Edge with Microsoft account |
-| Copilot Pro | ✅ | Preview | Same access as free in Edge |
+| Free | ❌ | — | Subscription required as of 2026 |
+| Microsoft 365 Personal | ✅ | 10 min/day | Windows, macOS, Edge, and Copilot mobile |
+| Microsoft 365 Family | ✅ | 10 min/day | Subscription owner only |
+| Microsoft 365 Premium | ✅ | 15 min/day | Highest consumer allowance |
+| Copilot Pro | ❌ | — | Retired: off sale October 2025, support ended 2026-08-01 |
+| M365 Copilot (commercial) | ✅ | Per license | Entra ID sign-in, Copilot web and mobile apps |
 
 ### Platforms
 
 | Platform | Available | Notes |
 |----------|-----------|-------|
-| Windows | ✅ | Edge browser required |
-| macOS | ✅ | Edge on Mac |
+| Windows | ✅ | Share any app or window with Copilot |
+| macOS | ✅ | Native Copilot app |
 | Linux | ❌ |  |
-| iOS | ❌ | Not available |
-| Android | ❌ | Not available |
-| Chrome | ❌ | Edge only |
-| web | ❌ | Edge browser only (not web Copilot) |
+| iOS | ✅ | Copilot mobile app, including camera feed |
+| Android | ✅ | Copilot mobile app, including camera feed |
+| Chrome | ❌ | Edge only for in-browser Vision |
+| web | ⚠️ | Copilot web app for commercial users signed in with Entra ID |
 | terminal | ❌ |  |
 | API | ❌ | No consumer API |
 
 ### Regional
 
-Available in the United States. Broader rollout planned.
+Available in all supported Copilot regions and languages. Availability can vary during rollout.
 
 ### Talking Point
 
-> "Copilot Vision lets Copilot see and discuss the webpage you're viewing in Edge. **Now free for all Edge users** in the US with a Microsoft account—no Pro subscription needed. Still in preview and Edge-only."
+> "Copilot Vision lets Copilot watch your screen, a shared app, or your phone camera and talk you through what it sees. It runs inside a Copilot Voice session, so you share a screen and then ask out loud. It is **no longer free**: you now need **Microsoft 365 Personal, Family, or Premium**, capped at **10 minutes a day** on Personal and Family and **15 minutes a day** on Premium. It reaches well beyond Edge now, covering Windows, macOS, and the mobile apps."
 
 ### Sources
 
@@ -237,6 +254,7 @@ Available in the United States. Broader rollout planned.
 
 | Date | Change |
 |------|--------|
+| 2026-09-05 | [Verified] Gating reverted from free to paid: Microsoft now requires a Microsoft 365 Personal, Family, or Premium subscription for Copilot Vision. Status moved from preview to ga. Added per-plan daily limits (10 min Personal/Family, 15 min Premium) and commercial Entra ID access. Platforms expanded well beyond Edge: iOS and Android now supported, Windows shares any app, macOS is a native app. Regional widened from US-only to all supported Copilot regions and languages. |
 | 2026-02-17T12:00Z | [Verified] Gating changed from paid to free for Edge users; macOS Edge confirmed; US availability confirmed |
 | 2025-03-01T12:00Z | Paywall removed — now free for all Edge users with Microsoft account |
 | 2024-12-05T12:00Z | Preview launched in Edge |
@@ -260,9 +278,10 @@ Available in the United States. Broader rollout planned.
 
 | Plan | Available | Limits | Notes |
 |------|-----------|--------|-------|
-| Free | ✅ | Subject to capacity | Voice input and output; no priority when capacity is constrained |
-| Microsoft 365 Personal / Family | ✅ | Priority access | Priority when capacity is limited |
-| Microsoft 365 Premium | ✅ | Priority access | Top consumer tier; replaced Copilot Pro |
+| Free | ✅ | Subject to capacity | Voice input and output after signing in; no priority when capacity is constrained |
+| Microsoft 365 Personal | ✅ | 30 min/day | Priority access when capacity is limited |
+| Microsoft 365 Family | ✅ | 30 min/day | Subscription owner only |
+| Microsoft 365 Premium | ✅ | 60 min/day | Top consumer tier; replaced Copilot Pro |
 | Copilot Pro | ❌ | — | Retired: off sale October 2025, support ended 2026-08-01 |
 
 ### Platforms
@@ -285,19 +304,20 @@ Available globally, with spoken support limited to a subset of languages. Govern
 
 ### Talking Point
 
-> "Copilot Voice is **free for everyone**, subject to capacity, with **Microsoft 365 Personal, Family, and Premium subscribers getting priority access** when capacity is constrained. **Copilot Pro no longer exists**: it went off sale in October 2025 and support ended 1 August 2026, replaced by Microsoft 365 Premium. Speak to Copilot on Windows, Mac, mobile, and the web."
+> "Copilot Voice is **free once you sign in**, subject to capacity. Subscribers get both priority and a published daily allowance: **30 minutes a day on Microsoft 365 Personal and Family, 60 minutes a day on Premium**. **Copilot Pro no longer exists**: it went off sale in October 2025 and support ended 1 August 2026, replaced by Microsoft 365 Premium. Speak to Copilot on Windows, Mac, mobile, and the web."
 
 ### Sources
 
 - [Microsoft Copilot](https://www.microsoft.com/en-us/microsoft-copilot)
 - [Changes to the Microsoft Copilot app](https://support.microsoft.com/en-us/microsoft-365-copilot/learning/changes-microsoft-copilot-app)
+- [AI credits and limits for Microsoft 365 subscriptions](https://support.microsoft.com/en-us/office/ai-credits-and-limits-for-microsoft-365-personal-family-and-premium-68530f1a-4459-4d02-9818-8233c1f673b8)
 - [Microsoft 365 Premium](https://www.microsoft.com/en-us/microsoft-365/p/microsoft-365-premium/cfq7ttc11z3q)
 
 ### Changelog
 
 | Date | Change |
 |------|--------|
-| 2026-09-05 | [Verified] Copilot Pro retired (off sale October 2025, support ended 2026-08-01) and replaced by Microsoft 365 Premium; availability rows re-cut to Free / M365 Personal-Family / M365 Premium. Free tier corrected from "Standard" limits to free-subject-to-capacity with priority reserved for M365 subscribers. Added language and government-cloud caveats to regional note. Status remains ga; platform flags unchanged. |
+| 2026-09-05 | [Verified] Copilot Pro retired (off sale October 2025, support ended 2026-08-01) and replaced by Microsoft 365 Premium; availability rows re-cut to Free / M365 Personal / Family / Premium. Free tier corrected from "Standard" limits to free-subject-to-capacity, sign-in required. Added Microsoft's published daily voice allowances (30 min/day Personal and Family, 60 min/day Premium). Added language and government-cloud caveats to regional note. Status remains ga; platform flags unchanged. |
 | 2024-10-01T12:00Z | Initial entry |
 
 ---
@@ -308,18 +328,20 @@ Available globally, with spoken support limited to a subset of languages. Govern
 |----------|-------|
 | Category | other |
 | Status | ga |
-| Gating | paid |
+| Gating | mixed |
 | URL | https://copilot.microsoft.com/ |
 | Launched | 2023-02-07T12:00Z |
-| Verified | 2026-03-22|
-| Checked | 2026-09-04|
+| Verified | 2026-09-05|
+| Checked | 2026-09-05|
 
 ### Availability
 
 | Plan | Available | Limits | Notes |
 |------|-----------|--------|-------|
-| Free | ⚠️ | Limited | Falls back to faster models at peak |
-| Copilot Pro | ✅ | Priority | Consistent GPT-4 access |
+| Free | ⚠️ | Limited | Model routing not guaranteed; lower usage limits than subscriptions |
+| Microsoft 365 Personal / Family | ✅ | Priority access | Higher usage limits; priority when capacity is constrained |
+| Microsoft 365 Premium | ✅ | Extended | Exclusive access to advanced AI features |
+| Copilot Pro | ❌ | — | Retired: off sale October 2025, support ended 2026-08-01 |
 
 ### Platforms
 
@@ -341,16 +363,18 @@ Available globally.
 
 ### Talking Point
 
-> "Free Copilot uses GPT-4 when available but may fall back to faster models during peak times. **Pro guarantees priority GPT-4 access.**"
+> "Copilot no longer sells access to a named GPT-4 tier, and Microsoft's own plan documentation never mentions one. What a **Microsoft 365 subscription buys is usage, not a better model**: higher limits, priority access when capacity is tight, and on **Premium** the advanced AI features and the Analyst and Researcher agents. Reporting through 2026 describes Copilot routing across newer OpenAI models alongside Microsoft's own MAI models, with a model picker on some surfaces. Any guide still framing this as free-versus-Pro GPT-4 access is out of date."
 
 ### Sources
 
-- [Copilot Pro Features](https://www.microsoft.com/en-us/store/b/copilotpro)
+- [Microsoft Copilot free vs Copilot in Microsoft 365](https://support.microsoft.com/en-us/microsoft-365-copilot/what-s-the-difference-between-microsoft-copilot-free-and-copilot-in-microsoft-365)
+- [AI credits and limits for Microsoft 365 subscriptions](https://support.microsoft.com/en-us/office/ai-credits-and-limits-for-microsoft-365-personal-family-and-premium-68530f1a-4459-4d02-9818-8233c1f673b8)
 
 ### Changelog
 
 | Date | Change |
 |------|--------|
+| 2026-09-05 | [Verified] The GPT-4 framing is obsolete: Microsoft's plan documentation no longer sells a named model tier, and publishes no free-versus-paid model split. Gating changed from paid to mixed, since the paid differentiator is usage limits and advanced features rather than model access. Copilot Pro rows replaced with the Microsoft 365 consumer plans. Dead Copilot Pro store source replaced with Microsoft support pages. Multi-model routing across OpenAI and Microsoft MAI models is secondary reporting, not first-party confirmed. Record is a candidate for renaming away from "GPT-4 Access". |
 | 2023-02-07T12:00Z | Initial entry |
 
 ---
@@ -364,15 +388,18 @@ Available globally.
 | Gating | free |
 | URL | https://designer.microsoft.com/ |
 | Launched | 2023-03-21T12:00Z |
-| Verified | 2026-03-23|
-| Checked | 2026-09-04|
+| Verified | 2026-09-05|
+| Checked | 2026-09-05|
 
 ### Availability
 
 | Plan | Available | Limits | Notes |
 |------|-----------|--------|-------|
-| Free | ✅ | 15 AI credits/mo | Basic generation (Classic M365); 60 credits/mo for M365 Personal |
-| Copilot Pro | ✅ | 100 boosts/day | Priority generation |
+| Free | ✅ | Not published | Image creation after signing in with a Microsoft account |
+| Microsoft 365 Personal | ✅ | 60 AI credits/mo | Designer, Create, Paint, Photos, and M365 web, mobile and desktop apps |
+| Microsoft 365 Family | ✅ | 60 AI credits/mo | Subscription owner only |
+| Microsoft 365 Premium | ✅ | Beyond standard credits | Extensive usage above the standard credit limit |
+| Copilot Pro | ❌ | — | Retired: off sale October 2025, support ended 2026-08-01 |
 
 ### Platforms
 
@@ -394,7 +421,7 @@ Available globally.
 
 ### Talking Point
 
-> "Image generation with Designer is **available on all plans including free** using AI credits (15–60/month depending on plan). Now powered by **GPT-Image-1.5** (upgraded from GPT-4o). Designer bot in Teams retired Feb 2026—use Copilot image generation instead."
+> "Image generation with Designer is **available on every plan including free**, though you must sign in. Paid plans meter it with AI credits: **60 a month on Microsoft 365 Personal and Family**, and **usage beyond the standard credit limit on Premium**. Microsoft doesn't publish a monthly figure for free accounts. Powered by **GPT-Image-1.5**. The Designer bot in Teams was retired in February 2026, so use Copilot image generation instead."
 
 ### Sources
 
@@ -405,6 +432,7 @@ Available globally.
 
 | Date | Change |
 |------|--------|
+| 2026-09-05 | [Verified] Copilot Pro retired and replaced by Microsoft 365 Premium. Per-plan credits re-cut from Microsoft's AI credits support page: 60 credits/mo on Personal and Family, usage beyond the standard limit on Premium. Free-tier allowance corrected to "not published" — the previous 15 credits/mo figure described legacy Classic Microsoft 365, not free Copilot. |
 | 2026-03-23T12:00Z | [Verified] Gating corrected from paid to free — free users have access with 15 AI credits/mo; data was internally inconsistent |
 | 2026-03-21T12:00Z | [Verified] Credits system replaced boosts (15-60 credits/month); Designer bot retired in Teams (Feb 27); model upgraded to GPT-Image-1.5 |
 | 2023-03-21T12:00Z | Initial entry |
@@ -420,16 +448,18 @@ Available globally.
 | Gating   | free |
 | URL      | https://copilot.microsoft.com |
 | Launched | 2023-02-07T12:00Z |
-| Verified | 2026-03-22|
-| Checked  | 2026-09-04 |
+| Verified | 2026-09-05|
+| Checked  | 2026-09-05 |
 
 ### Availability
 
 | Plan | Available | Limits | Notes |
 |------|-----------|--------|-------|
-| Free | ✅ | Standard | Basic chat; sign-in unlocks history, longer convos, voice |
-| Copilot Pro | ✅ | Higher | Priority access, longer context |
-| M365 Copilot | ✅ | Full | Included with M365 subscription |
+| Free | ✅ | Standard | No sign-in for basic chat; sign in for history, longer conversations, image creation, voice |
+| Microsoft 365 Personal / Family | ✅ | Extensive use | Priority access when capacity is constrained |
+| Microsoft 365 Premium | ✅ | Extensive use | Adds advanced AI features and Analyst / Researcher agents |
+| Copilot Pro | ❌ | — | Retired: off sale October 2025, support ended 2026-08-01 |
+| M365 Copilot | ✅ | Full | Commercial license |
 
 ### Platforms
 
@@ -451,17 +481,19 @@ Broadly available globally; some AI features may vary by region or require data-
 
 ### Talking Point
 
-> "Microsoft Copilot's core text chat is **free at copilot.microsoft.com** — no account required for basic access. Sign in with a Microsoft account for chat history, longer conversations, and voice. Native apps available on Windows, macOS, iOS, and Android."
+> "Microsoft Copilot's core text chat is **free at copilot.microsoft.com**, with no account required for basic access. Sign in with a Microsoft account for chat history, longer conversations, image creation, and voice. A paid **Microsoft 365 plan buys higher usage, not a different chatbot**, and **Premium** adds the Analyst and Researcher agents. Native apps available on Windows, macOS, iOS, and Android."
 
 ### Sources
 
 - [Microsoft Copilot](https://copilot.microsoft.com)
-- [What's the difference between the Microsoft Copilot experiences?](https://support.microsoft.com/en-us/topic/what-s-the-difference-between-the-microsoft-copilot-experiences-cfff4791-694a-4d90-9c9c-1eb3fb28e842)
+- [Microsoft Copilot free vs Copilot in Microsoft 365](https://support.microsoft.com/en-us/microsoft-365-copilot/what-s-the-difference-between-microsoft-copilot-free-and-copilot-in-microsoft-365)
+- [AI credits and limits for Microsoft 365 subscriptions](https://support.microsoft.com/en-us/office/ai-credits-and-limits-for-microsoft-365-personal-family-and-premium-68530f1a-4459-4d02-9818-8233c1f673b8)
 
 ### Changelog
 
 | Date | Change |
 |------|--------|
+| 2026-09-05 | [Verified] Copilot Pro row replaced by the Microsoft 365 consumer plans after Copilot Pro's retirement; free tier confirmed as no-sign-in basic chat with sign-in unlocking history, longer conversations, image creation and voice. Noted that paid plans buy usage rather than a different model, and that Premium adds the Analyst and Researcher agents. Refreshed the redirected support source. |
 | 2026-03-07T12:00Z | Initial entry |
 | 2023-11-15T12:00Z | Bing Chat rebranded to Microsoft Copilot |
 | 2023-02-07T12:00Z | Bing Chat (predecessor) launched |

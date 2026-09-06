@@ -141,6 +141,7 @@
                         <option value="0">Free</option>
                         <option value="8">$8/mo</option>
                         <option value="10">$10/mo</option>
+                        <option value="13">$13/mo</option>
                         <option value="16">$16/mo</option>
                         <option value="20">$20/mo</option>
                         <option value="30">$30/mo</option>
@@ -838,8 +839,11 @@
             </div>
             <div class="pricing-bar">
                 <span class="price-tag"><strong>Free</strong>: $0</span>
-                <span class="price-tag"><strong>Copilot Pro</strong>: $20/mo</span>
-                <span class="price-tag"><strong>Copilot for Microsoft 365</strong>: $30/user/mo</span>
+                <span class="price-tag"><strong>Microsoft 365 Personal</strong>: $9.99/mo</span>
+                <span class="price-tag"><strong>Microsoft 365 Family</strong>: $12.99/mo</span>
+                <span class="price-tag"><strong>Microsoft 365 Premium</strong>: $19.99/mo</span>
+                <span class="price-tag"><strong>Microsoft 365 Copilot</strong>: $30/user/mo</span>
+                <span class="price-tag"><strong>Copilot Pro is retired. Microsoft stopped selling it in October 2025 and support for remaining subscribers ended 2026-08-01; its consumer features moved to Microsoft 365 Premium.</strong>: </span>
             </div>
             <div class="features-grid">
                 
@@ -856,7 +860,11 @@
                                 <span class="status"><span class="avail no" aria-label="Not available" role="img">✗</span></span>
                             </div>
                             <div class="avail-item">
-                                <span class="plan has-tooltip" tabindex="0">Copilot Pro<span class="plan-tooltip">— • Not available</span></span>
+                                <span class="plan has-tooltip" tabindex="0">Microsoft 365 Personal / Family<span class="plan-tooltip">— • Consumer plans do not include agent authoring</span></span>
+                                <span class="status"><span class="avail no" aria-label="Not available" role="img">✗</span></span>
+                            </div>
+                            <div class="avail-item">
+                                <span class="plan has-tooltip" tabindex="0">Microsoft 365 Premium<span class="plan-tooltip">— • Consumer plan; includes prebuilt Analyst and Researcher agents, not agent authoring</span></span>
                                 <span class="status"><span class="avail no" aria-label="Not available" role="img">✗</span></span>
                             </div>
                             <div class="avail-item">
@@ -874,7 +882,7 @@
                     <div class="surface-column">
                         <span class="plat-icon yes" title="Windows">Windows</span><span class="plat-icon yes" title="macOS">macOS</span><span class="plat-icon no" title="Linux">Linux</span><span class="plat-icon no" title="iOS">iOS</span><span class="plat-icon no" title="Android">Android</span><span class="plat-icon no" title="Chrome">Chrome</span><span class="plat-icon yes" title="web">web</span><span class="plat-icon no" title="terminal">terminal</span><span class="plat-icon partial" title="API">API</span>
                         <div class="surface-dates">
-                            <span class="date-item launched clickable" title="Launched" onclick="showChangelog('microsoft-copilot-agent-builder')"><span class="date-emoji">🚀</span><span class="date-value">2025-02-24</span></span><span class="date-item verified" title="Verified"><span class="date-emoji">✓</span><span class="date-value">2026-03-22</span></span><span class="date-item checked" title="Checked"><span class="date-emoji">👁</span><span class="date-value">2026-09-04</span></span>
+                            <span class="date-item launched clickable" title="Launched" onclick="showChangelog('microsoft-copilot-agent-builder')"><span class="date-emoji">🚀</span><span class="date-value">2025-02-24</span></span><span class="date-item verified" title="Verified"><span class="date-emoji">✓</span><span class="date-value">2026-09-05</span></span><span class="date-item checked" title="Checked"><span class="date-emoji">👁</span><span class="date-value">2026-09-05</span></span>
                         </div>
                     </div>
                 </div>
@@ -891,7 +899,11 @@
                                 <span class="status"><span class="avail no" aria-label="Not available" role="img">✗</span></span>
                             </div>
                             <div class="avail-item">
-                                <span class="plan has-tooltip" tabindex="0">Copilot Pro<span class="plan-tooltip">— • Not available</span></span>
+                                <span class="plan has-tooltip" tabindex="0">Microsoft 365 Personal / Family<span class="plan-tooltip">— • Consumer plans do not include connectors</span></span>
+                                <span class="status"><span class="avail no" aria-label="Not available" role="img">✗</span></span>
+                            </div>
+                            <div class="avail-item">
+                                <span class="plan has-tooltip" tabindex="0">Microsoft 365 Premium<span class="plan-tooltip">— • Consumer plan; commercial Copilot license required</span></span>
                                 <span class="status"><span class="avail no" aria-label="Not available" role="img">✗</span></span>
                             </div>
                             <div class="avail-item">
@@ -899,17 +911,17 @@
                                 <span class="status"><span class="avail yes" aria-label="Available" role="img">✓</span></span>
                             </div>
                         </div>
-                        <div class="talking-point" role="button" tabindex="0" aria-label="Click to copy talking point" onclick="copyTalkingPoint(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();copyTalkingPoint(this)}">Copilot Connectors let M365 Copilot access external data from services like Salesforce, ServiceNow, Box, and more. <strong>Requires M365 Copilot ($30/user/mo)</strong>—not available on free or Pro plans. As of March 2026, <strong>federated connectors add live data from Notion, HubSpot, Linear, Intercom, Google Contacts, and Google Calendar</strong>.</div>
+                        <div class="talking-point" role="button" tabindex="0" aria-label="Click to copy talking point" onclick="copyTalkingPoint(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();copyTalkingPoint(this)}">Copilot Connectors let M365 Copilot access external data from services like Salesforce, ServiceNow, Box, and more. <strong>Requires M365 Copilot ($30/user/mo)</strong>, and is not available on the free tier or any Microsoft 365 consumer plan. As of March 2026, <strong>federated connectors add live data from Notion, HubSpot, Linear, Intercom, Google Contacts, and Google Calendar</strong>.</div>
                         
                     </div>
                     <div class="surface-column">
                         <span class="plat-icon yes" title="Windows">Windows</span><span class="plat-icon yes" title="macOS">macOS</span><span class="plat-icon no" title="Linux">Linux</span><span class="plat-icon yes" title="iOS">iOS</span><span class="plat-icon yes" title="Android">Android</span><span class="plat-icon no" title="Chrome">Chrome</span><span class="plat-icon yes" title="web">web</span><span class="plat-icon no" title="terminal">terminal</span><span class="plat-icon yes" title="API">API</span>
                         <div class="surface-dates">
-                            <span class="date-item launched clickable" title="Launched" onclick="showChangelog('microsoft-copilot-copilot-connectors')"><span class="date-emoji">🚀</span><span class="date-value">2023-11-01</span></span><span class="date-item verified" title="Verified"><span class="date-emoji">✓</span><span class="date-value">2026-03-22</span></span><span class="date-item checked" title="Checked"><span class="date-emoji">👁</span><span class="date-value">2026-09-04</span></span>
+                            <span class="date-item launched clickable" title="Launched" onclick="showChangelog('microsoft-copilot-copilot-connectors')"><span class="date-emoji">🚀</span><span class="date-value">2023-11-01</span></span><span class="date-item verified" title="Verified"><span class="date-emoji">✓</span><span class="date-value">2026-09-05</span></span><span class="date-item checked" title="Checked"><span class="date-emoji">👁</span><span class="date-value">2026-09-05</span></span>
                         </div>
                     </div>
                 </div>
-                <div class="feature-card" id="microsoft-copilot-copilot-in-office-apps" data-category="cloud-files" data-prices="20" data-surfaces="windows_macos_ios_android_web">
+                <div class="feature-card" id="microsoft-copilot-copilot-in-office-apps" data-category="cloud-files" data-prices="10_13_20" data-surfaces="windows_macos_ios_android_web">
                     <div class="card-main">
                         <div class="feature-header">
                             <h3><a href="https://www.microsoft.com/en-us/microsoft-365/copilot" target="_blank" class="feature-link">Copilot in Office Apps</a></h3>
@@ -918,56 +930,84 @@
                         <div class="avail-grid">
                             
                             <div class="avail-item">
-                                <span class="plan has-tooltip" tabindex="0">Free<span class="plan-tooltip">— • Not available</span></span>
+                                <span class="plan has-tooltip" tabindex="0">Free<span class="plan-tooltip">— • Web and app chat only; no Office app integration</span></span>
                                 <span class="status"><span class="avail no" aria-label="Not available" role="img">✗</span></span>
                             </div>
                             <div class="avail-item">
-                                <span class="plan has-tooltip" tabindex="0">Copilot Pro<span class="plan-tooltip">Priority • Word, Excel, PowerPoint, Outlook</span></span>
+                                <span class="plan has-tooltip" tabindex="0">Microsoft 365 Personal<span class="plan-tooltip">AI credits + per-feature limits • Word, Excel, PowerPoint, Outlook, OneNote; subscription owner only</span></span>
                                 <span class="status"><span class="avail yes" aria-label="Available" role="img">✓</span></span>
                             </div>
                             <div class="avail-item">
-                                <span class="plan has-tooltip" tabindex="0">M365 Copilot<span class="plan-tooltip">Full • Enterprise features</span></span>
+                                <span class="plan has-tooltip" tabindex="0">Microsoft 365 Family<span class="plan-tooltip">AI credits + per-feature limits • Same as Personal; AI benefits limited to the subscription owner</span></span>
+                                <span class="status"><span class="avail yes" aria-label="Available" role="img">✓</span></span>
+                            </div>
+                            <div class="avail-item">
+                                <span class="plan has-tooltip" tabindex="0">Microsoft 365 Premium<span class="plan-tooltip">Extended • Adds advanced AI features and Analyst / Researcher agents</span></span>
+                                <span class="status"><span class="avail yes" aria-label="Available" role="img">✓</span></span>
+                            </div>
+                            <div class="avail-item">
+                                <span class="plan has-tooltip" tabindex="0">Copilot Pro<span class="plan-tooltip">— • Retired: off sale October 2025, support ended 2026-08-01</span></span>
+                                <span class="status"><span class="avail no" aria-label="Not available" role="img">✗</span></span>
+                            </div>
+                            <div class="avail-item">
+                                <span class="plan has-tooltip" tabindex="0">M365 Copilot<span class="plan-tooltip">Full • Commercial license; enterprise features</span></span>
                                 <span class="status"><span class="avail yes" aria-label="Available" role="img">✓</span></span>
                             </div>
                         </div>
-                        <div class="talking-point" role="button" tabindex="0" aria-label="Click to copy talking point" onclick="copyTalkingPoint(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();copyTalkingPoint(this)}">Copilot in Word, Excel, PowerPoint requires <strong>Copilot Pro ($20/mo) or M365 Copilot ($30/user/mo)</strong>. Free Copilot doesn't include Office integration.</div>
+                        <div class="talking-point" role="button" tabindex="0" aria-label="Click to copy talking point" onclick="copyTalkingPoint(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();copyTalkingPoint(this)}">Copilot in Word, Excel, PowerPoint and Outlook now comes with <strong>any paid Microsoft 365 consumer plan, starting at $9.99/mo for Personal</strong>, or with a <strong>Microsoft 365 Copilot commercial license ($30/user/mo)</strong>. Free Copilot still doesn't include Office integration. Two catches: the AI benefits go to the <strong>subscription owner only</strong>, even on Family, and usage draws on monthly AI credits. <strong>Copilot Pro no longer exists</strong>, so ignore any guide that still names it.</div>
                         
                     </div>
                     <div class="surface-column">
                         <span class="plat-icon yes" title="Windows">Windows</span><span class="plat-icon yes" title="macOS">macOS</span><span class="plat-icon no" title="Linux">Linux</span><span class="plat-icon yes" title="iOS">iOS</span><span class="plat-icon yes" title="Android">Android</span><span class="plat-icon no" title="Chrome">Chrome</span><span class="plat-icon yes" title="web">web</span><span class="plat-icon no" title="terminal">terminal</span><span class="plat-icon no" title="API">API</span>
                         <div class="surface-dates">
-                            <span class="date-item launched clickable" title="Launched" onclick="showChangelog('microsoft-copilot-copilot-in-office-apps')"><span class="date-emoji">🚀</span><span class="date-value">2023-11-01</span></span><span class="date-item verified" title="Verified"><span class="date-emoji">✓</span><span class="date-value">2026-03-22</span></span><span class="date-item checked" title="Checked"><span class="date-emoji">👁</span><span class="date-value">2026-09-04</span></span>
+                            <span class="date-item launched clickable" title="Launched" onclick="showChangelog('microsoft-copilot-copilot-in-office-apps')"><span class="date-emoji">🚀</span><span class="date-value">2023-11-01</span></span><span class="date-item verified" title="Verified"><span class="date-emoji">✓</span><span class="date-value">2026-09-05</span></span><span class="date-item checked" title="Checked"><span class="date-emoji">👁</span><span class="date-value">2026-09-05</span></span>
                         </div>
                     </div>
                 </div>
-                <div class="feature-card" id="microsoft-copilot-copilot-vision" data-category="browser" data-prices="0_20" data-surfaces="windows_macos">
+                <div class="feature-card" id="microsoft-copilot-copilot-vision" data-category="browser" data-prices="10_13_20" data-surfaces="windows_macos_ios_android_web">
                     <div class="card-main">
                         <div class="feature-header">
                             <h3><a href="https://support.microsoft.com/en-us/topic/using-copilot-vision-with-microsoft-copilot-3c67686f-fa97-40f6-8a3e-0e45265d425f" target="_blank" class="feature-link">Copilot Vision</a></h3>
-                            <span class="badges"><button class="permalink-btn" onclick="copyPermalink('microsoft-copilot-copilot-vision')" title="Copy link to this feature" aria-label="Copy permalink">🔗</button><span class="badge avail-preview">Preview</span><span class="badge gate-free">Free</span></span>
+                            <span class="badges"><button class="permalink-btn" onclick="copyPermalink('microsoft-copilot-copilot-vision')" title="Copy link to this feature" aria-label="Copy permalink">🔗</button><span class="badge avail-ga">GA</span><span class="badge gate-paid">Paid</span></span>
                         </div>
                         <div class="avail-grid">
                             
                             <div class="avail-item">
-                                <span class="plan has-tooltip" tabindex="0">Free<span class="plan-tooltip">Preview • Free in Edge with Microsoft account</span></span>
+                                <span class="plan has-tooltip" tabindex="0">Free<span class="plan-tooltip">— • Subscription required as of 2026</span></span>
+                                <span class="status"><span class="avail no" aria-label="Not available" role="img">✗</span></span>
+                            </div>
+                            <div class="avail-item">
+                                <span class="plan has-tooltip" tabindex="0">Microsoft 365 Personal<span class="plan-tooltip">10 min/day • Windows, macOS, Edge, and Copilot mobile</span></span>
                                 <span class="status"><span class="avail yes" aria-label="Available" role="img">✓</span></span>
                             </div>
                             <div class="avail-item">
-                                <span class="plan has-tooltip" tabindex="0">Copilot Pro<span class="plan-tooltip">Preview • Same access as free in Edge</span></span>
+                                <span class="plan has-tooltip" tabindex="0">Microsoft 365 Family<span class="plan-tooltip">10 min/day • Subscription owner only</span></span>
+                                <span class="status"><span class="avail yes" aria-label="Available" role="img">✓</span></span>
+                            </div>
+                            <div class="avail-item">
+                                <span class="plan has-tooltip" tabindex="0">Microsoft 365 Premium<span class="plan-tooltip">15 min/day • Highest consumer allowance</span></span>
+                                <span class="status"><span class="avail yes" aria-label="Available" role="img">✓</span></span>
+                            </div>
+                            <div class="avail-item">
+                                <span class="plan has-tooltip" tabindex="0">Copilot Pro<span class="plan-tooltip">— • Retired: off sale October 2025, support ended 2026-08-01</span></span>
+                                <span class="status"><span class="avail no" aria-label="Not available" role="img">✗</span></span>
+                            </div>
+                            <div class="avail-item">
+                                <span class="plan has-tooltip" tabindex="0">M365 Copilot (commercial)<span class="plan-tooltip">Per license • Entra ID sign-in, Copilot web and mobile apps</span></span>
                                 <span class="status"><span class="avail yes" aria-label="Available" role="img">✓</span></span>
                             </div>
                         </div>
-                        <div class="talking-point" role="button" tabindex="0" aria-label="Click to copy talking point" onclick="copyTalkingPoint(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();copyTalkingPoint(this)}">Copilot Vision lets Copilot see and discuss the webpage you're viewing in Edge. <strong>Now free for all Edge users</strong> in the US with a Microsoft account—no Pro subscription needed. Still in preview and Edge-only.</div>
+                        <div class="talking-point" role="button" tabindex="0" aria-label="Click to copy talking point" onclick="copyTalkingPoint(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();copyTalkingPoint(this)}">Copilot Vision lets Copilot watch your screen, a shared app, or your phone camera and talk you through what it sees. It runs inside a Copilot Voice session, so you share a screen and then ask out loud. It is <strong>no longer free</strong>: you now need <strong>Microsoft 365 Personal, Family, or Premium</strong>, capped at <strong>10 minutes a day</strong> on Personal and Family and <strong>15 minutes a day</strong> on Premium. It reaches well beyond Edge now, covering Windows, macOS, and the mobile apps.</div>
                         
                     </div>
                     <div class="surface-column">
-                        <span class="plat-icon yes" title="Windows">Windows</span><span class="plat-icon yes" title="macOS">macOS</span><span class="plat-icon no" title="Linux">Linux</span><span class="plat-icon no" title="iOS">iOS</span><span class="plat-icon no" title="Android">Android</span><span class="plat-icon no" title="Chrome">Chrome</span><span class="plat-icon no" title="web">web</span><span class="plat-icon no" title="terminal">terminal</span><span class="plat-icon no" title="API">API</span>
+                        <span class="plat-icon yes" title="Windows">Windows</span><span class="plat-icon yes" title="macOS">macOS</span><span class="plat-icon no" title="Linux">Linux</span><span class="plat-icon yes" title="iOS">iOS</span><span class="plat-icon yes" title="Android">Android</span><span class="plat-icon no" title="Chrome">Chrome</span><span class="plat-icon partial" title="web">web</span><span class="plat-icon no" title="terminal">terminal</span><span class="plat-icon no" title="API">API</span>
                         <div class="surface-dates">
-                            <span class="date-item launched clickable" title="Launched" onclick="showChangelog('microsoft-copilot-copilot-vision')"><span class="date-emoji">🚀</span><span class="date-value">2024-10-01</span></span><span class="date-item verified" title="Verified"><span class="date-emoji">✓</span><span class="date-value">2026-03-15</span></span><span class="date-item checked" title="Checked"><span class="date-emoji">👁</span><span class="date-value">2026-09-04</span></span>
+                            <span class="date-item launched clickable" title="Launched" onclick="showChangelog('microsoft-copilot-copilot-vision')"><span class="date-emoji">🚀</span><span class="date-value">2024-10-01</span></span><span class="date-item verified" title="Verified"><span class="date-emoji">✓</span><span class="date-value">2026-09-05</span></span><span class="date-item checked" title="Checked"><span class="date-emoji">👁</span><span class="date-value">2026-09-05</span></span>
                         </div>
                     </div>
                 </div>
-                <div class="feature-card" id="microsoft-copilot-copilot-voice" data-category="voice" data-prices="0" data-surfaces="windows_macos_ios_android_web">
+                <div class="feature-card" id="microsoft-copilot-copilot-voice" data-category="voice" data-prices="0_10_13_20" data-surfaces="windows_macos_ios_android_web">
                     <div class="card-main">
                         <div class="feature-header">
                             <h3><a href="https://www.microsoft.com/en-us/microsoft-copilot" target="_blank" class="feature-link">Copilot Voice</a></h3>
@@ -976,15 +1016,19 @@
                         <div class="avail-grid">
                             
                             <div class="avail-item">
-                                <span class="plan has-tooltip" tabindex="0">Free<span class="plan-tooltip">Subject to capacity • Voice input and output; no priority when capacity is constrained</span></span>
+                                <span class="plan has-tooltip" tabindex="0">Free<span class="plan-tooltip">Subject to capacity • Voice input and output after signing in; no priority when capacity is constrained</span></span>
                                 <span class="status"><span class="avail yes" aria-label="Available" role="img">✓</span></span>
                             </div>
                             <div class="avail-item">
-                                <span class="plan has-tooltip" tabindex="0">Microsoft 365 Personal / Family<span class="plan-tooltip">Priority access • Priority when capacity is limited</span></span>
+                                <span class="plan has-tooltip" tabindex="0">Microsoft 365 Personal<span class="plan-tooltip">30 min/day • Priority access when capacity is limited</span></span>
                                 <span class="status"><span class="avail yes" aria-label="Available" role="img">✓</span></span>
                             </div>
                             <div class="avail-item">
-                                <span class="plan has-tooltip" tabindex="0">Microsoft 365 Premium<span class="plan-tooltip">Priority access • Top consumer tier; replaced Copilot Pro</span></span>
+                                <span class="plan has-tooltip" tabindex="0">Microsoft 365 Family<span class="plan-tooltip">30 min/day • Subscription owner only</span></span>
+                                <span class="status"><span class="avail yes" aria-label="Available" role="img">✓</span></span>
+                            </div>
+                            <div class="avail-item">
+                                <span class="plan has-tooltip" tabindex="0">Microsoft 365 Premium<span class="plan-tooltip">60 min/day • Top consumer tier; replaced Copilot Pro</span></span>
                                 <span class="status"><span class="avail yes" aria-label="Available" role="img">✓</span></span>
                             </div>
                             <div class="avail-item">
@@ -992,7 +1036,7 @@
                                 <span class="status"><span class="avail no" aria-label="Not available" role="img">✗</span></span>
                             </div>
                         </div>
-                        <div class="talking-point" role="button" tabindex="0" aria-label="Click to copy talking point" onclick="copyTalkingPoint(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();copyTalkingPoint(this)}">Copilot Voice is <strong>free for everyone</strong>, subject to capacity, with <strong>Microsoft 365 Personal, Family, and Premium subscribers getting priority access</strong> when capacity is constrained. <strong>Copilot Pro no longer exists</strong>: it went off sale in October 2025 and support ended 1 August 2026, replaced by Microsoft 365 Premium. Speak to Copilot on Windows, Mac, mobile, and the web.</div>
+                        <div class="talking-point" role="button" tabindex="0" aria-label="Click to copy talking point" onclick="copyTalkingPoint(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();copyTalkingPoint(this)}">Copilot Voice is <strong>free once you sign in</strong>, subject to capacity. Subscribers get both priority and a published daily allowance: <strong>30 minutes a day on Microsoft 365 Personal and Family, 60 minutes a day on Premium</strong>. <strong>Copilot Pro no longer exists</strong>: it went off sale in October 2025 and support ended 1 August 2026, replaced by Microsoft 365 Premium. Speak to Copilot on Windows, Mac, mobile, and the web.</div>
                         
                     </div>
                     <div class="surface-column">
@@ -1006,30 +1050,38 @@
                     <div class="card-main">
                         <div class="feature-header">
                             <h3><a href="https://copilot.microsoft.com/" target="_blank" class="feature-link">GPT-4 Access</a></h3>
-                            <span class="badges"><button class="permalink-btn" onclick="copyPermalink('microsoft-copilot-gpt-4-access')" title="Copy link to this feature" aria-label="Copy permalink">🔗</button><span class="badge avail-ga">GA</span><span class="badge gate-paid">Paid</span></span>
+                            <span class="badges"><button class="permalink-btn" onclick="copyPermalink('microsoft-copilot-gpt-4-access')" title="Copy link to this feature" aria-label="Copy permalink">🔗</button><span class="badge avail-ga">GA</span><span class="badge gate-paid">mixed</span></span>
                         </div>
                         <div class="avail-grid">
                             
                             <div class="avail-item">
-                                <span class="plan has-tooltip" tabindex="0">Free<span class="plan-tooltip">Limited • Falls back to faster models at peak</span></span>
+                                <span class="plan has-tooltip" tabindex="0">Free<span class="plan-tooltip">Limited • Model routing not guaranteed; lower usage limits than subscriptions</span></span>
                                 <span class="status"><span class="avail partial" aria-label="Partially available" role="img">~</span></span>
                             </div>
                             <div class="avail-item">
-                                <span class="plan has-tooltip" tabindex="0">Copilot Pro<span class="plan-tooltip">Priority • Consistent GPT-4 access</span></span>
+                                <span class="plan has-tooltip" tabindex="0">Microsoft 365 Personal / Family<span class="plan-tooltip">Priority access • Higher usage limits; priority when capacity is constrained</span></span>
                                 <span class="status"><span class="avail yes" aria-label="Available" role="img">✓</span></span>
                             </div>
+                            <div class="avail-item">
+                                <span class="plan has-tooltip" tabindex="0">Microsoft 365 Premium<span class="plan-tooltip">Extended • Exclusive access to advanced AI features</span></span>
+                                <span class="status"><span class="avail yes" aria-label="Available" role="img">✓</span></span>
+                            </div>
+                            <div class="avail-item">
+                                <span class="plan has-tooltip" tabindex="0">Copilot Pro<span class="plan-tooltip">— • Retired: off sale October 2025, support ended 2026-08-01</span></span>
+                                <span class="status"><span class="avail no" aria-label="Not available" role="img">✗</span></span>
+                            </div>
                         </div>
-                        <div class="talking-point" role="button" tabindex="0" aria-label="Click to copy talking point" onclick="copyTalkingPoint(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();copyTalkingPoint(this)}">Free Copilot uses GPT-4 when available but may fall back to faster models during peak times. <strong>Pro guarantees priority GPT-4 access.</strong></div>
+                        <div class="talking-point" role="button" tabindex="0" aria-label="Click to copy talking point" onclick="copyTalkingPoint(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();copyTalkingPoint(this)}">Copilot no longer sells access to a named GPT-4 tier, and Microsoft's own plan documentation never mentions one. What a <strong>Microsoft 365 subscription buys is usage, not a better model</strong>: higher limits, priority access when capacity is tight, and on <strong>Premium</strong> the advanced AI features and the Analyst and Researcher agents. Reporting through 2026 describes Copilot routing across newer OpenAI models alongside Microsoft's own MAI models, with a model picker on some surfaces. Any guide still framing this as free-versus-Pro GPT-4 access is out of date.</div>
                         
                     </div>
                     <div class="surface-column">
                         <span class="plat-icon yes" title="Windows">Windows</span><span class="plat-icon yes" title="macOS">macOS</span><span class="plat-icon no" title="Linux">Linux</span><span class="plat-icon yes" title="iOS">iOS</span><span class="plat-icon yes" title="Android">Android</span><span class="plat-icon no" title="Chrome">Chrome</span><span class="plat-icon yes" title="web">web</span><span class="plat-icon no" title="terminal">terminal</span><span class="plat-icon no" title="API">API</span>
                         <div class="surface-dates">
-                            <span class="date-item launched clickable" title="Launched" onclick="showChangelog('microsoft-copilot-gpt-4-access')"><span class="date-emoji">🚀</span><span class="date-value">2023-02-07</span></span><span class="date-item verified" title="Verified"><span class="date-emoji">✓</span><span class="date-value">2026-03-22</span></span><span class="date-item checked" title="Checked"><span class="date-emoji">👁</span><span class="date-value">2026-09-04</span></span>
+                            <span class="date-item launched clickable" title="Launched" onclick="showChangelog('microsoft-copilot-gpt-4-access')"><span class="date-emoji">🚀</span><span class="date-value">2023-02-07</span></span><span class="date-item verified" title="Verified"><span class="date-emoji">✓</span><span class="date-value">2026-09-05</span></span><span class="date-item checked" title="Checked"><span class="date-emoji">👁</span><span class="date-value">2026-09-05</span></span>
                         </div>
                     </div>
                 </div>
-                <div class="feature-card" id="microsoft-copilot-image-generation-designer" data-category="image-gen" data-prices="0_20" data-surfaces="windows_macos_ios_android_web">
+                <div class="feature-card" id="microsoft-copilot-image-generation-designer" data-category="image-gen" data-prices="0_10_13_20" data-surfaces="windows_macos_ios_android_web">
                     <div class="card-main">
                         <div class="feature-header">
                             <h3><a href="https://designer.microsoft.com/" target="_blank" class="feature-link">Image Generation (Designer)</a></h3>
@@ -1038,21 +1090,33 @@
                         <div class="avail-grid">
                             
                             <div class="avail-item">
-                                <span class="plan has-tooltip" tabindex="0">Free<span class="plan-tooltip">15 AI credits/mo • Basic generation (Classic M365); 60 credits/mo for M365 Personal</span></span>
+                                <span class="plan has-tooltip" tabindex="0">Free<span class="plan-tooltip">Not published • Image creation after signing in with a Microsoft account</span></span>
                                 <span class="status"><span class="avail yes" aria-label="Available" role="img">✓</span></span>
                             </div>
                             <div class="avail-item">
-                                <span class="plan has-tooltip" tabindex="0">Copilot Pro<span class="plan-tooltip">100 boosts/day • Priority generation</span></span>
+                                <span class="plan has-tooltip" tabindex="0">Microsoft 365 Personal<span class="plan-tooltip">60 AI credits/mo • Designer, Create, Paint, Photos, and M365 web, mobile and desktop apps</span></span>
                                 <span class="status"><span class="avail yes" aria-label="Available" role="img">✓</span></span>
                             </div>
+                            <div class="avail-item">
+                                <span class="plan has-tooltip" tabindex="0">Microsoft 365 Family<span class="plan-tooltip">60 AI credits/mo • Subscription owner only</span></span>
+                                <span class="status"><span class="avail yes" aria-label="Available" role="img">✓</span></span>
+                            </div>
+                            <div class="avail-item">
+                                <span class="plan has-tooltip" tabindex="0">Microsoft 365 Premium<span class="plan-tooltip">Beyond standard credits • Extensive usage above the standard credit limit</span></span>
+                                <span class="status"><span class="avail yes" aria-label="Available" role="img">✓</span></span>
+                            </div>
+                            <div class="avail-item">
+                                <span class="plan has-tooltip" tabindex="0">Copilot Pro<span class="plan-tooltip">— • Retired: off sale October 2025, support ended 2026-08-01</span></span>
+                                <span class="status"><span class="avail no" aria-label="Not available" role="img">✗</span></span>
+                            </div>
                         </div>
-                        <div class="talking-point" role="button" tabindex="0" aria-label="Click to copy talking point" onclick="copyTalkingPoint(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();copyTalkingPoint(this)}">Image generation with Designer is <strong>available on all plans including free</strong> using AI credits (15–60/month depending on plan). Now powered by <strong>GPT-Image-1.5</strong> (upgraded from GPT-4o). Designer bot in Teams retired Feb 2026—use Copilot image generation instead.</div>
+                        <div class="talking-point" role="button" tabindex="0" aria-label="Click to copy talking point" onclick="copyTalkingPoint(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();copyTalkingPoint(this)}">Image generation with Designer is <strong>available on every plan including free</strong>, though you must sign in. Paid plans meter it with AI credits: <strong>60 a month on Microsoft 365 Personal and Family</strong>, and <strong>usage beyond the standard credit limit on Premium</strong>. Microsoft doesn't publish a monthly figure for free accounts. Powered by <strong>GPT-Image-1.5</strong>. The Designer bot in Teams was retired in February 2026, so use Copilot image generation instead.</div>
                         
                     </div>
                     <div class="surface-column">
                         <span class="plat-icon yes" title="Windows">Windows</span><span class="plat-icon yes" title="macOS">macOS</span><span class="plat-icon no" title="Linux">Linux</span><span class="plat-icon yes" title="iOS">iOS</span><span class="plat-icon yes" title="Android">Android</span><span class="plat-icon no" title="Chrome">Chrome</span><span class="plat-icon yes" title="web">web</span><span class="plat-icon no" title="terminal">terminal</span><span class="plat-icon no" title="API">API</span>
                         <div class="surface-dates">
-                            <span class="date-item launched clickable" title="Launched" onclick="showChangelog('microsoft-copilot-image-generation-designer')"><span class="date-emoji">🚀</span><span class="date-value">2023-03-21</span></span><span class="date-item verified" title="Verified"><span class="date-emoji">✓</span><span class="date-value">2026-03-23</span></span><span class="date-item checked" title="Checked"><span class="date-emoji">👁</span><span class="date-value">2026-09-04</span></span>
+                            <span class="date-item launched clickable" title="Launched" onclick="showChangelog('microsoft-copilot-image-generation-designer')"><span class="date-emoji">🚀</span><span class="date-value">2023-03-21</span></span><span class="date-item verified" title="Verified"><span class="date-emoji">✓</span><span class="date-value">2026-09-05</span></span><span class="date-item checked" title="Checked"><span class="date-emoji">👁</span><span class="date-value">2026-09-05</span></span>
                         </div>
                     </div>
                 </div>
@@ -1065,25 +1129,33 @@
                         <div class="avail-grid">
                             
                             <div class="avail-item">
-                                <span class="plan has-tooltip" tabindex="0">Free<span class="plan-tooltip">Standard • Basic chat; sign-in unlocks history, longer convos, voice</span></span>
+                                <span class="plan has-tooltip" tabindex="0">Free<span class="plan-tooltip">Standard • No sign-in for basic chat; sign in for history, longer conversations, image creation, voice</span></span>
                                 <span class="status"><span class="avail yes" aria-label="Available" role="img">✓</span></span>
                             </div>
                             <div class="avail-item">
-                                <span class="plan has-tooltip" tabindex="0">Copilot Pro<span class="plan-tooltip">Higher • Priority access, longer context</span></span>
+                                <span class="plan has-tooltip" tabindex="0">Microsoft 365 Personal / Family<span class="plan-tooltip">Extensive use • Priority access when capacity is constrained</span></span>
                                 <span class="status"><span class="avail yes" aria-label="Available" role="img">✓</span></span>
                             </div>
                             <div class="avail-item">
-                                <span class="plan has-tooltip" tabindex="0">M365 Copilot<span class="plan-tooltip">Full • Included with M365 subscription</span></span>
+                                <span class="plan has-tooltip" tabindex="0">Microsoft 365 Premium<span class="plan-tooltip">Extensive use • Adds advanced AI features and Analyst / Researcher agents</span></span>
+                                <span class="status"><span class="avail yes" aria-label="Available" role="img">✓</span></span>
+                            </div>
+                            <div class="avail-item">
+                                <span class="plan has-tooltip" tabindex="0">Copilot Pro<span class="plan-tooltip">— • Retired: off sale October 2025, support ended 2026-08-01</span></span>
+                                <span class="status"><span class="avail no" aria-label="Not available" role="img">✗</span></span>
+                            </div>
+                            <div class="avail-item">
+                                <span class="plan has-tooltip" tabindex="0">M365 Copilot<span class="plan-tooltip">Full • Commercial license</span></span>
                                 <span class="status"><span class="avail yes" aria-label="Available" role="img">✓</span></span>
                             </div>
                         </div>
-                        <div class="talking-point" role="button" tabindex="0" aria-label="Click to copy talking point" onclick="copyTalkingPoint(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();copyTalkingPoint(this)}">Microsoft Copilot's core text chat is <strong>free at copilot.microsoft.com</strong> — no account required for basic access. Sign in with a Microsoft account for chat history, longer conversations, and voice. Native apps available on Windows, macOS, iOS, and Android.</div>
+                        <div class="talking-point" role="button" tabindex="0" aria-label="Click to copy talking point" onclick="copyTalkingPoint(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();copyTalkingPoint(this)}">Microsoft Copilot's core text chat is <strong>free at copilot.microsoft.com</strong>, with no account required for basic access. Sign in with a Microsoft account for chat history, longer conversations, image creation, and voice. A paid <strong>Microsoft 365 plan buys higher usage, not a different chatbot</strong>, and <strong>Premium</strong> adds the Analyst and Researcher agents. Native apps available on Windows, macOS, iOS, and Android.</div>
                         
                     </div>
                     <div class="surface-column">
                         <span class="plat-icon yes" title="Windows">Windows</span><span class="plat-icon yes" title="macOS">macOS</span><span class="plat-icon no" title="Linux">Linux</span><span class="plat-icon yes" title="iOS">iOS</span><span class="plat-icon yes" title="Android">Android</span><span class="plat-icon no" title="Chrome">Chrome</span><span class="plat-icon yes" title="web">web</span><span class="plat-icon no" title="terminal">terminal</span><span class="plat-icon no" title="API">API</span>
                         <div class="surface-dates">
-                            <span class="date-item launched clickable" title="Launched" onclick="showChangelog('microsoft-copilot-chat')"><span class="date-emoji">🚀</span><span class="date-value">2023-02-07</span></span><span class="date-item verified" title="Verified"><span class="date-emoji">✓</span><span class="date-value">2026-03-22</span></span><span class="date-item checked" title="Checked"><span class="date-emoji">👁</span><span class="date-value">2026-09-04</span></span>
+                            <span class="date-item launched clickable" title="Launched" onclick="showChangelog('microsoft-copilot-chat')"><span class="date-emoji">🚀</span><span class="date-value">2023-02-07</span></span><span class="date-item verified" title="Verified"><span class="date-emoji">✓</span><span class="date-value">2026-09-05</span></span><span class="date-item checked" title="Checked"><span class="date-emoji">👁</span><span class="date-value">2026-09-05</span></span>
                         </div>
                     </div>
                 </div>
@@ -3594,9 +3666,10 @@
                 name: "Agent Builder",
                 platform: "Microsoft Copilot",
                 launched: "2025-02-24T12:00Z",
-                verified: "2026-03-22",
-                checked: "2026-09-04",
-                changes: [{ date: "2026-03-07T12:00Z", change: "[Verified] Multi-agent coordination added (agents can call other agents as tools); new agent surfaces: Outlook, OneDrive, Teams communities; PowerPoint agentic mode" },
+                verified: "2026-09-05",
+                checked: "2026-09-05",
+                changes: [{ date: "2026-09-05", change: "[Verified] Copilot Pro row replaced by the Microsoft 365 consumer plans, all marked unavailable: agent authoring remains a commercial Copilot capability. Recorded that Microsoft 365 Premium ships prebuilt Analyst and Researcher agents, which is agent consumption rather than authoring." },
+                { date: "2026-03-07T12:00Z", change: "[Verified] Multi-agent coordination added (agents can call other agents as tools); new agent surfaces: Outlook, OneDrive, Teams communities; PowerPoint agentic mode" },
                 { date: "2025-11-18T12:00Z", change: "Rebranding to Copilot Studio Lite announced" },
                 { date: "2025-02-24T12:00Z", change: "Initial entry" }]
             },
@@ -3604,9 +3677,10 @@
                 name: "Copilot Connectors",
                 platform: "Microsoft Copilot",
                 launched: "2023-11-01T12:00Z",
-                verified: "2026-03-22",
-                checked: "2026-09-04",
-                changes: [{ date: "2026-03-07T12:00Z", change: "[Verified] Federated connectors added: Notion, HubSpot, Linear, Intercom, Google Contacts, Google Calendar (live data via Researcher tool)" },
+                verified: "2026-09-05",
+                checked: "2026-09-05",
+                changes: [{ date: "2026-09-05", change: "[Verified] Copilot Pro row replaced by the Microsoft 365 consumer plans, all marked unavailable: connectors remain a commercial Copilot capability requiring a Microsoft 365 Copilot license." },
+                { date: "2026-03-07T12:00Z", change: "[Verified] Federated connectors added: Notion, HubSpot, Linear, Intercom, Google Contacts, Google Calendar (live data via Researcher tool)" },
                 { date: "2025-11-01T12:00Z", change: "MCP integration added" },
                 { date: "2023-11-01T12:00Z", change: "Initial entry" }]
             },
@@ -3614,17 +3688,19 @@
                 name: "Copilot in Office Apps",
                 platform: "Microsoft Copilot",
                 launched: "2023-11-01T12:00Z",
-                verified: "2026-03-22",
-                checked: "2026-09-04",
-                changes: [{ date: "2023-11-01T12:00Z", change: "Initial entry" }]
+                verified: "2026-09-05",
+                checked: "2026-09-05",
+                changes: [{ date: "2026-09-05", change: "[Verified] Copilot Pro retired and replaced by Microsoft 365 Premium; Office app integration confirmed as included in Microsoft 365 Personal, Family and Premium, limited to the subscription owner and metered by AI credits. Replaced the dead Copilot Pro store source with Microsoft's free-vs-subscription and AI credits support pages." },
+                { date: "2023-11-01T12:00Z", change: "Initial entry" }]
             },
             "microsoft-copilot-copilot-vision": {
                 name: "Copilot Vision",
                 platform: "Microsoft Copilot",
                 launched: "2024-10-01T12:00Z",
-                verified: "2026-03-15",
-                checked: "2026-09-04",
-                changes: [{ date: "2026-02-17T12:00Z", change: "[Verified] Gating changed from paid to free for Edge users; macOS Edge confirmed; US availability confirmed" },
+                verified: "2026-09-05",
+                checked: "2026-09-05",
+                changes: [{ date: "2026-09-05", change: "[Verified] Gating reverted from free to paid: Microsoft now requires a Microsoft 365 Personal, Family, or Premium subscription for Copilot Vision. Status moved from preview to ga. Added per-plan daily limits (10 min Personal/Family, 15 min Premium) and commercial Entra ID access. Platforms expanded well beyond Edge: iOS and Android now supported, Windows shares any app, macOS is a native app. Regional widened from US-only to all supported Copilot regions and languages." },
+                { date: "2026-02-17T12:00Z", change: "[Verified] Gating changed from paid to free for Edge users; macOS Edge confirmed; US availability confirmed" },
                 { date: "2025-03-01T12:00Z", change: "Paywall removed — now free for all Edge users with Microsoft account" },
                 { date: "2024-12-05T12:00Z", change: "Preview launched in Edge" },
                 { date: "2024-10-01T12:00Z", change: "Initial entry" }]
@@ -3635,24 +3711,26 @@
                 launched: "2024-10-01T12:00Z",
                 verified: "2026-09-05",
                 checked: "2026-09-05",
-                changes: [{ date: "2026-09-05", change: "[Verified] Copilot Pro retired (off sale October 2025, support ended 2026-08-01) and replaced by Microsoft 365 Premium; availability rows re-cut to Free / M365 Personal-Family / M365 Premium. Free tier corrected from \"Standard\" limits to free-subject-to-capacity with priority reserved for M365 subscribers. Added language and government-cloud caveats to regional note. Status remains ga; platform flags unchanged." },
+                changes: [{ date: "2026-09-05", change: "[Verified] Copilot Pro retired (off sale October 2025, support ended 2026-08-01) and replaced by Microsoft 365 Premium; availability rows re-cut to Free / M365 Personal / Family / Premium. Free tier corrected from \"Standard\" limits to free-subject-to-capacity, sign-in required. Added Microsoft's published daily voice allowances (30 min/day Personal and Family, 60 min/day Premium). Added language and government-cloud caveats to regional note. Status remains ga; platform flags unchanged." },
                 { date: "2024-10-01T12:00Z", change: "Initial entry" }]
             },
             "microsoft-copilot-gpt-4-access": {
                 name: "GPT-4 Access",
                 platform: "Microsoft Copilot",
                 launched: "2023-02-07T12:00Z",
-                verified: "2026-03-22",
-                checked: "2026-09-04",
-                changes: [{ date: "2023-02-07T12:00Z", change: "Initial entry" }]
+                verified: "2026-09-05",
+                checked: "2026-09-05",
+                changes: [{ date: "2026-09-05", change: "[Verified] The GPT-4 framing is obsolete: Microsoft's plan documentation no longer sells a named model tier, and publishes no free-versus-paid model split. Gating changed from paid to mixed, since the paid differentiator is usage limits and advanced features rather than model access. Copilot Pro rows replaced with the Microsoft 365 consumer plans. Dead Copilot Pro store source replaced with Microsoft support pages. Multi-model routing across OpenAI and Microsoft MAI models is secondary reporting, not first-party confirmed. Record is a candidate for renaming away from \"GPT-4 Access\"." },
+                { date: "2023-02-07T12:00Z", change: "Initial entry" }]
             },
             "microsoft-copilot-image-generation-designer": {
                 name: "Image Generation (Designer)",
                 platform: "Microsoft Copilot",
                 launched: "2023-03-21T12:00Z",
-                verified: "2026-03-23",
-                checked: "2026-09-04",
-                changes: [{ date: "2026-03-23T12:00Z", change: "[Verified] Gating corrected from paid to free — free users have access with 15 AI credits/mo; data was internally inconsistent" },
+                verified: "2026-09-05",
+                checked: "2026-09-05",
+                changes: [{ date: "2026-09-05", change: "[Verified] Copilot Pro retired and replaced by Microsoft 365 Premium. Per-plan credits re-cut from Microsoft's AI credits support page: 60 credits/mo on Personal and Family, usage beyond the standard limit on Premium. Free-tier allowance corrected to \"not published\" — the previous 15 credits/mo figure described legacy Classic Microsoft 365, not free Copilot." },
+                { date: "2026-03-23T12:00Z", change: "[Verified] Gating corrected from paid to free — free users have access with 15 AI credits/mo; data was internally inconsistent" },
                 { date: "2026-03-21T12:00Z", change: "[Verified] Credits system replaced boosts (15-60 credits/month); Designer bot retired in Teams (Feb 27); model upgraded to GPT-Image-1.5" },
                 { date: "2023-03-21T12:00Z", change: "Initial entry" }]
             },
@@ -3660,9 +3738,10 @@
                 name: "Chat",
                 platform: "Microsoft Copilot",
                 launched: "2023-02-07T12:00Z",
-                verified: "2026-03-22",
-                checked: "2026-09-04",
-                changes: [{ date: "2026-03-07T12:00Z", change: "Initial entry" },
+                verified: "2026-09-05",
+                checked: "2026-09-05",
+                changes: [{ date: "2026-09-05", change: "[Verified] Copilot Pro row replaced by the Microsoft 365 consumer plans after Copilot Pro's retirement; free tier confirmed as no-sign-in basic chat with sign-in unlocking history, longer conversations, image creation and voice. Noted that paid plans buy usage rather than a different model, and that Premium adds the Analyst and Researcher agents. Refreshed the redirected support source." },
+                { date: "2026-03-07T12:00Z", change: "Initial entry" },
                 { date: "2023-11-15T12:00Z", change: "Bing Chat rebranded to Microsoft Copilot" },
                 { date: "2023-02-07T12:00Z", change: "Bing Chat (predecessor) launched" }]
             },

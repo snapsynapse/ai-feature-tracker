@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-09-06T03:31:05.992Z",
+    "generated": "2026-09-06T03:45:45.441Z",
     "version": "1.0"
   },
   "capabilities": [
@@ -138,7 +138,7 @@
         "implementations": [
           "copilot-vision"
         ],
-        "best_gating": "free"
+        "best_gating": "paid"
       },
       "gemini": {
         "available": true,

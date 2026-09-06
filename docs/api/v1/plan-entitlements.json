@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-09-06T03:31:05.992Z",
+    "generated": "2026-09-06T03:45:45.441Z",
     "version": "1.0"
   },
   "products": {
@@ -445,11 +445,54 @@
           "implementation_count": 4,
           "capability_count": 7
         },
-        "Copilot Pro": {
-          "price": "$20/mo",
+        "Microsoft 365 Personal": {
+          "price": "$9.99/mo",
           "implementations": [
             "copilot-office-apps",
             "copilot-vision",
+            "copilot-voice",
+            "copilot-image-generation-designer"
+          ],
+          "capabilities": [
+            "make-and-edit-documents",
+            "read-text-and-documents",
+            "connect-to-external-systems",
+            "use-it-on-my-surfaces",
+            "see-images-and-screens",
+            "hear-audio-and-speech",
+            "speak-back-in-real-time",
+            "generate-images"
+          ],
+          "implementation_count": 4,
+          "capability_count": 8
+        },
+        "Microsoft 365 Family": {
+          "price": "$12.99/mo",
+          "implementations": [
+            "copilot-office-apps",
+            "copilot-vision",
+            "copilot-voice",
+            "copilot-image-generation-designer"
+          ],
+          "capabilities": [
+            "make-and-edit-documents",
+            "read-text-and-documents",
+            "connect-to-external-systems",
+            "use-it-on-my-surfaces",
+            "see-images-and-screens",
+            "hear-audio-and-speech",
+            "speak-back-in-real-time",
+            "generate-images"
+          ],
+          "implementation_count": 4,
+          "capability_count": 8
+        },
+        "Microsoft 365 Premium": {
+          "price": "$19.99/mo",
+          "implementations": [
+            "copilot-office-apps",
+            "copilot-vision",
+            "copilot-voice",
             "copilot-gpt-4-access",
             "copilot-image-generation-designer",
             "copilot-chat"
@@ -460,53 +503,53 @@
             "connect-to-external-systems",
             "use-it-on-my-surfaces",
             "see-images-and-screens",
+            "hear-audio-and-speech",
+            "speak-back-in-real-time",
             "generate-images",
             "write-and-explain"
           ],
-          "implementation_count": 5,
-          "capability_count": 7
+          "implementation_count": 6,
+          "capability_count": 9
+        },
+        "M365 Copilot (commercial)": {
+          "price": null,
+          "implementations": [
+            "copilot-vision"
+          ],
+          "capabilities": [
+            "see-images-and-screens"
+          ],
+          "implementation_count": 1,
+          "capability_count": 1
         },
         "Free": {
           "price": "$0",
           "implementations": [
-            "copilot-vision",
             "copilot-voice",
             "copilot-image-generation-designer",
             "copilot-chat"
           ],
           "capabilities": [
-            "see-images-and-screens",
             "hear-audio-and-speech",
             "speak-back-in-real-time",
             "generate-images",
             "write-and-explain",
             "use-it-on-my-surfaces"
           ],
-          "implementation_count": 4,
-          "capability_count": 6
+          "implementation_count": 3,
+          "capability_count": 5
         },
         "Microsoft 365 Personal / Family": {
           "price": null,
           "implementations": [
-            "copilot-voice"
+            "copilot-gpt-4-access",
+            "copilot-chat"
           ],
           "capabilities": [
-            "hear-audio-and-speech",
-            "speak-back-in-real-time"
+            "write-and-explain",
+            "use-it-on-my-surfaces"
           ],
-          "implementation_count": 1,
-          "capability_count": 2
-        },
-        "Microsoft 365 Premium": {
-          "price": null,
-          "implementations": [
-            "copilot-voice"
-          ],
-          "capabilities": [
-            "hear-audio-and-speech",
-            "speak-back-in-real-time"
-          ],
-          "implementation_count": 1,
+          "implementation_count": 2,
           "capability_count": 2
         }
       }
